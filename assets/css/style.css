@@ -13,17 +13,50 @@ body{
     margin-right: auto;
 }
 
+main{
+   min-height: 100vh;
+}
+
+/* Footer */
+footer{
+    /* fixed to bottom */
+    bottom: 0%;
+    left: 0%;
+    position: fixed;
+    text-align: center;
+}
+
+#footer{
+    max-width: 1800px;
+    margin: auto 0;
+    padding-bottom: 2rem;
+    width: 100%;
+   
+}
+
 /* Invaders.html styles */
+#game-controls{
+    display: flexbox;
+    columns: 3;
+    max-width: fit-content;
+    align-items: center;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #left-arrow{
     background: url(../media/left-arrow.svg) no-repeat center center/cover;
     height: 2rem;
     width: 2rem;
 }
+
 #up-arrow{
     background: url(../media/up-arrow.svg) no-repeat center center/cover;
     height: 2rem;
     width: 2rem;
 }
+
 #right-arrow{
     background: url(../media/right-arrow.svg) no-repeat center center/cover;
     height: 2rem;
