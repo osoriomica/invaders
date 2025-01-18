@@ -1,0 +1,31 @@
+
+/* Override default styles */
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body{
+    max-width: 1800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Invaders.html styles */
+#left-arrow{
+    background: url(../media/left-arrow.svg) no-repeat center center/cover;
+    height: 2rem;
+    width: 2rem;
+}
+#up-arrow{
+    background: url(../media/up-arrow.svg) no-repeat center center/cover;
+    height: 2rem;
+    width: 2rem;
+}
+#right-arrow{
+    background: url(../media/right-arrow.svg) no-repeat center center/cover;
+    height: 2rem;
+    width: 2rem;
+}
