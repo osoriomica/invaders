@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
 
 /* Override default styles */
 *{
@@ -12,6 +13,8 @@ body{
     margin-left: auto;
     margin-right: auto;
     display: flexbox;
+    font-family: "Jersey 15", sans-serif;
+    text-transform: uppercase;
 }
 
 main{
@@ -31,7 +34,6 @@ main{
     bottom: 0%;
     left: 0%;
     position: sticky;
-    background-color: blue;
 }
 #footer a, p{
     align-self: center;
@@ -88,6 +90,7 @@ main{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    transition: linear;
   }
   #social{
     display: inline-flex;
