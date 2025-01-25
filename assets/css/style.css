@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+/* 
+Colour palette:
+Background: #283044 dark blue 
+text: #fafafa off white
+Highlights: 
+*/
+
 
 /* Override default styles */
 *{
@@ -8,43 +15,59 @@
 }
 
 /* General Styles */
+
+body,
+footer,
+header{
+    width: 100%;
+    color: #fafafa;
+}
+
 body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Jersey 15", sans-serif;
+    text-transform: uppercase;
+    background-color: #283044;
+}
+
+main, nav{
     max-width: 1800px;
     margin-left: auto;
     margin-right: auto;
-    display: flexbox;
-    font-family: "Jersey 15", sans-serif;
-    text-transform: uppercase;
+}
+footer{
+       /* fixed to bottom */
+       bottom: 0%;
+       left: 0%;
+       position: fixed;
 }
 
-main{
-   min-height: 100vh;
-}
-
-/* Footer */
 #footer{
-    width: 100%;
+    height: fit-content;
     text-align: center;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    color: #fafafa;
+    padding: 0 1rem;
+    
     justify-content: center;
-    /* fixed to bottom */
-    bottom: 0%;
-    left: 0%;
-    position: sticky;
+    /* constrains size above 1800px */
+    max-width: 1800px;
+    margin-left: auto;
+    margin-right: auto;
 }
+  
 #footer a, p{
     align-self: center;
+    margin: 1.2rem 0;
+    
 }
 #social{
-    padding: 10px 0;
     flex-direction: row;
     display: flex;
     justify-content: center;
     list-style-type: none;
     align-items: baseline;
+    margin: 1.2rem 0;
 }
 #social li {
     padding: 0 1.4rem;
