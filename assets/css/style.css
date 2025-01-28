@@ -8,27 +8,29 @@ Highlights:
 
 
 /* Override default styles */
-*{
+* {
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
 }
 
-* a{
+* a,
+ul {
     text-decoration: none;
     color: #fafafa;
+    list-style-type: none;
 }
 
 /* General Styles */
 
 body,
 footer,
-header{
+header {
     width: 100%;
     color: #fafafa;
 }
 
-body{
+body {
     display: flex;
     flex-direction: column;
     font-family: "Jersey 15", sans-serif;
@@ -36,26 +38,39 @@ body{
     background-color: #283044;
 }
 
-main, nav{
+header {
+    display: flex;
+    flex-direction: row;
+}
+
+nav {
+    max-width: 1800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+nav ul{
+    
+}
+
+
+main {
+    background: url(../media/background.webp) no-repeat bottom center/cover;
+    height: 85vh;
+    width: 100%;
+    /* constrain size on extra large screens */
     max-width: 1800px;
     margin-left: auto;
     margin-right: auto;
 }
 
-main{
-    background: url(../media/background.webp) no-repeat bottom center/cover;
-    height:85vh;
-    width:100%;
+footer {
+    /* fixed to bottom */
+    bottom: 0%;
+    left: 0%;
+    position: fixed;
 }
 
-footer{
-       /* fixed to bottom */
-       bottom: 0%;
-       left: 0%;
-       position: fixed;
-}
-
-#footer{
+#footer {
     height: fit-content;
     text-align: center;
     padding: 0 1rem;
@@ -67,8 +82,9 @@ footer{
     margin-left: auto;
     margin-right: auto;
 }
-  
-#footer a, p{
+
+#footer a,
+p {
     align-self: center;
     /* margin: 1.2rem 0; */
 }
@@ -86,13 +102,13 @@ footer{
     padding: 0 1.4rem;
 }
 
-#social a{
+#social a {
     font-size: 1.4rem;
     color: inherit;
 }
 
 /* Invaders.html styles */
-#game-controls{
+#game-controls {
     justify-content: space-around;
     columns: 3;
     max-width: fit-content;
@@ -102,21 +118,22 @@ footer{
     margin-right: auto;
 }
 
-#left-arrow{
+#left-arrow {
     background: url(../media/left-arrow.svg) no-repeat center center/cover;
     height: 2rem;
     width: 2rem;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4)); /* Shadow effect from: https://css-tricks.com/adding-shadows-to-svg-icons-with-css-and-svg-filters/ */
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    /* Shadow effect from: https://css-tricks.com/adding-shadows-to-svg-icons-with-css-and-svg-filters/ */
 }
 
-#camera{
+#camera {
     background: url(../media/camera.svg) no-repeat center center/cover;
     height: 2rem;
     width: 2rem;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
-#right-arrow{
+#right-arrow {
     background: url(../media/right-arrow.svg) no-repeat center center/cover;
     height: 2rem;
     width: 2rem;
@@ -125,16 +142,17 @@ footer{
 
 /* Media queries */
 /* large phones or landscape mobile screens (600px and up) */
-@media screen and (min-width: 600px){
-  #footer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  #social{
-    display: inline-flex;
-  }
-    
+@media screen and (min-width: 600px) {
+    #footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #social {
+        display: inline-flex;
+    }
+
 }
 
 
