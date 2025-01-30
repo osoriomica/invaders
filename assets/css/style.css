@@ -1,11 +1,14 @@
+/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
 
+/* css variables using var() - https://www.w3schools.com/css/css3_variables.asp */
 :root{
---bg-dark: #283044; /* dark blue */
+--bg-dark: #030717; /* dark blue */
 --bg-light:;
 --light-text: #fafafa; /*off white*/
 --dark-text:;
 }
+
 
 /* Override default styles */
 * {
@@ -61,11 +64,15 @@ main {
     margin-right: auto;
 }
 /* main - homepage */
-#main-text{
-    background-color: var(--bg-dark);
+#road-sign{
+    
+    
+}
+.main-text{
     padding: 1rem;
-    margin: 1rem;
-    border-radius: 2px;
+    margin: 2rem 0.5rem;
+    border-radius: 2px;   
+    background-color: var(--bg-dark);
 }
 
 /* game - styles*/
@@ -161,9 +168,15 @@ p {
 /* large phones or landscape mobile screens (600px and up) */
 @media screen and (min-width: 600px) {
     /* Main - homepage */
-    #welcome-text{
+    .main-text{
         padding: 3rem;
         margin-top: 4rem;
+        max-width: 600px;
+        /* Display background image only on larger screens */
+        background-image: url(../media/road-sign.webp);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color:unset;
     }
     #footer {
         display: flex;
