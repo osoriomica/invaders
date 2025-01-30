@@ -84,13 +84,13 @@ nav {
 /* Main Section - styles */
 main {
     background: url(../media/background.webp) no-repeat bottom center/cover;
-    height: 80vh;
+    height: 100vh;
     width: 100%;
     /* constrain size on extra large screens */
     max-width: 1800px;
     margin-left: auto;
     margin-right: auto;
-    /* z-index: 2; */
+    z-index: 1;
 }
 
 /* main - homepage */
@@ -136,7 +136,6 @@ footer {
     bottom: 0%;
     left: 0%;
     width: 100%;
-    z-index: -1;
 }
 
 #footer {
@@ -180,7 +179,7 @@ p {
 }
 #social a:hover{
     color: var(--highlight1);
-    transition: color .3s ease-in-out;
+    transition: color .25s ease-in-out;
 }
 /* Invaders.html styles */
 #game-controls {
