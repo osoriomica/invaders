@@ -9,22 +9,11 @@
     /* orange-peel */
     --light-text: #ddd;
     /*antiflash-white*/
-    --dark-text: ;
+    --dark-text: #102542ff;
+    /* oxford-blue */
     --highlight2: #d10003ff;
     /*engineering-orange*/
 }
-
-/* CSS HEX */
-/* --imperial-red: #f82d32ff;
---chocolate-cosmos: #540b0eff;
---orange-peel: #ff9f1cff;
---oxford-blue: #102542ff;
---antiflash-white: #eeeeeeff; */
---space-cadet: #252c3fff;
---engineering-orange: #d10003ff;
---princeton-orange: #fa932cff;
---platinum: #ddddddff;
-—antiflash-white: #efefefff;
 
 /* Override default styles */
 * {
@@ -53,7 +42,9 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Jersey 15', serif;
+    /* font-family: 'Press Start 2P', serif; */
     text-transform: uppercase;
+    word-spacing: .3rem;
     background-color: var(--bg-dark);
 }
 
@@ -116,19 +107,28 @@ a {
     filter: unset;
 }
 
-
-
 /* game - styles*/
 #game-controls {
     display: flex;
 }
 
-.btn {
-    color: var(--light-text);
+.play-btn {
+    color: var(--dark-text);
     padding: 0.2rem;
-    align-self: flex-end;
+    background-color: var(--highlight1);
+    font-family: 'Press Start 2p', serif;
+    font-size: .75rem;
+}
+.btn{
+    border-radius: .15rem;
+    transition: color .5s ease-in-out;
 }
 
+/* 404 */
+.error-code{
+    font-size: 2.5rem;
+
+}
 /* footer section - styles */
 footer {
     /* fixed to bottom */
