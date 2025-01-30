@@ -50,11 +50,7 @@ nav {
     border: none;
 }
 
-.navbar-brand >img{
-    background-color: none;
-}
 /* Main Section - styles */
-
 main {
     background: url(../media/background.webp) no-repeat bottom center/cover;
     height: 80vh;
@@ -64,18 +60,31 @@ main {
     margin-left: auto;
     margin-right: auto;
 }
-/* Main - homepage */
+/* main - homepage */
 #welcome-text{
     background-color: var(--bg-dark);
-
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 2px;
 }
 
-/* Footer section - styles */
+/* game - styles*/
+#game-controls{
+    display: flex;
+}
+.btn{
+    color: var(--light-text);
+    padding: 0.2rem;
+    align-self: flex-end;
+}
+
+/* footer section - styles */
 footer {
     /* fixed to bottom */
     bottom: 0%;
     left: 0%;
-    position: fixed;
+    position: sticky;
+    width: 100%;
 }
 
 #footer {
@@ -151,6 +160,11 @@ p {
 /* Media queries */
 /* large phones or landscape mobile screens (600px and up) */
 @media screen and (min-width: 600px) {
+    /* Main - homepage */
+    #welcome-text{
+        padding: 3rem;
+        margin-top: 4rem;
+    }
     #footer {
         display: flex;
         flex-direction: row;
