@@ -1,14 +1,25 @@
 /* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&family=Press+Start+2P&display=swap');
 
 /* css variables using var() - https://www.w3schools.com/css/css3_variables.asp */
-:root{
---bg-dark: #030717; /* dark blue */
---bg-light:;
---light-text: #fafafa; /*off white*/
---dark-text:;
+:root {
+    --bg-dark: #102542ff;
+    /* dark blue */
+    --bg-light: #FF9F1C;
+    /*yellow*/
+    --light-text: #eeeeee;
+    /*antiflash white*/
+    --dark-text: ;
+    --highlight: #f82d32;
+    /*red*/
 }
 
+/* CSS HEX */
+/* --imperial-red: #f82d32ff;
+--chocolate-cosmos: #540b0eff;
+--orange-peel: #ff9f1cff;
+--oxford-blue: #102542ff;
+--antiflash-white: #eeeeeeff; */
 
 /* Override default styles */
 * {
@@ -36,9 +47,18 @@ header {
 body {
     display: flex;
     flex-direction: column;
-    font-family: "Jersey 15", sans-serif;
+    font-family: 'Jersey 15', serif;
     text-transform: uppercase;
     background-color: var(--bg-dark);
+}
+
+h1,
+h2,
+h3 {
+    color: var(--bg-light);
+    font-family: 'Press Start 2P', serif;
+    /* Calc() function picked from Inspect element values and edited for intended look */
+    font-size: calc(1rem + 1.25vw);
 }
 
 /* Header - styles */
@@ -49,7 +69,7 @@ nav {
     margin-right: auto;
 }
 
-.navbar-toggler{
+.navbar-toggler {
     border: none;
 }
 
@@ -62,26 +82,38 @@ main {
     max-width: 1800px;
     margin-left: auto;
     margin-right: auto;
+    z-index: 2;
 }
+
 /* main - homepage */
 
-.main-text-bg{
-    padding: 2rem;
-    margin: 2rem auto;
+.main-text {
+    padding: 2.4rem 2rem;
+    margin: 1rem auto 0;
     width: 100%;
-    height: 100vh;
+    height: 85vh;
     max-width: 300px;
     /* background image */
-    background-image: url(../media/6x4-road-sign.png);
+    background-image: url(../media/6x4-road-sign.svg);
     background-repeat: no-repeat;
     background-size: contain;
+    filter: sepia(30%) drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4)) opacity(90%);
+    /* filter functions on w3schools: https://www.w3schools.com/cssref/css3_pr_filter.php */
 }
 
+.main-text>p,
+h1,
+a {
+    filter: unset;
+}
+
+
 /* game - styles*/
-#game-controls{
+#game-controls {
     display: flex;
 }
-.btn{
+
+.btn {
     color: var(--light-text);
     padding: 0.2rem;
     align-self: flex-end;
@@ -90,9 +122,9 @@ main {
 /* footer section - styles */
 footer {
     /* fixed to bottom */
+    position: fixed;
     bottom: 0%;
     left: 0%;
-    position: sticky;
     width: 100%;
 }
 
@@ -109,19 +141,19 @@ footer {
     margin-right: auto;
 }
 
-#footer a,
+#footer >a,
 p {
     align-self: center;
-    /* margin: 1.2rem 0; */
+    margin: .5rem 0;
 }
 
-#social{
+#social {
     flex-direction: row;
     display: flex;
     justify-content: center;
     list-style-type: none;
     align-items: baseline;
-    margin: 1.2rem 0;
+    margin: .5rem 0;
 }
 
 #social li {
@@ -169,21 +201,20 @@ p {
 /* Media queries */
 /* large phones or landscape mobile screens (600px and up) */
 @media screen and (min-width: 600px) {
+
+    h1,
+    h2,
+    h3 {
+        font-size: 2rem;
+    }
+
     /* Main - homepage */
-    .main-text-bg{
+    .main-text {
         padding: 3rem;
         margin-top: 4rem;
         max-width: 590px;
-        /* Different background image on larger screens */
+        /* Different background image for larger screens */
         background-image: url(../media/road-sign.webp);
-        /* background-repeat: no-repeat;
-        background-size: contain; */
-     
-    }
-    #footer {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
     }
 
     #social {
