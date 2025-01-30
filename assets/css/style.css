@@ -101,12 +101,10 @@ main {
     background-repeat: no-repeat;
     background-size: contain;
     /* filter functions on w3schools: https://www.w3schools.com/cssref/css3_pr_filter.php */
-    filter: sepia(50%) drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4)) opacity(95%);
+    filter: sepia(30%) drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4)) opacity(95%);
 }
 
-.main-text> div{
-    filter:none;
-}
+
 
 /* game - styles*/
 #game-controls {
