@@ -97,8 +97,8 @@ main {
     background-image: url(../media/6x4-road-sign.svg);
     background-repeat: no-repeat;
     background-size: contain;
-    filter: sepia(30%) drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4)) opacity(90%);
     /* filter functions on w3schools: https://www.w3schools.com/cssref/css3_pr_filter.php */
+    filter: sepia(30%) drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4)) opacity(90%);
 }
 
 .main-text>p,
@@ -106,6 +106,7 @@ h1,
 a {
     filter: unset;
 }
+
 
 
 /* game - styles*/
@@ -200,7 +201,7 @@ p {
 
 /* Media queries */
 /* large phones or landscape mobile screens (600px and up) */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 568px) {
 
     h1,
     h2,
@@ -211,7 +212,7 @@ p {
     /* Main - homepage */
     .main-text {
         padding: 3rem;
-        margin-top: 4rem;
+        margin-top: calc(4rem*1.5vh);
         max-width: 590px;
         /* Different background image for larger screens */
         background-image: url(../media/road-sign.webp);
