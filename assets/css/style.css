@@ -55,6 +55,9 @@ nav > .container-fluid{
     padding-left: 0%;
 }
 
+.navbar-brand >img{
+    background-color: none;
+}
 /* Main Section - styles */
 
 main {
