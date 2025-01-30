@@ -21,7 +21,7 @@ ul {
     list-style-type: none;
 }
 
-/* General Styles */
+/* General styles */
 
 body,
 footer,
@@ -38,24 +38,28 @@ body {
     background-color: #283044;
 }
 
-header {
-    display: flex;
-    flex-direction: row;
-}
+/* Header - styles */
 
 nav {
     max-width: 1800px;
     margin-left: auto;
     margin-right: auto;
 }
-nav ul{
-    
+
+nav > .container-fluid{
+    padding-left: 0%;
 }
 
+.navbar-toggler{
+    border: none;
+    padding-left: 0%;
+}
+
+/* Main Section - styles */
 
 main {
     background: url(../media/background.webp) no-repeat bottom center/cover;
-    height: 85vh;
+    height: 80vh;
     width: 100%;
     /* constrain size on extra large screens */
     max-width: 1800px;
