@@ -61,7 +61,7 @@ main {
     margin-right: auto;
 }
 /* main - homepage */
-#welcome-text{
+#main-text{
     background-color: var(--bg-dark);
     padding: 1rem;
     margin: 1rem;
