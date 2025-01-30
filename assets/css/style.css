@@ -3,15 +3,15 @@
 
 /* css variables using var() - https://www.w3schools.com/css/css3_variables.asp */
 :root {
-    --bg-dark: #102542ff;
-    /* dark blue */
-    --bg-light: #FF9F1C;
-    /*yellow*/
-    --light-text: #eeeeee;
-    /*antiflash white*/
+    --bg-dark: #252c3f; 
+    /* space-cadet */
+    --highlight1: #ff9f1cff;
+    /* orange-peel */
+    --light-text: #ddd;
+    /*antiflash-white*/
     --dark-text: ;
-    --highlight: #f82d32;
-    /*red*/
+    --highlight2: #d10003ff;
+    /*engineering-orange*/
 }
 
 /* CSS HEX */
@@ -20,6 +20,11 @@
 --orange-peel: #ff9f1cff;
 --oxford-blue: #102542ff;
 --antiflash-white: #eeeeeeff; */
+--space-cadet: #252c3fff;
+--engineering-orange: #d10003ff;
+--princeton-orange: #fa932cff;
+--platinum: #ddddddff;
+—antiflash-white: #efefefff;
 
 /* Override default styles */
 * {
@@ -55,10 +60,11 @@ body {
 h1,
 h2,
 h3 {
-    color: var(--bg-light);
+    color: var(--highlight1);
     font-family: 'Press Start 2P', serif;
     /* Calc() function picked from Inspect element values and edited for intended look */
-    font-size: calc(1rem + 1.25vw);
+    font-size: calc(1rem + 1.20vw);
+    margin-bottom: auto;
 }
 
 /* Header - styles */
@@ -72,7 +78,9 @@ nav {
 .navbar-toggler {
     border: none;
 }
-
+.navbar-nav:hover{
+    --bs-nav-link-hover-color: var(--highlight1);
+}
 /* Main Section - styles */
 main {
     background: url(../media/background.webp) no-repeat bottom center/cover;
@@ -82,23 +90,24 @@ main {
     max-width: 1800px;
     margin-left: auto;
     margin-right: auto;
-    z-index: 2;
+    /* z-index: 2; */
 }
 
 /* main - homepage */
 
 .main-text {
-    padding: 2.4rem 2rem;
-    margin: 1rem auto 0;
+    padding: 2.4rem 2rem 0;
+    margin: 2rem auto 0;
     width: 100%;
-    height: 85vh;
+    /* height: 85vh; this height is not working on landscape phones, it overflows */
+    height: 100vh; /* this height works for landscape phones but overflows*/
     max-width: 300px;
     /* background image */
     background-image: url(../media/6x4-road-sign.svg);
     background-repeat: no-repeat;
     background-size: contain;
     /* filter functions on w3schools: https://www.w3schools.com/cssref/css3_pr_filter.php */
-    filter: sepia(30%) drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4)) opacity(90%);
+    filter: sepia(30%) drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4)) opacity(95%);
 }
 
 .main-text>p,
@@ -123,10 +132,11 @@ a {
 /* footer section - styles */
 footer {
     /* fixed to bottom */
-    position: fixed;
+    position: sticky;
     bottom: 0%;
     left: 0%;
     width: 100%;
+    z-index: -1;
 }
 
 #footer {
@@ -165,7 +175,13 @@ p {
     font-size: 1.4rem;
     color: inherit;
 }
-
+#social a:focus{
+    color: var(--highlight1);
+}
+#social a:hover{
+    color: var(--highlight1);
+    transition: color .3s ease-in-out;
+}
 /* Invaders.html styles */
 #game-controls {
     justify-content: space-around;
@@ -200,20 +216,16 @@ p {
 }
 
 /* Media queries */
-/* large phones or landscape mobile screens (600px and up) */
+/* large phones or landscape mobile screens (568px and up) */
 @media screen and (min-width: 568px) {
-
-    h1,
-    h2,
-    h3 {
-        font-size: 2rem;
-    }
-
+    
     /* Main - homepage */
     .main-text {
-        padding: 3rem;
-        margin-top: calc(4rem*1.5vh);
+        padding: 2.6rem 3rem 0;
+        margin-top: calc(4rem*1.4vh);
         max-width: 590px;
+        /* height: 60vh; this height doesn't work on landscape phones */
+        height: 100vh; /* this height works for landscape phones but overflows onto the footer*/
         /* Different background image for larger screens */
         background-image: url(../media/road-sign.webp);
     }
@@ -224,5 +236,19 @@ p {
 
 }
 
-
-/* #f82d32 */
+/* large devices (laptops and desktops 992px and up) */
+@media screen and (min-width: 992px) {
+    /* General styles */
+    p{
+        font-size: calc(1rem + .3vw);
+    }
+    /* Main - homepage */
+    .main-text {
+        padding: 4.5rem 3.5rem 0 3rem;
+        max-width: 800px;
+        height: 70vh;
+    }
+    .main-text h1{
+        margin-bottom: 1.5rem;
+    }
+}
