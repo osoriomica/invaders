@@ -44,7 +44,8 @@ body {
     font-family: 'Jersey 15', serif;
     /* font-family: 'Press Start 2P', serif; */
     text-transform: uppercase;
-    word-spacing: .3rem;
+    word-spacing: .25rem;
+    line-height: 1.4rem;
     background-color: var(--bg-dark);
 }
 
@@ -59,6 +60,11 @@ h3 {
 }
 
 /* Header - styles */
+.navbar,
+footer a,
+p {
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+}
 
 nav {
     max-width: 1800px;
@@ -88,7 +94,7 @@ main {
 
 /* main - homepage */
 
-.main-text {
+.main-text-bg {
     padding: 2.4rem 2rem 0;
     margin: 2rem auto 0;
     width: 100%;
@@ -97,7 +103,7 @@ main {
     /* this height works for landscape phones but overflows*/
     max-width: 300px;
     /* background image */
-    background-image: url(../media/6x4-road-sign.svg);
+    background-image: url(../media/6x4-road-sign.webp);
     background-repeat: no-repeat;
     background-size: contain;
     /* filter functions on w3schools: https://www.w3schools.com/cssref/css3_pr_filter.php */
@@ -197,7 +203,7 @@ p {
 }
 
 #left-arrow {
-    background: url(../media/left-arrow.svg) no-repeat center center/cover;
+    background: url(../media/ddd-left-arrow.svg) no-repeat center center/cover;
     height: 4rem;
     width: 4rem;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
@@ -212,7 +218,7 @@ p {
 }
 
 #right-arrow {
-    background: url(../media/right-arrow.svg) no-repeat center center/cover;
+    background: url(../media/ddd-right-arrow.svg) no-repeat center center/cover;
     height: 4rem;
     width: 4rem;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
@@ -223,7 +229,7 @@ p {
 @media screen and (min-width: 568px) {
 
     /* Main - homepage */
-    .main-text {
+    .main-text-bg {
         padding: 2.6rem 3rem 0;
         margin-top: calc(4rem*1.4vh);
         max-width: 590px;
@@ -249,13 +255,16 @@ p {
     }
 
     /* Main - homepage */
-    .main-text {
+    .main-text-bg {
         padding: 4.5rem 3.5rem 0 3rem;
         max-width: 800px;
-        height: 70vh;
+        height: 80vh;
     }
 
-    .main-text h1 {
+    .main-text-bg h1 {
         margin-bottom: 1.5rem;
+    }
+    .play-btn {
+        margin-top: 2.4rem;
     }
 }
