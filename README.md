@@ -92,7 +92,7 @@ The buttons and links are formatted so that the user can interact intuitively.
 	- Jersey 15:  General text elements. 
 - Sounds and music:
 - Graphics: 
-- Buttons:
+- Buttons: camera capture, tile crack, fanfarre?
 - Background: 
 - Modals: Styled to resemble the French road signs that has been ‘invaded’ with a pixelated art installation. Format: blue background, white uppercase fonts and centred text. A tiny space Invader on the top right corner.
 
@@ -130,11 +130,13 @@ Background image on .main-text-bg not displaying responsively. Issue: The text w
 	
 	
 ### Media
-	Invader cut out and edited from photo by Guilhem Vellut from Paris, France. https://www.flickr.com/photos/o_0/28023125416/
-Camera pixel illustration⁠ from Rafiico Studio on Canva.com https://www.canva.com/photos/MAFHfE3RSy0/
-Pixel art happy girl group character⁠ from Patinya_P_ANG on Canva.com https://www.canva.com/photos/MAFs6D_S9Rs/
-Star Pixel Art⁠ from chickchick on Canva.com https://www.canva.com/photos/MAGSKDopQAg/
-Concrete wall⁠ by Xurzon from Getty Images Pro on Canva.com https://www.canva.com/photos/MADesbL5SK8/
-Base image for the main text background edited from image listing https://www.ebay.it/itm/314175660736 
+Invader cut out and edited from photo by Guilhem Vellut from Paris, France. https://www.flickr.com/photos/o_0/28023125416/  
+Pixelated camera icon⁠ edited from the original by Rara nia nur hanifa on Canva.com https://www.canva.com/icons/MAFYvLietmQ/  
+Shooter sprite based on the artwork byt Patinya_P_ANG on Canva.com https://www.canva.com/photos/MAFs6D_S9Rs/  
+Star Pixel Art⁠ from chickchick on Canva.com https://www.canva.com/photos/MAGSKDopQAg/  
+Road sign image edited from image listing https://www.ebay.it/itm/314175660736  
+Sound effect: 
+ - Camera capture sound effect by <a href="https://pixabay.com/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6448">freesound_community</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6448">Pixabay</a>
+
 
 ### ACKNOWLEDGEMENTS
