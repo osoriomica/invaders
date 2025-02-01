@@ -1,131 +1,126 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# URBAN INVADERS
 
-Welcome USER_NAME,
+## Introduction
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+### About the original Space Invaders:
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+By Arcade Museum, Fair use, https://en.wikipedia.org/w/index.php?curid=41622028
+Released in 1978 by Taito Corporation, and designed by Tomohiro Nishikado; Space Invaders is considered one of the most influential and greatest games of all time (https://en.wikipedia.org/wiki/Space_Invaders). After almost half a century since its origins, it has continued to be a part of the pop culture across the globe, inspiring people daily with its simplicity and iconic design.
+One of my favourite street artists, Franck Slama (AKA Invader) has given the famous alien invaders and their unmistakable pixelated art a new life by installing, pixelated ceramic tiles on public walls around the world. HIs artwork includes the invaders as well as other famous characters from olds-school video games like Mario Bros and Pac Man. 
+-See space-invaders website for more info on his work: (https://www.space-invaders.com/home/).
 
-## Gitpod Reminders
+By Julie - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=50343315
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+!(Add couple of photos from my camera row).
 
-`python3 -m http.server`
+It’s become a personal habit of mine to photograph (or shoot) these Invader installations whenever I happily come across them whilst walking on the streets of my city or as a tourist somewhere else.
+So, this project comes from that mix of nostalgia, street art and our compulsive need of capturing cool things in photos. The user controls the shooter as usual, but on this occasion, they are tourists with their cameras shooting photos of the invaders crawling down the buildings. I hope to capture some of that original fun with a twist on my version of Space Invaders. 
 
-A blue button should appear to click: _Make Public_,
+## User Experience
 
-Another blue button should appear to click: _Open Browser_.
+### User stories
+The user: anyone should be able to play and hopefully enjoy the experience. On one side, Space Invaders recalls the nostalgia for the Golden Age of arcade games but also, it’s a simple and fun game to play. 
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+- As a user, I’d like to understand how to play the game.
+- As a user, I would like to easily start a new game.
+- As a user, I’d like to have control over some of the visuals like the background, the invader’s style or my avatar.
+- As a user, I’d like to be able to pause, resume and/or start a new game.
+- As a user, I’d like to control the volume for the audio effects/background music.  
+- As a user, I’d like to know my score at the end of the game.
+- As a user, I’d like to know if I’ve lost and be able to start again. 
+- As a user, I’d like to share my score with social media and maybe challenge a friend.??
 
-A blue button should appear to click: _Make Public_,
+### Features
+Layout: The website is a single page to keep the focus on the game as the main focal point. 
+Welcome message: the homepage has a simple welcome message like a French road sign (blue background, green border with white uppercase fonts, vertically centred) with a tiny space Invader on the top right corner. The message displayed offers quick instructions and a button to start the game. Maybe transitioning with a loading animation screen before the rest of the code can run. 
 
-Another blue button should appear to click: _Open Browser_.
+By Jordiet. from Reus - París, CC BY-SA 2.0, https://commons.wikimedia.org/w/index.php?curid=76505381 
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+Instructions: The user can click on the instructions button to open a modal featuring a quick intro to the game and playing instructions. Button to close the modal reads “Got it!”.
+Game Controls: Three buttons above the game’s grid that the user can click on: New Game, Pause and Resume.
+Choose your shooter/invader/space. The user can choose their favourite shooter/invader/space from a pre-set options menu underneath the game’s grid. Each space loads a different background song A default space is loaded at the start of the game and on clicking the New Game button.
+Volume controls: The user can click on the audio icons to control volume.
+A footer with social media links to share the game.
+Gameplay: 
+On game start, the shooter is placed at the bottom centre of the grid. The grouped of invaders appear at the top left corner and start moving side to side, descending one space towards the shooter.
+Using Left and Right arrows, the user can move the shooter side to side but not past the edge of the grid. 
+Using the Up arrow, the shooter can fire against the invaders. 
+3 credits are given to the user to play before the game is over. 
+Each time the shooter hits an invader, this disappears and the score is increased by one. 
+The game is won by destroying all the invaders before they touch the shooter or the bottom of the grid. If the 
+The game is lost if the invaders reach the shooter or the bottom of the grid. 
+If all invaders are destroyed. Send a new wave of faster invaders with differentiated by a different icon.??
+At random, one “boss invader” can appear during the game and shoot back at the user. The user can fire at this invader too. If the user is hit by the “boss invader”, the shooter looses a credit/life.??
+Game Over: the end of the game. A modal appears with the final score and a Congratulations! Or Game Over message. (And the option to share this on Instagram/Facebook??).   
+#### Future features to add:
+	- Scoreboard with a top 10 of the highest scores and the user’s initials. 
+ 	- Boss to increase difficulty of the game. 
+	- Share score to social media? 
+	- Report an issue link to write an email to developer. 
+	- Random math drop bomb to shooter? (Nice to have if more time) 
 
-To log into the Heroku toolbelt CLI:
+### Functionalities to add
+- Choose your Avatar / invaders
+- Score display.
+- 404 Page - Looks like you’ve reached beyond space. Button: Go back! 
+- Second and third wave of faster invaders?
+- 3 lives? Display credits 03/02/01/game over - Would you like to play again?
+- Store highest score across 3 lives.??
+- Boss with faster moving interval that shoots back at user??
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### Design	
+The overall design is inspired by the original arcade aesthetic and Invader’s street art installations (see introduction).
+The colour palette is high-contrasting and the text elements easy to read.
+The buttons and links are formatted so that the user can interact intuitively.
+	- Colour Palette: 
+    red: #ec0003
+#f82d32 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+--space-cadet: #252c3fff;
+--engineering-orange: #d10003ff;
+--princeton-orange: #fa932cff;
+--platinum: #ddddddff;
+—antiflash-white: #efefefff;
 
-### Connecting your Mongo database
+252c3f-d10003-fa932c-dddddd-efefef
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+	- Typography: Caracteres (used in French road signs) https://www.ffonts.net/Caracteres-L1.font.download#google_vignette
+	- Sounds and music:
+	- Graphics:
+	- Buttons:
+	- Background:
+	- Modals: Styled to resemble the French road signs that has been ‘invaded’ with a pixelated art installation. Format: blue background, white uppercase fonts and centred text. A tiny space Invader on the top right corner.
 
-------
+## WIREFRAMES  
+### TECHNOLOGIES USED  
+HTML5, CSS3, JS, GitHub, Visual Studio Code, Google Fonts, ffonts.net, Wireframe.cc, Abode Color Palette (https://color.adobe.com/) canva.com, SVG REPO (www.svgrepo.com) to source and customise the svg graphics. https://cloudconvert.com/svg-to-webp to convert and optimise images for the web. 
 
-## Release History
+## TESTING
+Online validation: HTML, CSS, JS, Lighthouse on google
+https://validator.w3.org/ 
+https://jigsaw.w3.org/css-validator/ 
+https://jshint.com/ 
+https://developer.chrome.com/docs/lighthouse/overview/ 
+Jest tests!- effective and meaningful	.
+If using TDD, demonstrate in commit log. Document it in Readme or separate file.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### Testing user stories
 
-**June 18, 2024,** Add Mongo back into template
+### BUGS
+Navbar toggle not behaving properly. Issue: Target was not set to correct ID. Fix: Using bootstrap’s documentation, I made sure both the parent’s data-bs-target and the id of its descendant div were the same.  
+Background image on .main-text-bg not displaying responsively. Issue: The text would overflow the container and the image was not growing with its parent div. Fix: set width to 100%, and height to 100vh so the text would stop overflowing and the image would occupy the full width of its container.
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+## DEPLOYMENT
+## CREDITS
+	The base javascript code for the game comes from Ania Kubów ( https://youtu.be/s6LrpUTQQn0?si=DZ24tUrVomU48pgm)
+	
+	
+### MEDIA
+	Invader cut out and edited from photo by Guilhem Vellut from Paris, France. https://www.flickr.com/photos/o_0/28023125416/
+Camera pixel illustration⁠ from Rafiico Studio on Canva.com https://www.canva.com/photos/MAFHfE3RSy0/
+Pixel art happy girl group character⁠ from Patinya_P_ANG on Canva.com https://www.canva.com/photos/MAFs6D_S9Rs/
+Star Pixel Art⁠ from chickchick on Canva.com https://www.canva.com/photos/MAGSKDopQAg/
+Concrete wall⁠ by Xurzon from Getty Images Pro on Canva.com https://www.canva.com/photos/MADesbL5SK8/
+Base image for the main text background edited from image listing https://www.ebay.it/itm/314175660736 
 
-**May 28 2024:** Fix Mongo and Links installs
-
-**April 26 2024:** Update node version to 16
-
-**September 20 2023:** Update Python version to 3.9.17.
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+### ACKNOWLEDGEMENTS
