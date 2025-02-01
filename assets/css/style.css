@@ -135,13 +135,23 @@ main {
     font-size: .75rem;
 }
 
-#game-options .btn {
+#game-options button {
     border-radius: .15rem;
     transition: color .5s ease-in-out;
-    justify-content: space-between;
+    justify-content: space-around;
     color: var(--light-text);
     font-size: calc(1rem+1vw);
     padding: 0 3rem ;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: underline;
+    text-decoration-color: var(--highlight1);
+}
+#game-options button:hover{
+    text-decoration-color: var(--highlight2);
+    color: #fafafa;
+    transition:  0.3s ease-in-out;
 }
 
 #game{
@@ -153,6 +163,9 @@ main {
     margin-top: 1rem;
     padding-left: 1rem;
     font-size: smaller;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .grid{
@@ -178,8 +191,8 @@ main {
     background: url(../media/red-invader.svg)no-repeat center center/cover;
     filter: drop-shadow(1px 3px 1px rgb(0 0 0 / 0.4));
 }
-.shooter{
-    background: url(../media/shooter.svg)no-repeat center center/cover;
+.camera{
+    background: url(../media/camera.svg)no-repeat center center/cover;
     filter: drop-shadow(1px 3px 1px rgb(0 0 0 / 0.4));
 }
 .flash{
@@ -210,8 +223,8 @@ main {
     /* Shadow effect from: https://css-tricks.com/adding-shadows-to-svg-icons-with-css-and-svg-filters/ */
 }
 
-#camera {
-    background: url(../media/camera.svg) no-repeat center center/cover;
+#shooter {
+    background: url(../media/shooter.svg) no-repeat center center/cover;
     height: 4rem;
     width: 4rem;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));

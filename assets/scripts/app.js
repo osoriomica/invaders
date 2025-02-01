@@ -1,3 +1,4 @@
+// Game Global Variables
 const grid = document.querySelector('.grid')
 const resultDisplay = document.querySelector('.result')
 const scoreDisplay = document.querySelector('.score')
@@ -7,23 +8,26 @@ let currentShooterIndex = 217
 let invadersId
 let isGoingRight = true
 let direction = 1
-let score = 000
+let score = 0
 
-for (let i = 0; i < width * width; i++){ //spans 255 square divs and appends them to the grid
+// Code by Ania Kubow - for loop creates grid by spanning 255 square divs and appending them to a grid of 15 by 15
+for (let i = 0; i < width * width; i++){ 
     const square = document.createElement('div')
-    square.id=i //gives ids to each square based on their index
+    square.id = i //gives ids to each square based on their index
     grid.appendChild(square)
 }
 
 const squares = Array.from(document.querySelectorAll('.grid div')) //transforms list of divs to an array so we can loop through them
 console.log(squares)
 
+// Assign invader class to selected divs within the grid using index ids.
 const alienInvaders = [
     0,1,2,3,4,5,6,7,8,9,
     15,16,17,18,19,20,21,22,23,24,
     30,31,32,33,34,35,36,37,38,39
 ]
 
+// loops through the alienInvaders set to draw the invaders
 function draw(){
     for (let i = 0; i <alienInvaders.length; i++){
         if (!invadersRemoved.includes(i)){
@@ -33,7 +37,7 @@ function draw(){
 }
 draw()
 
-squares[currentShooterIndex].classList.add('shooter')
+squares[currentShooterIndex].classList.add('camera')
 
 function remove(){
     for(let i = 0; i < alienInvaders.length; i++){
@@ -42,7 +46,7 @@ function remove(){
 }
 
 function moveShooter(e){
-    squares[currentShooterIndex].classList.remove('shooter')
+    squares[currentShooterIndex].classList.remove('camera')
     switch(e.key){
         case 'ArrowLeft':
             if (currentShooterIndex % width !==0) currentShooterIndex -=1
@@ -51,14 +55,14 @@ function moveShooter(e){
             if (currentShooterIndex % width <width -1) currentShooterIndex +=1
             break
     }
-    squares[currentShooterIndex].classList.add('shooter')
+    squares[currentShooterIndex].classList.add('camera')
 }
 
 document.addEventListener('keydown', moveShooter)
 
 function moveInvaders(){
     const leftEdge = alienInvaders[0] % width === 0;
-    const rightEdge = alienInvaders[alienInvaders.length -1] % width === width-1; //we minus one on the length because we need the index
+    const rightEdge = alienInvaders[alienInvaders.length -1] % width === width-1; //minus one on the length because we need the index
     remove();
    
     if(rightEdge && isGoingRight){
@@ -84,7 +88,8 @@ function moveInvaders(){
     if (squares[currentShooterIndex].classList.contains('invader')){
         resultDisplay.innerHTML = 'Game Over'
         clearInterval(invadersId)
-        squares[currentShooterIndex].classList.remove('shooter') //removes shooter from grid on game over
+        squares[currentShooterIndex].classList.remove('camera') //removes shooter from grid on game over
+        remove()
     }
     if (invadersRemoved.length === alienInvaders.length) {
         resultDisplay.innerHTML = 'You Win'
