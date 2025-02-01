@@ -13,6 +13,9 @@ let score = 0
 const leftArrow = document.getElementById('left-arrow')
 const rightArrow = document.getElementById('right-arrow')
 const shooter = document.getElementById('shooter')
+// Sound Effect
+const boomSFX = new Audio('../media/iphone-camera-capture.mp3');
+
 
 // Code by Ania Kubow - for loop creates grid by spanning 255 square divs and appending them to a grid of 15 by 15
 for (let i = 0; i < width * width; i++) {
@@ -133,6 +136,7 @@ function shoot(e) {
             squares[currentFlashIndex].classList.remove('flash')
             squares[currentFlashIndex].classList.remove('invader')
             squares[currentFlashIndex].classList.add('boom')
+            boomSFX.play()
 
             setTimeout(() => squares[currentFlashIndex].classList.remove('boom'), 300)
             clearInterval(flashId)
