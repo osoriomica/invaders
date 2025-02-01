@@ -206,8 +206,8 @@ main {
 
 /* Invaders Game controls */
 #game-controls {
+    display: flex;
     justify-content: space-around;
-    columns: 3;
     max-width: fit-content;
     align-items: center;
     margin-top: 1rem;
@@ -222,6 +222,11 @@ main {
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
     /* Shadow effect from: https://css-tricks.com/adding-shadows-to-svg-icons-with-css-and-svg-filters/ */
 }
+#left-arrow:active {
+    height: 3.5rem;
+    width: 3.5rem;
+    padding: .5rem;
+}
 
 #shooter {
     background: url(../media/shooter.svg) no-repeat center center/cover;
@@ -230,12 +235,25 @@ main {
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
+#shooter:active {
+    height: 3.5rem;
+    width: 3.5rem;
+    padding: .5rem;
+}
+
 #right-arrow {
     background: url(../media/ddd-right-arrow.svg) no-repeat center center/cover;
     height: 4rem;
     width: 4rem;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
+
+#right-arrow:active {
+    height: 3.5rem;
+    width: 3.5rem;
+    padding: .5rem;
+}
+
 
 
 /* footer section - styles */

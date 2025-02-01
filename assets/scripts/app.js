@@ -9,12 +9,15 @@ let invadersId
 let isGoingRight = true
 let direction = 1
 let score = 0
-// on-screen buttons
+
+// On-screen buttons
 const leftArrow = document.getElementById('left-arrow')
 const rightArrow = document.getElementById('right-arrow')
 const shooter = document.getElementById('shooter')
-// Sound Effect
-const boomSFX = new Audio('../media/iphone-camera-capture.mp3');
+
+// Sound Effect // Audio() constructor - https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement/Audio
+const boomSFX = new Audio('assets/media/iphone-camera-capture.mp3')
+boomSFX.volume = 0.1
 
 
 // Code by Ania Kubow - for loop creates grid by spanning 255 square divs and appending them to a grid of 15 by 15
@@ -52,19 +55,7 @@ function remove() {
     }
 }
 
-// Original code by Ania Kubow: 
-//     switch(e.key){
-//         case 'ArrowLeft':
-//             if (currentShooterIndex % width !==0) currentShooterIndex -=1
-//             break
-//         case 'ArrowRight':
-//             if (currentShooterIndex % width <width -1) currentShooterIndex +=1
-//             break
-//     }
-//     squares[currentShooterIndex].classList.add('camera')
-// }
-
-//Move shooter function - pressing the key arrows or clicking on the arrow buttons 
+//Move shooter function - pressing the key arrows or clicking on the arrow buttons - based on Ania Kubow's code
 function moveShooter(e) {
     squares[currentShooterIndex].classList.remove('camera')
     if ((e.key === 'ArrowLeft' || e.target.id === "left-arrow") && currentShooterIndex % width !== 0) {
@@ -82,7 +73,7 @@ document.addEventListener('keydown', moveShooter)
 leftArrow.addEventListener("click", moveShooter)
 rightArrow.addEventListener('click', moveShooter)
 
-// Move invaders function by Anian Kubow
+// Move invaders function by Ania Kubow
 function moveInvaders() {
     const leftEdge = alienInvaders[0] % width === 0;
     const rightEdge = alienInvaders[alienInvaders.length - 1] % width === width - 1; //minus one on the length because we need the index
@@ -136,7 +127,7 @@ function shoot(e) {
             squares[currentFlashIndex].classList.remove('flash')
             squares[currentFlashIndex].classList.remove('invader')
             squares[currentFlashIndex].classList.add('boom')
-            boomSFX.play()
+            
 
             setTimeout(() => squares[currentFlashIndex].classList.remove('boom'), 300)
             clearInterval(flashId)
@@ -150,6 +141,7 @@ function shoot(e) {
     }
     if (e.key === 'ArrowUp' || e.target.id === 'shooter') {
         flashId = setInterval(moveFlash, 100)
+        boomSFX.play() 
     }
 }
 
