@@ -59,7 +59,7 @@ h3 {
     margin-bottom: auto;
 }
 
-/* Header - styles */
+/* Header */
 .navbar,
 footer a,
 p {
@@ -80,7 +80,7 @@ nav {
     --bs-nav-link-hover-color: var(--highlight1);
 }
 
-/* Main Section - styles */
+/* Main Section - general */
 main {
     background: url(../media/background.webp) no-repeat bottom center/cover;
     height: 100vh;
@@ -92,7 +92,12 @@ main {
     z-index: 1;
 }
 
-/* main - homepage */
+/* 404 */
+.error-code {
+    font-size: 2.5rem;
+
+}
+/* homepage */
 
 .main-text-bg {
     padding: 2.4rem 2rem 0;
@@ -106,35 +111,119 @@ main {
     background-image: url(../media/6x4-road-sign.webp);
     background-repeat: no-repeat;
     background-size: contain;
-    /* filter functions on w3schools: https://www.w3schools.com/cssref/css3_pr_filter.php */
+    /* filter functions from w3schools: https://www.w3schools.com/cssref/css3_pr_filter.php */
     filter: sepia(30%) drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4)) opacity(95%);
 }
 
-
-
-/* game - styles*/
-#game-controls {
-    display: flex;
+.main-text-bg .btn{
+    color: var(--light-text);
+    font-size: calc(1rem+1vw);
+    padding: 0.5rem 1rem ;
+    background-color: var(--highlight1);
 }
 
+/* Invaders game */
+
+#game-options{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 .play-btn {
-    color: var(--dark-text);
     padding: 0.2rem;
-    background-color: var(--highlight1);
     font-family: 'Press Start 2p', serif;
     font-size: .75rem;
 }
 
-.btn {
+#game-options .btn {
     border-radius: .15rem;
     transition: color .5s ease-in-out;
+    justify-content: space-between;
+    color: var(--light-text);
+    font-size: calc(1rem+1vw);
+    padding: 0 3rem ;
 }
 
-/* 404 */
-.error-code {
-    font-size: 2.5rem;
-
+#game{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--bg-dark);
 }
+#main-game h1{
+    margin-top: 1rem;
+    padding-left: 1rem;
+    font-size: smaller;
+}
+
+.grid{
+    width: 320px;
+    height: 320px;
+    border: solid 1px var(--bg-dark);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    background-color: rgb(40,48,67,0.7);
+}
+
+.grid div{
+    width: 21px;
+    height: 21px;
+    box-sizing: border-box;
+}
+
+.invader{
+    background: url(../media/red-invader.svg)no-repeat center center/cover;
+    filter: drop-shadow(1px 3px 1px rgb(0 0 0 / 0.4));
+}
+.shooter{
+    background: url(../media/shooter.svg)no-repeat center center/cover;
+    filter: drop-shadow(1px 3px 1px rgb(0 0 0 / 0.4));
+}
+.flash{
+    background: url(../media/flash.svg)no-repeat center center/cover;
+    filter: drop-shadow(1px 3px 1px rgb(0 0 0 / 0.4));
+}
+.boom{
+    background: url(../media/cracked-invader.svg)no-repeat center center/cover;
+    filter: drop-shadow(1px 3px 1px rgb(0 0 0 / 0.4));
+}
+
+/* Invaders Game controls */
+#game-controls {
+    justify-content: space-around;
+    columns: 3;
+    max-width: fit-content;
+    align-items: center;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#left-arrow {
+    background: url(../media/ddd-left-arrow.svg) no-repeat center center/cover;
+    height: 4rem;
+    width: 4rem;
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    /* Shadow effect from: https://css-tricks.com/adding-shadows-to-svg-icons-with-css-and-svg-filters/ */
+}
+
+#camera {
+    background: url(../media/camera.svg) no-repeat center center/cover;
+    height: 4rem;
+    width: 4rem;
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+}
+
+#right-arrow {
+    background: url(../media/ddd-right-arrow.svg) no-repeat center center/cover;
+    height: 4rem;
+    width: 4rem;
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+}
+
 
 /* footer section - styles */
 footer {
@@ -189,39 +278,6 @@ p {
 #social a:hover {
     color: var(--highlight1);
     transition: color .25s ease-in-out;
-}
-
-/* Invaders.html styles */
-#game-controls {
-    justify-content: space-around;
-    columns: 3;
-    max-width: fit-content;
-    align-items: center;
-    margin-top: 2rem;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#left-arrow {
-    background: url(../media/ddd-left-arrow.svg) no-repeat center center/cover;
-    height: 4rem;
-    width: 4rem;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
-    /* Shadow effect from: https://css-tricks.com/adding-shadows-to-svg-icons-with-css-and-svg-filters/ */
-}
-
-#camera {
-    background: url(../media/camera.svg) no-repeat center center/cover;
-    height: 4rem;
-    width: 4rem;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
-}
-
-#right-arrow {
-    background: url(../media/ddd-right-arrow.svg) no-repeat center center/cover;
-    height: 4rem;
-    width: 4rem;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
 /* Media queries */

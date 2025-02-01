@@ -50,17 +50,22 @@
     </header>
 
     <!-- main -->
-    <main>
-        <!-- Game options -->
-        <div id="game-options">
-            <h1 class="results"></h1>
-            <button id="pause" type="button" class="btn">Pause</button>
-            <button id="restart" type="button" class="btn">New Game</button>
-        </div>
+    <main id="main-game">
         
         <!-- Game -->
-        <h1 class="results">0</h1>
-        
+        <section id="game">
+
+        <!-- Game options -->
+        <div id="game-options">
+            <button id="pause" type="button" class="btn play-btn">Pause</button>
+            <button id="restart" type="button" class="btn play-btn">New Game</button>
+        </div>
+
+        <!-- Results -->
+        <h1 class="result">Score: <span class="score">000</span></h1>
+        </section>
+
+        <!-- Grid -->
         <div class="grid"></div>
         
         
