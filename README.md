@@ -101,12 +101,14 @@ The buttons and links are formatted so that the user can interact intuitively.
 
 ### Technologies used:
 - Languages: HTML5, CSS3, JS 
+- Bootstrap 5.2.3
 - GitHub: to host my project  
 - Visual Studio Code: IDE connected to github codespaces
 - Google Fonts: Find and import font families
 - Wireframe.cc: Make initial wireframes 
 - canva.com- Create, edit and export sprite elements and draft my wireframes and overall design before translating it to html/css code. 
 - coolors.co- Create the colour palette
+- Font Awesome - arrow icons
 - cloudconvert.com: convert and optimise images for the web. 
 
 ## TESTING

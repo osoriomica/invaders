@@ -49,6 +49,10 @@ body {
     background-color: var(--bg-dark);
 }
 
+p{
+    margin-bottom: .5rem;
+}
+
 h1,
 h2,
 h3 {
@@ -56,7 +60,7 @@ h3 {
     font-family: 'Press Start 2P', serif;
     /* Calc() function picked from Inspect element values and edited for intended look */
     font-size: calc(1rem + 1.20vw);
-    margin-bottom: auto;
+    margin-bottom: .3rem;
 }
 
 /* Header */
@@ -68,8 +72,7 @@ p {
 
 nav {
     max-width: 1800px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 
 .navbar-toggler {
@@ -87,8 +90,7 @@ main {
     width: 100%;
     /* constrain size on extra large screens */
     max-width: 1800px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     z-index: 1;
 }
 
@@ -97,6 +99,7 @@ main {
     font-size: 2.5rem;
 
 }
+
 /* homepage */
 
 .main-text-bg {
@@ -115,24 +118,40 @@ main {
     filter: sepia(30%) drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4)) opacity(95%);
 }
 
-.main-text-bg .btn{
-    color: var(--light-text);
-    font-size: calc(1rem+1vw);
-    padding: 0.5rem 1rem ;
+.main-text-bg .btn {
+    color: var(--dark-text);
+    padding: 0.4rem 0.7rem;
     background-color: var(--highlight1);
+}
+
+.main-text-bg .btn :hover{
+    color: var(--light-text);
+}
+
+.main-text-bg .btn :active{
+    color: var(--light-text);
+}
+
+.center-align {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Invaders game */
 
-#game-options{
+#game-options {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
+
 .play-btn {
-    padding: 0.2rem;
     font-family: 'Press Start 2p', serif;
     font-size: .75rem;
+    width: fit-content;
+
 }
 
 #game-options button {
@@ -140,66 +159,66 @@ main {
     transition: color .5s ease-in-out;
     justify-content: space-around;
     color: var(--light-text);
-    font-size: calc(1rem+1vw);
-    padding: 0 3rem ;
+    padding: 0.5rem 1.5rem;
     width: max-content;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     text-decoration: underline;
     text-decoration-color: var(--highlight1);
 }
-#game-options button:hover{
+
+#game-options button:hover {
     text-decoration-color: var(--highlight2);
     color: #fafafa;
-    transition:  0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
-#game{
-    margin-left: auto;
-    margin-right: auto;
+#game {
+    margin: 0 auto;
     background-color: var(--bg-dark);
 }
-#main-game h1{
+
+#main-game h1 {
     margin-top: 1rem;
     padding-left: 1rem;
     font-size: smaller;
     width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 
-.grid{
+.grid {
     width: 320px;
     height: 320px;
     border: solid 1px var(--bg-dark);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     margin-top: 1rem;
-    background-color: rgb(40,48,67,0.7);
+    background-color: rgb(40, 48, 67, 0.7);
 }
 
-.grid div{
+.grid div {
     width: 21px;
     height: 21px;
     box-sizing: border-box;
 }
 
-.invader{
+.invader {
     background: url(../media/red-invader.svg)no-repeat center center/cover;
     filter: drop-shadow(1px 3px 1px rgb(0 0 0 / 0.4));
 }
-.camera{
+
+.camera {
     background: url(../media/camera.svg)no-repeat center center/cover;
     filter: drop-shadow(1px 3px 1px rgb(0 0 0 / 0.4));
 }
-.flash{
+
+.flash {
     background: url(../media/flash.svg)no-repeat center center/cover;
     filter: drop-shadow(1px 3px 1px rgb(0 0 0 / 0.4));
 }
-.boom{
+
+.boom {
     background: url(../media/cracked-invader.svg)no-repeat center center/cover;
     filter: drop-shadow(1px 3px 1px rgb(0 0 0 / 0.4));
 }
@@ -211,8 +230,7 @@ main {
     max-width: fit-content;
     align-items: center;
     margin-top: 1rem;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 
 #left-arrow {
@@ -222,6 +240,7 @@ main {
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
     /* Shadow effect from: https://css-tricks.com/adding-shadows-to-svg-icons-with-css-and-svg-filters/ */
 }
+
 #left-arrow:active {
     height: 3.5rem;
     width: 3.5rem;
@@ -274,12 +293,12 @@ footer {
     justify-content: space-between;
     /* constrains size above 1800px */
     max-width: 1800px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+
 }
 
 #footer>a,
-p {
+#footer>p {
     align-self: center;
     margin: .5rem 0;
 }
@@ -290,7 +309,7 @@ p {
     justify-content: center;
     list-style-type: none;
     align-items: baseline;
-    margin: .5rem 0;
+    margin: 0.5rem 0;
 }
 
 #social li {
@@ -313,7 +332,7 @@ p {
 
 /* Media queries */
 /* large phones or landscape mobile screens (568px and up) */
-@media screen and (min-width: 568px) {
+@media screen and (min-width: 568px)  {
 
     /* Main - homepage */
     .main-text-bg {
@@ -326,11 +345,14 @@ p {
         /* Different background image for larger screens */
         background-image: url(../media/road-sign.webp);
     }
+    
+    .main-text-bg h1 {
+        margin-bottom: 0.5rem;
+    }
 
     #social {
         display: inline-flex;
     }
-
 }
 
 /* large devices (laptops and desktops 992px and up) */
@@ -351,7 +373,8 @@ p {
     .main-text-bg h1 {
         margin-bottom: 1.5rem;
     }
-    .play-btn {
-        margin-top: 2.4rem;
+
+    .main-text-bg .btn {
+        margin-top: 2rem;
     }
 }
