@@ -31,28 +31,33 @@ The user: anyone should be able to play and hopefully enjoy the experience. On o
 - As a user, I’d like to share my score with social media and maybe challenge a friend.??
 
 ### Features
-Layout: The website is a single page to keep the focus on the game as the main focal point. 
-Welcome message: the homepage has a simple welcome message like a French road sign (blue background, green border with white uppercase fonts, vertically centred) with a tiny space Invader on the top right corner. The message displayed offers quick instructions and a button to start the game. Maybe transitioning with a loading animation screen before the rest of the code can run. 
+Layout: The website is presented in two pages, keeping the focus on the game as the main feature. 
+
+#### homepage: 
+- Welcome message: the homepage has a simple welcome message like a French road sign (blue background, white inner border and text written in white uppercase -but with an arcade-inspired font). The welcome message offers quick instructions and a button to start the game. 
+- Maybe transitioning with a loading animation screen before the rest of the code can run. 
 
 By Jordiet. from Reus - París, CC BY-SA 2.0, https://commons.wikimedia.org/w/index.php?curid=76505381 
 
-Instructions: The user can click on the instructions button to open a modal featuring a quick intro to the game and playing instructions. Button to close the modal reads “Got it!”.
-Game Controls: Three buttons above the game’s grid that the user can click on: New Game, Pause and Resume.
-Choose your shooter/invader/space. The user can choose their favourite shooter/invader/space from a pre-set options menu underneath the game’s grid. Each space loads a different background song A default space is loaded at the start of the game and on clicking the New Game button.
-Volume controls: The user can click on the audio icons to control volume.
-A footer with social media links to share the game.
-Gameplay: 
-On game start, the shooter is placed at the bottom centre of the grid. The grouped of invaders appear at the top left corner and start moving side to side, descending one space towards the shooter.
+- Instructions: The user can click on the instructions button to open a modal featuring a quick intro to the game and playing instructions. 
+#### game page:
+- Button to close the modal reads “Got it!”.
+- Game Controls: Three buttons above the game’s grid that the user can click on: New Game, Pause and Resume.
+- Choose your shooter/invader/space. The user can choose their favourite shooter/invader/space from a pre-set options menu underneath the game’s grid. Each space loads a different background song A default space is loaded at the start of the game and on clicking the New Game button.
+- Sound controls: The user can click on the audio icons to control volume.
+- A footer with social media links to share the game.
+##### Gameplay: 
+- On game start, the shooter is placed at the bottom centre of the grid. The grouped of invaders appear at the top left corner and start moving side to side, descending one space towards the shooter.
 Using Left and Right arrows, the user can move the shooter side to side but not past the edge of the grid. 
 Using the Up arrow, the shooter can fire against the invaders. 
-3 credits are given to the user to play before the game is over. 
-Each time the shooter hits an invader, this disappears and the score is increased by one. 
-The game is won by destroying all the invaders before they touch the shooter or the bottom of the grid. If the 
-The game is lost if the invaders reach the shooter or the bottom of the grid. 
-If all invaders are destroyed. Send a new wave of faster invaders with differentiated by a different icon.??
-At random, one “boss invader” can appear during the game and shoot back at the user. The user can fire at this invader too. If the user is hit by the “boss invader”, the shooter looses a credit/life.??
-Game Over: the end of the game. A modal appears with the final score and a Congratulations! Or Game Over message. (And the option to share this on Instagram/Facebook??).   
-#### Future features to add:
+- 3 credits are given to the user to play before the game is over. 
+- Each time the shooter hits an invader, this disappears and the score is increased by one. 
+- The game is won by destroying all the invaders before they touch the shooter or the bottom of the grid. If the 
+- The game is lost if the invaders reach the shooter or the bottom of the grid. 
+- If all invaders are destroyed. Send a new wave of faster invaders with differentiated by a different icon.??
+- At random, one “boss invader” can appear during the game and shoot back at the user. The user can fire at this invader too. If the user is hit by the “boss invader”, the shooter looses a credit/life.??
+- Game Over: the end of the game. A modal appears with the final score and a Congratulations! Or Game Over message. (And the option to share this on Instagram/Facebook??).   
+#### Possible features to add in a future deployment:
 	- Scoreboard with a top 10 of the highest scores and the user’s initials. 
  	- Boss to increase difficulty of the game. 
 	- Share score to social media? 
@@ -65,35 +70,44 @@ Game Over: the end of the game. A modal appears with the final score and a Congr
 - 404 Page - Looks like you’ve reached beyond space. Button: Go back! 
 - Second and third wave of faster invaders?
 - 3 lives? Display credits 03/02/01/game over - Would you like to play again?
-- Store highest score across 3 lives.??
 - Boss with faster moving interval that shoots back at user??
 
 ### Design	
 The overall design is inspired by the original arcade aesthetic and Invader’s street art installations (see introduction).
 The colour palette is high-contrasting and the text elements easy to read.
 The buttons and links are formatted so that the user can interact intuitively.
-	- Colour Palette: 
-    red: #ec0003
-#f82d32 
 
---space-cadet: #252c3fff;
---engineering-orange: #d10003ff;
---princeton-orange: #fa932cff;
---platinum: #ddddddff;
-—antiflash-white: #efefefff;
+- Colour Palette: 
 
-252c3f-d10003-fa932c-dddddd-efefef
+	| Color             | Hex                                                                | Name                         |
+	| ----------------- | ------------------------------------------------------------------ | -----------------------------|
+	| ![#252c3f](https://placehold.co/15x15/252c3f/252c3f.png) | #252c3f | Space Cadet |
+	| ![#ff9f1c](https://placehold.co/15x15/ff9f1c/ff9f1c.png)| #ff9f1c | Orange Peel |
+	| ![#dddddd](https://placehold.co/15x15/dddddd/dddddd.png) | #dddddd | Antiflash white | 
+	| ![#102542](https://placehold.co/15x15/102542/102542.png) | #102542 | Oxford Blue |
+	| ![#d10003](https://placehold.co/15x15/d10003/d10003.png) | #d10003 | Enginneering Orange |
 
-	- Typography: Caracteres (used in French road signs) https://www.ffonts.net/Caracteres-L1.font.download#google_vignette
-	- Sounds and music:
-	- Graphics:
-	- Buttons:
-	- Background:
-	- Modals: Styled to resemble the French road signs that has been ‘invaded’ with a pixelated art installation. Format: blue background, white uppercase fonts and centred text. A tiny space Invader on the top right corner.
+- Typography (imported from Google Fonts): 
+	- Press Start 2P: Headings and highlighted buttons.
+	- Jersey 15:  General text elements. 
+- Sounds and music:
+- Graphics: 
+- Buttons:
+- Background: 
+- Modals: Styled to resemble the French road signs that has been ‘invaded’ with a pixelated art installation. Format: blue background, white uppercase fonts and centred text. A tiny space Invader on the top right corner.
 
 ## WIREFRAMES  
-### TECHNOLOGIES USED  
-HTML5, CSS3, JS, GitHub, Visual Studio Code, Google Fonts, ffonts.net, Wireframe.cc, Abode Color Palette (https://color.adobe.com/) canva.com, SVG REPO (www.svgrepo.com) to source and customise the svg graphics. https://cloudconvert.com/svg-to-webp to convert and optimise images for the web. 
+### Information Architecture diagram
+
+### Technologies used:
+- Languages: HTML5, CSS3, JS 
+- GitHub: to host my project  
+- Visual Studio Code: IDE connected to github codespaces
+- Google Fonts: Find and import font families
+- Wireframe.cc: Make initial wireframes 
+- canva.com- Create, edit and export sprite elements and draft my wireframes and overall design before translating it to html/css code. 
+- coolors.co- Create the colour palette
+- cloudconvert.com: convert and optimise images for the web. 
 
 ## TESTING
 Online validation: HTML, CSS, JS, Lighthouse on google
@@ -106,7 +120,7 @@ If using TDD, demonstrate in commit log. Document it in Readme or separate file.
 
 ### Testing user stories
 
-### BUGS
+### Bugs
 Navbar toggle not behaving properly. Issue: Target was not set to correct ID. Fix: Using bootstrap’s documentation, I made sure both the parent’s data-bs-target and the id of its descendant div were the same.  
 Background image on .main-text-bg not displaying responsively. Issue: The text would overflow the container and the image was not growing with its parent div. Fix: set width to 100%, and height to 100vh so the text would stop overflowing and the image would occupy the full width of its container.
 
@@ -115,7 +129,7 @@ Background image on .main-text-bg not displaying responsively. Issue: The text w
 	The base javascript code for the game comes from Ania Kubów ( https://youtu.be/s6LrpUTQQn0?si=DZ24tUrVomU48pgm)
 	
 	
-### MEDIA
+### Media
 	Invader cut out and edited from photo by Guilhem Vellut from Paris, France. https://www.flickr.com/photos/o_0/28023125416/
 Camera pixel illustration⁠ from Rafiico Studio on Canva.com https://www.canva.com/photos/MAFHfE3RSy0/
 Pixel art happy girl group character⁠ from Patinya_P_ANG on Canva.com https://www.canva.com/photos/MAFs6D_S9Rs/
