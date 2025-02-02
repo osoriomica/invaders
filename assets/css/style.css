@@ -273,7 +273,36 @@ main {
     padding: .5rem;
 }
 
+/* Sound control styles */
+.sound.off{
+    background: url('../media/volume-mute-fill.svg') no-repeat center center/cover;
+    height: 2.5rem;
+    width: 2.5rem;
+    filter: invert();
+    float: right;
+    margin-right: 2rem;
+}
 
+.sound-off:hover{
+    opacity: .5;
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+.sound-on{
+    background: url('../media/volume-up-fill.svg') no-repeat center center/cover;
+    height: 2.5rem;
+    width: 2.5rem;
+    filter: invert();
+    float: right;
+    margin-right: 2rem;
+}
+
+.sound-on:hover{
+    opacity: .5;
+    width: 2.4rem;
+    height: 2.4rem;
+}
 
 /* footer section - styles */
 footer {
