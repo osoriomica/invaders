@@ -49,7 +49,7 @@ body {
     background-color: var(--bg-dark);
 }
 
-p{
+p {
     margin-bottom: .5rem;
 }
 
@@ -66,7 +66,7 @@ h3 {
 /* Header */
 .navbar,
 footer a,
-p {
+p, h4{
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
@@ -118,17 +118,20 @@ main {
     filter: sepia(30%) drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4)) opacity(95%);
 }
 
-.main-text-bg .btn {
+.main-text-bg .btn,
+.modal .btn {
     color: var(--dark-text);
     padding: 0.4rem 0.7rem;
     background-color: var(--highlight1);
 }
 
-.main-text-bg .btn :hover{
+.main-text-bg .btn,
+.modal .btn :hover {
     color: var(--light-text);
 }
 
-.main-text-bg .btn :active{
+.main-text-bg .btn,
+.modal .btn :active {
     color: var(--light-text);
 }
 
@@ -153,14 +156,13 @@ main {
     font-family: 'Press Start 2p', serif;
     font-size: .75rem;
     width: fit-content;
-    
+
 }
 
-#game-options button{
-    transition: color .5s ease-in-out;
+#game-options button {
     justify-content: space-around;
     color: var(--light-text);
-    padding: 0.5rem 1.5rem;
+    padding: 0.3rem 0.7rem;
     width: max-content;
     margin: 0 auto;
     background-color: var(--highlight2);
@@ -168,8 +170,15 @@ main {
 }
 
 #game-options button:hover {
-    color: #fafafa;
-    transition: 0.3s ease-in-out;
+    background-color: var(--light-text);
+    color: var(--dark-text);
+    transition: color 0.5s ease-in-out;
+}
+
+#game-options button:active {
+    background-color: var(--light-text);
+    color: var(--dark-text);
+    transition: color 0.5s ease-in-out;
 }
 
 #game {
@@ -182,51 +191,31 @@ main {
     font-size: smaller;
     width: fit-content;
     margin: 0 auto;
-   
+
 }
 
 /* Start, pause and restart styles */
-#restart, #start-pause{
+.hidden-buttons {
     display: none;
 }
 
-.popover{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0,0,0,0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+/* Start Game sModal */
+.modal {
+    --bs-modal-bg: var(--bg-dark);
+    padding-top: 0.1rem;
+
 }
 
-.popover.show{
-    visibility: visible;
-    opacity: 1;
-}
-
-.popover-content{
-    background: url(../media/6x4-road-sign.webp);
-    padding: 2rem;
+.modal-body {
     text-align: center;
-    width: 80%;
-    max-width: 300px; /* 600px for larger screens*/
-    color: var(--light-text);
 }
 
-.popover h2{
-    font-size: smaller;
+.modal-title {
     color: var(--highlight1);
-    margin-bottom: .5rem;
 }
 
 /* Sound control styles */
-.sound-on{
+.sound-on {
     background: url('../media/volume-mute-fill.svg') no-repeat center center/cover;
     height: 2.5rem;
     width: 2.5rem;
@@ -235,17 +224,17 @@ main {
     margin-right: 2rem;
 }
 
-.sound:hover{
+.sound:hover {
     opacity: .5;
     width: 1.4rem;
     height: 1.4rem;
 }
 
-.sound-on{
+.sound-on {
     background: url('../media/volume-mute-fill.svg') no-repeat center center/cover;
 }
 
-.sound-off{
+.sound-off {
     background: url('../media/volume-up-fill.svg') no-repeat center center/cover;
 }
 
@@ -270,6 +259,9 @@ main {
 .invader {
     background: url(../media/red-invader.svg)no-repeat center center/cover;
     filter: drop-shadow(1px 3px 1px rgb(0 0 0 / 0.4));
+    height:2rem;
+    width: 2rem;
+
 }
 
 .camera {
@@ -293,8 +285,7 @@ main {
     justify-content: space-around;
     max-width: fit-content;
     align-items: center;
-    margin-top: 1rem;
-    margin: 0 auto;
+    margin: 1rem auto 0;
 }
 
 #left-arrow {
@@ -394,7 +385,7 @@ footer {
 
 /* Media queries */
 /* large phones or landscape mobile screens (568px and up) */
-@media screen and (min-width: 568px)  {
+@media screen and (min-width: 568px) {
 
     /* Main - homepage */
     .main-text-bg {
@@ -407,7 +398,7 @@ footer {
         /* Different background image for larger screens */
         background-image: url(../media/road-sign.webp);
     }
-    
+
     .main-text-bg h1 {
         margin-bottom: 0.5rem;
     }
@@ -442,19 +433,19 @@ footer {
 
     /* Grid and sprites */
     .grid {
-    width: 620px;
-    height: 620px;
-    /* border: solid 1px var(--bg-dark); */
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin: 1rem auto;
-    background-color: rgb(40, 48, 67, 0.8);
-}
+        width: 620px;
+        height: 620px;
+        /* border: solid 1px var(--bg-dark); */
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 1rem auto;
+        background-color: rgb(40, 48, 67, 0.8);
+    }
 
     .grid div {
-    width: 40px;
-    height: 40px;
-    box-sizing: border-box;
-}
+        width: 40px;
+        height: 40px;
+        box-sizing: border-box;
+    }
 }

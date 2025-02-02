@@ -5,7 +5,7 @@ const scoreDisplay = document.querySelector('.score')
 const width = 15
 const invadersRemoved = [] //keeps track of shooted invaders so they're not drawn again when moving
 let currentShooterIndex = 217
-let invadersId
+let invadersId = 0
 let isGoingRight = true
 let direction = 1
 let score = 0
@@ -15,6 +15,12 @@ const leftArrow = document.getElementById('left-arrow')
 const rightArrow = document.getElementById('right-arrow')
 const shooter = document.getElementById('shooter')
 const startPause = document.getElementById('start-pause')
+const restartButton = document.getElementById('restart')
+
+// Modal elements 
+const gameModal = new bootstrap.Modal(document.getElementById('game-modal'))
+const startGameButton = document.getElementById('start-game')
+
 
 // Sound - used for testing
 // let soundSFX = {
@@ -123,8 +129,6 @@ function moveInvaders() {
     }
 }
 
-invadersId = setInterval(moveInvaders, 300)
-
 // Shoot function - original code by Ania Kubow. Edited to customise game
 function shoot(e) {
     let flashId
@@ -155,6 +159,25 @@ function shoot(e) {
         flashId = setInterval(moveFlash, 100)
         boomSFX.play() 
     }
+}
+
+// show modal on page load
+window.onload = () => {
+    setTimeout(() =>{
+        gameModal.show()
+    }, 500)
+}
+
+// start game on modal>button click
+startGameButton.addEventListener('click', () => {
+    gameModal.hide();
+    startGame();
+})
+
+function startGame() {
+    invadersId = setInterval(moveInvaders, 350);
+    startPause.classList.remove('hidden-buttons')
+    restartButton.classList.remove('hidden-buttons')
 }
 
 document.addEventListener('keydown', shoot)
