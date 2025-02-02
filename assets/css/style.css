@@ -185,9 +185,45 @@ main {
    
 }
 
-/* #restart, #start-pause{
+/* Start, pause and restart styles */
+#restart, #start-pause{
     display: none;
-} */
+}
+
+.popover{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.popover.show{
+    visibility: visible;
+    opacity: 1;
+}
+
+.popover-content{
+    background: url(../media/6x4-road-sign.webp);
+    padding: 2rem;
+    text-align: center;
+    width: 80%;
+    max-width: 300px; /* 600px for larger screens*/
+    color: var(--light-text);
+}
+
+.popover h2{
+    font-size: smaller;
+    color: var(--highlight1);
+    margin-bottom: .5rem;
+}
 
 /* Sound control styles */
 .sound-on{
