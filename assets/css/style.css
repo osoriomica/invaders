@@ -145,29 +145,29 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 0 2rem;
+    margin-top: .7rem;
 }
 
 .play-btn {
     font-family: 'Press Start 2p', serif;
     font-size: .75rem;
     width: fit-content;
-
+    
 }
 
-#game-options button {
-    border-radius: .15rem;
+#game-options button{
     transition: color .5s ease-in-out;
     justify-content: space-around;
     color: var(--light-text);
     padding: 0.5rem 1.5rem;
     width: max-content;
     margin: 0 auto;
-    text-decoration: underline;
-    text-decoration-color: var(--highlight1);
+    background-color: var(--highlight2);
+    border-radius: 3px;
 }
 
 #game-options button:hover {
-    text-decoration-color: var(--highlight2);
     color: #fafafa;
     transition: 0.3s ease-in-out;
 }
@@ -178,23 +178,51 @@ main {
 }
 
 #main-game h1 {
-    margin-top: 1rem;
-    padding-left: 1rem;
+    padding-bottom: 1rem;
     font-size: smaller;
     width: fit-content;
     margin: 0 auto;
+   
 }
 
+/* #restart, #start-pause{
+    display: none;
+} */
+
+/* Sound control styles */
+.sound-on{
+    background: url('../media/volume-mute-fill.svg') no-repeat center center/cover;
+    height: 2.5rem;
+    width: 2.5rem;
+    filter: invert();
+    float: right;
+    margin-right: 2rem;
+}
+
+.sound:hover{
+    opacity: .5;
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+.sound-on{
+    background: url('../media/volume-mute-fill.svg') no-repeat center center/cover;
+}
+
+.sound-off{
+    background: url('../media/volume-up-fill.svg') no-repeat center center/cover;
+}
+
+/* Grid and sprites */
 .grid {
     width: 320px;
     height: 320px;
-    border: solid 1px var(--bg-dark);
+    /* border: solid 1px var(--bg-dark); */
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin: 0 auto;
-    margin-top: 1rem;
-    background-color: rgb(40, 48, 67, 0.7);
+    margin: 1rem auto;
+    background-color: rgb(40, 48, 67, 0.8);
 }
 
 .grid div {
@@ -271,37 +299,6 @@ main {
     height: 3.5rem;
     width: 3.5rem;
     padding: .5rem;
-}
-
-/* Sound control styles */
-.sound.off{
-    background: url('../media/volume-mute-fill.svg') no-repeat center center/cover;
-    height: 2.5rem;
-    width: 2.5rem;
-    filter: invert();
-    float: right;
-    margin-right: 2rem;
-}
-
-.sound-off:hover{
-    opacity: .5;
-    width: 2.4rem;
-    height: 2.4rem;
-}
-
-.sound-on{
-    background: url('../media/volume-up-fill.svg') no-repeat center center/cover;
-    height: 2.5rem;
-    width: 2.5rem;
-    filter: invert();
-    float: right;
-    margin-right: 2rem;
-}
-
-.sound-on:hover{
-    opacity: .5;
-    width: 2.4rem;
-    height: 2.4rem;
 }
 
 /* footer section - styles */
@@ -406,4 +403,22 @@ footer {
     .main-text-bg .btn {
         margin-top: 2rem;
     }
+
+    /* Grid and sprites */
+    .grid {
+    width: 620px;
+    height: 620px;
+    /* border: solid 1px var(--bg-dark); */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 1rem auto;
+    background-color: rgb(40, 48, 67, 0.8);
+}
+
+    .grid div {
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+}
 }
