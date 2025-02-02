@@ -149,7 +149,7 @@ main {
     flex-direction: row;
     justify-content: space-between;
     padding: 0 2rem;
-    margin-top: .7rem;
+    margin-top: .5rem;
 }
 
 .play-btn {
@@ -215,27 +215,25 @@ main {
 }
 
 /* Sound control styles */
-.sound-on {
-    background: url('../media/volume-mute-fill.svg') no-repeat center center/cover;
+.sound{
     height: 2.5rem;
     width: 2.5rem;
     filter: invert();
+    opacity: .6;
     float: right;
-    margin-right: 2rem;
+    margin-right: 1rem;
 }
 
 .sound:hover {
-    opacity: .5;
-    width: 1.4rem;
-    height: 1.4rem;
+    opacity: 1;
 }
 
 .sound-on {
-    background: url('../media/volume-mute-fill.svg') no-repeat center center/cover;
+    background: url('../media/volume-up-fill.svg') no-repeat center center/cover;
 }
 
 .sound-off {
-    background: url('../media/volume-up-fill.svg') no-repeat center center/cover;
+    background: url('../media/volume-mute-fill.svg') no-repeat center center/cover;
 }
 
 /* Grid and sprites */
@@ -246,7 +244,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin: 1rem auto;
+    margin: .5rem auto;
     background-color: rgb(40, 48, 67, 0.8);
 }
 
