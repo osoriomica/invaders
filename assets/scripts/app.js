@@ -175,12 +175,29 @@ startGameButton.addEventListener('click', () => {
 })
 
 function startGame() {
-    invadersId = setInterval(moveInvaders, 350);
-    startPause.classList.remove('hidden-buttons')
+    invadersId = setInterval(moveInvaders, 350); //sets up the initial game state, before this, the aliens are just static.
+    startPause.classList.remove('hidden-buttons') //toggles visibility of game option buttons (New Game and Start-Pause)
     restartButton.classList.remove('hidden-buttons')
+    startPause.innerHTML = 'PAUSE';
 }
 
 document.addEventListener('keydown', shoot)
 shooter.addEventListener('click', shoot)
+
+// Pause/Resume button
+function togglePauseResume(e){
+    if (invadersId){
+        //Game is running from the beginning so we need to pause it first
+        clearInterval(invadersId)
+        invadersId = ""
+        startPause.innerHTML = 'RESUME'
+    } else {
+        invadersId = setInterval(moveInvaders, 350)
+        startPause.innerHTML = 'PAUSE'
+        moveInvaders()
+    }
+}
+
+startPause.addEventListener('click', togglePauseResume)
 
 // module.exports = {soundSFX};
