@@ -202,14 +202,16 @@ startPause.addEventListener('click', togglePauseResume)
 
 // Restart button - resets game state and starts over
 function restartGame(e){
-    score = 000
-    scoreDisplay.innerHTML = score
-    invadersRemoved.length = 0
-    resultDisplay.innerHTML = ''
-    startPause.innerHTML='PAUSE'
-    alienInvaders.length = 0
-    draw()
-    invadersId = setInterval(moveInvaders, 350)
+    // score = 000
+    // scoreDisplay.innerHTML = score
+    // invadersRemoved.length = 0
+    // resultDisplay.innerHTML = ''
+    // startPause.innerHTML='PAUSE'
+    // alienInvaders.length = 0
+    // draw()
+    // invadersId = setInterval(moveInvaders, 350)
+    location.reload()
+
 
 }
 
