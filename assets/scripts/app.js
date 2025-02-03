@@ -116,15 +116,15 @@ function moveInvaders() {
         alienInvaders[i] += direction
     }
     draw()
-
-    if (squares[currentShooterIndex].classList.contains('invader')) {
+// original code by Ania Kubow, modified to address bug: game would not end unless invaders actually collided with current shooter index so they could pass by if there was a gap in the middle. 
+    if (squares[210 || 211 || 212 || 213 || 214 || 215 || 216 || 217 || 218 || 219 || 220 || 221 || 222 || 223 || 224].classList.contains('invader')) {
         resultDisplay.innerHTML = 'Game Over'
         clearInterval(invadersId)
         squares[currentShooterIndex].classList.remove('camera') //removes shooter from grid on game over
         remove() //removes all invaders on game Over
     }
     if (invadersRemoved.length === alienInvaders.length) {
-        resultDisplay.innerHTML = 'You Win'
+        resultDisplay.innerHTML = `<h4>You Win!</h4><br>You shot ${score} invaders`
         clearInterval(invadersId)
     }
 }
@@ -145,7 +145,7 @@ function shoot(e) {
             squares[currentFlashIndex].classList.add('boom')
             
 
-            setTimeout(() => squares[currentFlashIndex].classList.remove('boom'), 300)
+            setTimeout(() => squares[currentFlashIndex].classList.remove('boom'), 300) //makes .boom disappear after 300 miliseconds
             clearInterval(flashId)
 
             const InvaderRemoved = alienInvaders.indexOf(currentFlashIndex)//looks into the flash index to see if there're aliens and stores it
@@ -161,11 +161,11 @@ function shoot(e) {
     }
 }
 
-// show modal on page load
+// show modal on page load 
 window.onload = () => {
     setTimeout(() =>{
         gameModal.show()
-    }, 500)
+    }, 300)
 }
 
 // start game on modal>button click
@@ -200,4 +200,18 @@ function togglePauseResume(e){
 
 startPause.addEventListener('click', togglePauseResume)
 
+// Restart button - resets game state and starts over
+function restartGame(e){
+    score = 000
+    scoreDisplay.innerHTML = score
+    invadersRemoved.length = 0
+    resultDisplay.innerHTML = ''
+    startPause.innerHTML='PAUSE'
+    alienInvaders.length = 0
+    draw()
+    invadersId = setInterval(moveInvaders, 350)
+
+}
+
+restartButton.addEventListener('click', restartGame)
 // module.exports = {soundSFX};
