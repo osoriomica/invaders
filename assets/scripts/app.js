@@ -118,10 +118,10 @@ function moveInvaders() {
     draw()
 // original code by Ania Kubow, modified to address bug: game would not end unless invaders actually collided with current shooter index so they could pass by if there was a gap in the middle. 
     if (squares[210 || 211 || 212 || 213 || 214 || 215 || 216 || 217 || 218 || 219 || 220 || 221 || 222 || 223 || 224].classList.contains('invader')) {
-        resultDisplay.innerHTML = 'Game Over'
+        resultDisplay.innerHTML = `<h4>Game Over</h4> You shot ${score} invaders<br>`
         clearInterval(invadersId)
         squares[currentShooterIndex].classList.remove('camera') //removes shooter from grid on game over
-        remove() //removes all invaders on game Over
+        setTimeout(() =>remove(), 500) //removes all invaders on game Over
     }
     if (invadersRemoved.length === alienInvaders.length) {
         resultDisplay.innerHTML = `<h4>You Win!</h4><br>You shot ${score} invaders`
@@ -202,17 +202,7 @@ startPause.addEventListener('click', togglePauseResume)
 
 // Restart button - resets game state and starts over
 function restartGame(e){
-    // score = 000
-    // scoreDisplay.innerHTML = score
-    // invadersRemoved.length = 0
-    // resultDisplay.innerHTML = ''
-    // startPause.innerHTML='PAUSE'
-    // alienInvaders.length = 0
-    // draw()
-    // invadersId = setInterval(moveInvaders, 350)
     location.reload()
-
-
 }
 
 restartButton.addEventListener('click', restartGame)
