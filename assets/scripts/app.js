@@ -14,6 +14,7 @@ let score = 0
 
 
 // On-screen buttons
+const shooterOptions = document.querySelectorAll('#shooter-options .shooter')
 const leftArrow = document.getElementById('left-arrow')
 const rightArrow = document.getElementById('right-arrow')
 const shooter = document.getElementById('shooter')
@@ -24,6 +25,23 @@ const toggleSoundButton = document.getElementById('sound')
 // Modal elements 
 const gameModal = new bootstrap.Modal(document.getElementById('game-modal'))
 const startGameButton = document.getElementById('start-game')
+
+// Choose the shooter function using a forEach loop 
+shooterOptions.forEach(option => {
+    option.addEventListener('click', chooseShooter)
+})
+
+function chooseShooter(e){
+    const selectedShooter = e.target
+    console.log('Chosen shooter:', selectedShooter.id)
+
+    shooter.classList = ''
+    
+    for (const className of selectedShooter.classList){
+        shooter.classList.add(className) 
+        //this code passes each class individually to my .shooter as the classList.add() method was seeing the classes as a single class name and returning an InvalidCharacterError
+    }
+}
 
 // Sound FX with a sound object to keep the code scalable
 const soundsList = {
@@ -181,7 +199,8 @@ function shoot(e) {
             console.log(invadersRemoved)
         }
     }
-    if (e.key === 'ArrowUp' || e.target.id === 'shooter') {
+    if (e.key === 'ArrowUp' || e.key === " " || e.target.id === 'shooter') {
+        e.preventDefault()
         flashId = setInterval(moveFlash, 100)
         soundsList.boomSFX.play() 
     }
