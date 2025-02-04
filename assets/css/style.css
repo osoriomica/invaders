@@ -123,16 +123,12 @@ main {
     color: var(--dark-text);
     padding: 0.4rem 0.7rem;
     background-color: var(--highlight1);
-}
-
-.main-text-bg .btn,
-.modal .btn :hover {
+    &:hover {
     color: var(--light-text);
-}
-
-.main-text-bg .btn,
-.modal .btn :active {
+    }
+    &:active {
     color: var(--light-text);
+    }
 }
 
 .center-align {
@@ -167,18 +163,16 @@ main {
     margin: 0 auto;
     background-color: var(--highlight2);
     border-radius: 3px;
-}
-
-#game-options button:hover {
+    &:hover {
     background-color: var(--light-text);
     color: var(--dark-text);
     transition: color 0.5s ease-in-out;
-}
-
-#game-options button:active {
+    }
+    &:active {
     background-color: var(--light-text);
     color: var(--dark-text);
     transition: color 0.5s ease-in-out;
+    }
 }
 
 #game {
@@ -271,12 +265,11 @@ main {
     width: 4rem;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
     /* Shadow effect from: https://css-tricks.com/adding-shadows-to-svg-icons-with-css-and-svg-filters/ */
-}
-
-#left-arrow:active {
+    &:active {
     height: 3.5rem;
     width: 3.5rem;
     padding: .5rem;
+    }
 }
 
 .shooter1{
@@ -295,12 +288,11 @@ main {
     height: 4rem;
     width: 4rem;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
-}
-
-#shooter:active {
+    &:active {
     height: 3.5rem;
     width: 3.5rem;
     padding: .5rem;
+    }
 }
 #shooterOptions{
     max-width: 1800px;
@@ -312,13 +304,14 @@ main {
     height: 2rem;
     width: 2rem;
     filter: opacity(0.7);
-}
-#shooterOptions div:hover{
+    &:hover{
     height: 2.3rem;
     width: 2.3rem;
     filter: opacity(1);
     cursor: pointer;
+    }
 }
+
 #shooterOptions h5{
     font-family: 'Press Start 2P', serif;
 }
@@ -328,30 +321,19 @@ main {
     height: 4rem;
     width: 4rem;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    &:active {
+        height: 3.5rem;
+        width: 3.5rem;
+        padding: .5rem;
+    }
 }
 
-#right-arrow:active {
-    height: 3.5rem;
-    width: 3.5rem;
-    padding: .5rem;
-}
 
 /* Sound control styles */
 .sound{
     height: 2.5rem;
     width: 2.5rem;
     filter: invert();
-    opacity: .6;
-    float: right;
-    margin-right: 1.5rem;
-}
-
-.sound:hover {
-    opacity: 1;
-}
-
-.sound:active {
-    opacity: 1;
 }
 
 .sound-on {
@@ -361,77 +343,25 @@ main {
 .sound-off {
     background: url('../media/volume-mute-fill.svg') no-repeat center center/cover;
 }
-/* FAB button */
-.fab-container {
+
+/*Sound SFX button positioning, adapted from FAB - Floating Action Button by Florent https://codepen.io/fosmont/pen/oNbOQWd  */
+.sound-container {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
     user-select: none;
     position: absolute;
+    filter: opacity(.6);
     bottom: 30px; right: 30px;
     &:hover {
-      height: 100%;
-      .sub-button:nth-child(2) {
-          transform: translateY(-80px);
-      }
-      .sub-button:nth-child(3) {
-          transform: translateY(-140px);
-      }
-      .sub-button:nth-child(4) {
-          transform: translateY(-200px);
-      }
-      .sub-button:nth-child(5) {
-          transform: translateY(-260px);
-      }
-      .sub-button:nth-child(6) {
-          transform: translateY(-320px);
-      }
+        filter: opacity(1);
     }
-    .fab {
-      position: relative;
-      height: 70px; width: 70px;
-      background-color: $primary;
-      border-radius: 50%;
-      z-index: 2;
-      &::before {
-        content: " ";
-        position: absolute;
-        bottom: 0; right: 0;
-        height: 35px; width: 35px;
-        background-color: inherit;
-        border-radius: 0 0 10px 0;
-        z-index: -1;
-      }
-      .fab-content {
-        display: flex;
-        align-items: center; justify-content: center;
-        height: 100%; width: 100%;
-        border-radius: 50%;
-        .material-icons {
-          color: white;
-          font-size: 48px;
-        }
-      }
+    &:active {
+        filter: opacity(1);
     }
-    .sub-button {
-      position: absolute;
-      display: flex;
-      align-items: center; justify-content: center;
-      bottom: 10px; right: 10px;
-      height: 50px; width: 50px;
-      background-color: $primary;
-      border-radius: 50%;
-      transition: all .3s ease;
-      &:hover {
-        cursor: pointer;
-      }
-      .material-icons {
-        color: white;
-        padding-top: 6px;
-      }
-    }
-  }
+}
+
 /* footer section - styles */
 footer {
     /* fixed to bottom */
