@@ -126,7 +126,7 @@ If using TDD, demonstrate in commit log. Document it in Readme or separate file.
 Navbar toggle not behaving properly. Issue: Target was not set to correct ID. Fix: Using bootstrap’s documentation, I made sure both the parent’s data-bs-target and the id of its descendant div were the same.  
 Background image on .main-text-bg not displaying responsively. Issue: The text would overflow the container and the image was not growing with its parent div. Fix: set width to 100%, and height to 100vh so the text would stop overflowing and the image would occupy the full width of its container.
 start game modal closing but not initialising game. The default setting for bootstrap's modal allows the user to click outside the modal to dismiss it, but if the user did this instead of pressing the start game button, the setInterval was not being updated by the startGame(). Fix:  Set backdrop to static (the modal will not close when clicking outside of it) to force the user to click on the Start Game button.
-Function restart - button event doesn't reset the game state properly. Score goes back to 0 but Invaders continue moving. Expected: As well as the score/results display, the remaining invaders should disappear and reappear in their initial position with original numbers. 
+Function restart - button event doesn't reset the game state properly. Score goes back to 0 but Invaders continue moving. Expected: As well as the score/results display, the remaining invaders should disappear and reappear in their initial position with original numbers. Fixed: use the built-in method location.reload() to reload the page, and reset the game state to its original status. 
 
 ## DEPLOYMENT
 ## CREDITS
@@ -136,9 +136,12 @@ Function restart - button event doesn't reset the game state properly. Score goe
 ### Media
 Invader cut out and edited from photo by Guilhem Vellut from Paris, France. https://www.flickr.com/photos/o_0/28023125416/  
 Pixelated camera icon⁠ edited from the original by Rara nia nur hanifa on Canva.com https://www.canva.com/icons/MAFYvLietmQ/  
-Shooter sprite based on the artwork byt Patinya_P_ANG on Canva.com https://www.canva.com/photos/MAFs6D_S9Rs/  
 Star Pixel Art⁠ from chickchick on Canva.com https://www.canva.com/photos/MAGSKDopQAg/  
 Road sign image edited from image listing https://www.ebay.it/itm/314175660736  
+Shooter1 based on the artwork byt Patinya_P_ANG on Canva.com https://www.canva.com/photos/MAFs6D_S9Rs/  
+shooter2 made using Pixel art green retro hat by Patinya_P_Ang from Patinya_P_ANG https://www.canva.com/photos/MAFrmC84tXI/
+shooter3 cat pixel by FranGeL Katerns https://www.canva.com/icons/MAGRfqjLFK4/
+
 Sound effect: 
  - Camera capture sound effect by <a href="https://pixabay.com/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6448">freesound_community</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6448">Pixabay</a>
 
