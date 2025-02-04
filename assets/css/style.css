@@ -66,7 +66,8 @@ h3 {
 /* Header */
 .navbar,
 footer a,
-p, h4{
+p,
+h4 {
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
@@ -123,11 +124,15 @@ main {
     color: var(--dark-text);
     padding: 0.4rem 0.7rem;
     background-color: var(--highlight1);
+
     &:hover {
-    color: var(--light-text);
+        color: var(--light-text);
+        transition: color 0.5s ease-in-out;
     }
+
     &:active {
-    color: var(--light-text);
+        color: var(--light-text);
+        transition: color 0.5s ease-in-out;
     }
 }
 
@@ -163,15 +168,17 @@ main {
     margin: 0 auto;
     background-color: var(--highlight2);
     border-radius: 3px;
+
     &:hover {
-    background-color: var(--light-text);
-    color: var(--dark-text);
-    transition: color 0.5s ease-in-out;
+        background-color: var(--light-text);
+        color: var(--dark-text);
+        transition: color 0.5s ease-in-out;
     }
+
     &:active {
-    background-color: var(--light-text);
-    color: var(--dark-text);
-    transition: color 0.5s ease-in-out;
+        background-color: var(--light-text);
+        color: var(--dark-text);
+        transition: color 0.5s ease-in-out;
     }
 }
 
@@ -202,10 +209,12 @@ main {
 
 .modal-body {
     text-align: center;
+    line-height: 1.1rem;
 }
 
 .modal-title {
     color: var(--highlight1);
+    font-size: 2rem;
 }
 
 
@@ -230,9 +239,9 @@ main {
 .invader {
     background: url(../media/red-invader.svg)no-repeat center center/cover;
     filter: drop-shadow(1px 3px 1px rgb(0 0 0 / 0.4));
-    height:2rem;
+    height: 2rem;
     width: 2rem;
-    
+
 }
 
 .camera {
@@ -266,6 +275,7 @@ main {
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
     /* Shadow effect from: https://css-tricks.com/adding-shadows-to-svg-icons-with-css-and-svg-filters/ */
     cursor: pointer;
+
     &:active {
         height: 3.5rem;
         width: 3.5rem;
@@ -279,6 +289,7 @@ main {
     width: 4rem;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
     cursor: pointer;
+
     &:active {
         height: 3.5rem;
         width: 3.5rem;
@@ -286,15 +297,15 @@ main {
     }
 }
 
-.shooter1{
+.shooter1 {
     background: url(../media/shooter1.svg) no-repeat center center/cover;
 }
 
-.shooter2{
+.shooter2 {
     background: url(../media/shooter2.svg) no-repeat center center/cover;
 }
 
-.shooter3{
+.shooter3 {
     background: url(../media/shooter3.svg) no-repeat center center/cover;
 }
 
@@ -303,37 +314,50 @@ main {
     width: 4rem;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
     cursor: pointer;
+
     &:active {
-    height: 3.5rem;
-    width: 3.5rem;
-    padding: .5rem;
+        height: 3.5rem;
+        width: 3.5rem;
+        padding: .5rem;
     }
 }
 
 /* options within the modal */
-#shooter-options{
+#shooter-options {
     display: flex;
     flex-direction: row;
-    justify-content:center;
+    justify-content: center;
+    margin-bottom: .4rem;
 
 }
-#shooter-options div{
+
+#shooter-options div {
     height: 2rem;
     width: 2rem;
-    filter: opacity(0.7);
-    margin: 0 .3rem .5rem;
-    &:hover{
-    height: 2.3rem;
-    width: 2.3rem;
-    filter: opacity(1);
+    margin: 0.3rem 0.3rem .5rem;
+    background-color: var(--light-text);
+    border-radius: 25px;
     cursor: pointer;
+
+    &:hover {
+        height: 2.3rem;
+        width: 2.3rem;
+        margin: 0 0 .2rem;
+        background-color: white;
+    }
+
+    &:active {
+        height: 2.3rem;
+        width: 2.3rem;
+        margin: 0 0 .2rem;
+        background-color: white;
     }
 }
 
 
 
 /* Sound control styles */
-#sound{
+#sound {
     height: 2.5rem;
     width: 2.5rem;
     filter: invert();
@@ -356,10 +380,13 @@ main {
     user-select: none;
     position: absolute;
     filter: opacity(.6);
-    bottom: 30px; right: 30px;
+    bottom: 30px;
+    right: 30px;
+
     &:hover {
         filter: opacity(1);
     }
+
     &:active {
         filter: opacity(1);
     }

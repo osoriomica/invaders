@@ -135,17 +135,17 @@ If using TDD, demonstrate in commit log. Document it in Readme or separate file.
 	
 	
 ### Media
-Invader cut out and edited from photo by Guilhem Vellut from Paris, France. https://www.flickr.com/photos/o_0/28023125416/  
-Pixelated camera icon⁠ edited from the original by Rara nia nur hanifa on Canva.com https://www.canva.com/icons/MAFYvLietmQ/  
-Star Pixel Art⁠ from chickchick on Canva.com https://www.canva.com/photos/MAGSKDopQAg/  
-Road sign image edited from image listing https://www.ebay.it/itm/314175660736  
-Shooter1 based on the artwork byt Patinya_P_ANG on Canva.com https://www.canva.com/photos/MAFs6D_S9Rs/  
-shooter2 made using Pixel art green retro hat by Patinya_P_Ang from Patinya_P_ANG https://www.canva.com/photos/MAFrmC84tXI/
-shooter3 cat pixel by FranGeL Katerns https://www.canva.com/icons/MAGRfqjLFK4/
+- Invader cut out and edited from photo by Guilhem Vellut from Paris, France. https://www.flickr.com/photos/o_0/28023125416/  
+- Pixelated camera icon⁠ edited from the original by Rara nia nur hanifa on Canva.com https://www.canva.com/icons/MAFYvLietmQ/  
+- Star Pixel Art⁠ from chickchick on Canva.com https://www.canva.com/photos/MAGSKDopQAg/  
+- Road sign image edited from image listing https://www.ebay.it/itm/314175660736  
+- Shooter1 based on the artwork byt Patinya_P_ANG on Canva.com https://www.canva.com/photos/MAFs6D_S9Rs/  
+- shooter2 made using Pixel art green retro hat by Patinya_P_Ang from Patinya_P_ANG https://www.canva.com/photos/MAFrmC84tXI/
+- shooter3 cat pixel by FranGeL Katerns https://www.canva.com/icons/MAGRfqjLFK4/
 
 Sound effect: 
- - Camera capture sound effect by <a href="https://pixabay.com/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6448">freesound_community</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6448">Pixabay</a>
-
+- Camera capture sound effect by <a href="https://pixabay.com/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6448">freesound_community</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6448">Pixabay</a>
+- negative_beeps Sound Effect by <a href="https://pixabay.com/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6008">freesound_community</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6008">Pixabay</a>
 
 ### ACKNOWLEDGEMENTS
 Related projects: https://github.com/SJECollins/ci-pp2-pixels-arcade/tree/main

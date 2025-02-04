@@ -39,14 +39,14 @@ function chooseShooter(e){
     
     for (const className of selectedShooter.classList){
         shooter.classList.add(className) 
-        //this code passes each class individually to my .shooter as the classList.add() method was seeing the classes as a single class name and returning an InvalidCharacterError
+        //this code passes each class individually to .shooter as the classList.add() method was seeing the classes as a single class name and returning an InvalidCharacterError
     }
 }
 
 // Sound FX with a sound object to keep the code scalable
 const soundsList = {
     boomSFX: new Audio('assets/media/iphone-camera-capture.mp3'), // Audio() constructor- https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement/Audio
-    gameOverSFX: new Audio('assets/media/iphone-camera-capture.mp3'),
+    gameOverSFX: new Audio('assets/media/game-over-arcade.mp3'),
 }
 // set default volume for all sound
 Object.values(soundsList).forEach(sound => sound.volume = 0.2)
@@ -163,6 +163,7 @@ function moveInvaders() {
 // original code by Ania Kubow, modified to address bug: game would not end unless invaders actually collided with current shooter index so they could pass by if there was a gap in the middle. 
     if (squares[210 || 211 || 212 || 213 || 214 || 215 || 216 || 217 || 218 || 219 || 220 || 221 || 222 || 223 || 224].classList.contains('invader')) {
         resultDisplay.innerHTML = `<h4>Game Over</h4> You shot ${score} invaders<br>`
+        soundsList.gameOverSFX.play() 
         clearInterval(invadersId)
         squares[currentShooterIndex].classList.remove('camera') //removes shooter from grid on game over
         setTimeout(() =>remove(), 500) //removes all invaders on game Over
