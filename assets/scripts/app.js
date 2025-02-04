@@ -46,7 +46,7 @@ function toggleSound(){
     
 }
 
-//Toggle sound function
+//Original toggle sound function targetting only one Audio
 // const boomSFX = new Audio('assets/media/iphone-camera-capture.mp3')
 // boomSFX.volume = 0.1 // default volume
 
