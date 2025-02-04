@@ -1,3 +1,5 @@
+// const { soundsList } = require("./soundsfx")
+
 // Game Global Variables
 const grid = document.querySelector('.grid')
 const resultDisplay = document.querySelector('.result')
@@ -10,9 +12,6 @@ let isGoingRight = true
 let direction = 1
 let score = 0
 
-// Audio() constructor - https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement/Audio
-const boomSFX = new Audio('assets/media/iphone-camera-capture.mp3')
-boomSFX.volume = 0.1 // default volume
 
 // On-screen buttons
 const leftArrow = document.getElementById('left-arrow')
@@ -26,27 +25,42 @@ const toggleSoundButton = document.getElementById('sound')
 const gameModal = new bootstrap.Modal(document.getElementById('game-modal'))
 const startGameButton = document.getElementById('start-game')
 
+// Sound FX with a sound object to keep the code scalable
+const soundsList = {
+    boomSFX: new Audio('assets/media/iphone-camera-capture.mp3'), // Audio() constructor- https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement/Audio
+    gameOverSFX: new Audio('assets/media/iphone-camera-capture.mp3'),
+}
+// set default volume for all sound
+Object.values(soundsList).forEach(sound => sound.volume = 0.2)
 
-// Sound - used for testing
-// let soundSFX = {
-//     boomSFX: '',
-// };
-// const gameOverSFX = new Audio()
-// gameOverSFX.volume = 0
-//volume=0 for loop iterate all sounds in SFX object if e.target.id and soundsSFX.volume!==0 then turn audio off. 
+// toggle volume for every sound in soundsList
+function toggleSound(){
+    const newVolume = (toggleSoundButton.classList.contains('sound-on')) ? 0 : 0.2
+
+    // set volume for each sound in soundsList
+    Object.values(soundsList).forEach(sound => sound.volume = newVolume)
+
+    // toggle sound button background images
+    toggleSoundButton.classList.toggle('sound-on')
+    toggleSoundButton.classList.toggle('sound-off')
+    
+}
 
 //Toggle sound function
-function toggleSound(e){
-    if (toggleSoundButton.classList.contains('sound-on')){
-        toggleSoundButton.classList.add('sound-off')
-        toggleSoundButton.classList.remove('sound-on')
-        boomSFX.volume = 0 //mutes the sound
-    } else {
-        toggleSoundButton.classList.add('sound-on')
-        toggleSoundButton.classList.remove('sound-off')
-        boomSFX.volume = 0.1 //unmute the sound
-    }
-}
+// const boomSFX = new Audio('assets/media/iphone-camera-capture.mp3')
+// boomSFX.volume = 0.1 // default volume
+
+// function toggleSound(e){
+//     if (toggleSoundButton.classList.contains('sound-on')){
+//         toggleSoundButton.classList.add('sound-off')
+//         toggleSoundButton.classList.remove('sound-on')
+//         boomSFX.volume = 0 //mutes the sound
+//     } else {
+//         toggleSoundButton.classList.add('sound-on')
+//         toggleSoundButton.classList.remove('sound-off')
+//         boomSFX.volume = 0.1 //unmute the sound
+//     }
+// }
 toggleSoundButton.addEventListener('click', toggleSound)
 
 
@@ -169,7 +183,7 @@ function shoot(e) {
     }
     if (e.key === 'ArrowUp' || e.target.id === 'shooter') {
         flashId = setInterval(moveFlash, 100)
-        boomSFX.play() 
+        soundsList.boomSFX.play() 
     }
 }
 
@@ -218,4 +232,3 @@ function restartGame(e){
 }
 
 restartButton.addEventListener('click', restartGame)
-// module.exports = {soundSFX};
