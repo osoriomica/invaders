@@ -10,12 +10,17 @@ let isGoingRight = true
 let direction = 1
 let score = 0
 
+// Audio() constructor - https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement/Audio
+const boomSFX = new Audio('assets/media/iphone-camera-capture.mp3')
+boomSFX.volume = 0.1 // default volume
+
 // On-screen buttons
 const leftArrow = document.getElementById('left-arrow')
 const rightArrow = document.getElementById('right-arrow')
 const shooter = document.getElementById('shooter')
 const startPause = document.getElementById('start-pause')
 const restartButton = document.getElementById('restart')
+const toggleSoundButton = document.getElementById('sound')
 
 // Modal elements 
 const gameModal = new bootstrap.Modal(document.getElementById('game-modal'))
@@ -26,16 +31,23 @@ const startGameButton = document.getElementById('start-game')
 // let soundSFX = {
 //     boomSFX: '',
 // };
-// Audio() constructor - https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement/Audio
-const boomSFX = new Audio('assets/media/iphone-camera-capture.mp3')
-boomSFX.volume = 0.1
 // const gameOverSFX = new Audio()
 // gameOverSFX.volume = 0
-// button on lower right of screen to turn all audio on/off .volume=0 for loop iterate all sounds in SFX object if e.target.id and soundsSFX.volume!==0 then turn audio off. 
+//volume=0 for loop iterate all sounds in SFX object if e.target.id and soundsSFX.volume!==0 then turn audio off. 
 
-//Start Game
-// pop-up to remind user with instructions and Start button
-// on click - set invadersId interval for moveInvaders
+//Toggle sound function
+function toggleSound(e){
+    if (toggleSoundButton.classList.contains('sound-on')){
+        toggleSoundButton.classList.add('sound-off')
+        toggleSoundButton.classList.remove('sound-on')
+        boomSFX.volume = 0 //mutes the sound
+    } else {
+        toggleSoundButton.classList.add('sound-on')
+        toggleSoundButton.classList.remove('sound-off')
+        boomSFX.volume = 0.1 //unmute the sound
+    }
+}
+toggleSoundButton.addEventListener('click', toggleSound)
 
 
 // Code by Ania Kubow - for loop creates grid by spanning 255 square divs and appending them to a grid of 15 by 15

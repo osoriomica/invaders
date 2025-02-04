@@ -265,10 +265,24 @@ main {
     width: 4rem;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
     /* Shadow effect from: https://css-tricks.com/adding-shadows-to-svg-icons-with-css-and-svg-filters/ */
+    cursor: pointer;
     &:active {
-    height: 3.5rem;
-    width: 3.5rem;
-    padding: .5rem;
+        height: 3.5rem;
+        width: 3.5rem;
+        padding: .5rem;
+    }
+}
+
+#right-arrow {
+    background: url(../media/ddd-right-arrow.svg) no-repeat center center/cover;
+    height: 4rem;
+    width: 4rem;
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    cursor: pointer;
+    &:active {
+        height: 3.5rem;
+        width: 3.5rem;
+        padding: .5rem;
     }
 }
 
@@ -288,22 +302,26 @@ main {
     height: 4rem;
     width: 4rem;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    cursor: pointer;
     &:active {
     height: 3.5rem;
     width: 3.5rem;
     padding: .5rem;
     }
 }
-#shooterOptions{
-    max-width: 1800px;
-    margin: 1rem auto 2rem;
+
+/* options within the modal */
+#shooter-options{
     display: flex;
     flex-direction: row;
+    justify-content:center;
+
 }
-#shooterOptions div{
+#shooter-options div{
     height: 2rem;
     width: 2rem;
     filter: opacity(0.7);
+    margin: 0 .3rem .5rem;
     &:hover{
     height: 2.3rem;
     width: 2.3rem;
@@ -312,25 +330,10 @@ main {
     }
 }
 
-#shooterOptions h5{
-    font-family: 'Press Start 2P', serif;
-}
-
-#right-arrow {
-    background: url(../media/ddd-right-arrow.svg) no-repeat center center/cover;
-    height: 4rem;
-    width: 4rem;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
-    &:active {
-        height: 3.5rem;
-        width: 3.5rem;
-        padding: .5rem;
-    }
-}
 
 
 /* Sound control styles */
-.sound{
+#sound{
     height: 2.5rem;
     width: 2.5rem;
     filter: invert();

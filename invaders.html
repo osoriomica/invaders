@@ -52,13 +52,17 @@
 
     <!-- Start game Modal -->
     <div class="modal fade" id="game-modal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="game start modal" aria-hidden="true">
-        
         <div class="modal-dialog modal-dialog-centered">
-            
             <div class="modal-content">
                 <div class="modal-body">
                     <h4 class="modal-title">The urban invaders are here!</h4>
                     <p>Take your shot but remember, <br>don't let them touch you!</p>
+                    <p id="shooter-container">Choose your shooter:</p>    
+                            <div id="shooter-options">
+                                <div class="shooter1"></div>
+                                <div class="shooter2"></div>
+                                <div class="shooter3"></div>
+                            </div>
                     <button type="button" id="start-game" class="btn play-btn">START GAME</button>
                     <div class="d-flex justify-content-end">
                         <div class="invader"></div>
@@ -75,6 +79,7 @@
         <section id="game">
             <!-- Results -->
             <h1 class="result">your score: <span class="score">000</span></h1>
+            
         </section>
         <!-- Game options -->
             <section id="game-options" class="hidden-buttons">
@@ -103,18 +108,10 @@
                 </div>
             </a>
         </section>
-        <section>
-        <!-- shooter options -->
-            <div id="shooterOptions">
-                <h4>Choose your shooter:</h4>
-                <div class="shooter1"></div>
-                <div class="shooter2"></div>
-                <div class="shooter3"></div>
-            </div>
-        </section>
+           
         <!-- Floating SoundSFX -->
         <div class="sound-container">
-            <div class="sound sound-on"></div>
+            <div id="sound" class="sound-on"></div>
            
         </div>
     </main>
