@@ -39,7 +39,7 @@ function chooseShooter(e){
     
     for (const className of selectedShooter.classList){
         shooter.classList.add(className) 
-        //this code passes each class individually to .shooter as the classList.add() method was seeing the classes as a single class name and returning an InvalidCharacterError
+        //this code passes each class individually to .shooter as the classList.add() method was seeing the classes (.shooter .shooterN)as a single class name and returning an InvalidCharacterError
     }
 }
 
@@ -98,6 +98,9 @@ const alienInvaders = [
     15, 16, 17, 18, 19, 20, 21, 22, 23, 24,
     30, 31, 32, 33, 34, 35, 36, 37, 38, 39
 ]
+
+// Create a constant with the bottom row's divs to evaluate for game over
+const endRow = [210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224]
 
 // loops through the alienInvaders set to draw the invaders
 function draw() {
@@ -161,7 +164,7 @@ function moveInvaders() {
     }
     draw()
 // original code by Ania Kubow, modified to address bug: game would not end unless invaders actually collided with current shooter index so they could pass by if there was a gap in the middle. 
-    if (squares[210 || 211 || 212 || 213 || 214 || 215 || 216 || 217 || 218 || 219 || 220 || 221 || 222 || 223 || 224].classList.contains('invader')) {
+    if (squares[currentShooterIndex].classList.contains('invader')) {
         resultDisplay.innerHTML = `<h4>Game Over</h4> You shot ${score} invaders<br>`
         soundsList.gameOverSFX.play() 
         clearInterval(invadersId)
@@ -180,7 +183,9 @@ function shoot(e) {
     let currentFlashIndex = currentShooterIndex
 
     function moveFlash() {
-        squares[currentFlashIndex].classList.remove('flash')
+        console.log(squares.length)
+        console.log(currentFlashIndex)
+        squares[currentFlashIndex].classList.remove()
         currentFlashIndex -= width
         squares[currentFlashIndex].classList.add('flash')
 
