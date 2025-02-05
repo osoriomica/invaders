@@ -165,14 +165,14 @@ function moveInvaders() {
     draw()
 // original code by Ania Kubow, modified to address bug: game would not end unless invaders actually collided with current shooter index so they could pass by if there was a gap in the middle. 
     if (squares[currentShooterIndex].classList.contains('invader')) {
-        resultDisplay.innerHTML = `<h4>Game Over</h4> You shot ${score} invaders<br>`
+        resultDisplay.innerHTML = `<h4>Game Over</h4> You shot ${score} invaders`
         soundsList.gameOverSFX.play() 
         clearInterval(invadersId)
         squares[currentShooterIndex].classList.remove('camera') //removes shooter from grid on game over
         setTimeout(() =>remove(), 500) //removes all invaders on game Over
     }
     if (invadersRemoved.length === alienInvaders.length) {
-        resultDisplay.innerHTML = `<h4>You Win!</h4><br>You shot ${score} invaders`
+        resultDisplay.innerHTML = `<h4>You Win!</h4> You shot ${score} invaders`
         clearInterval(invadersId)
     }
 }
@@ -185,8 +185,19 @@ function shoot(e) {
     function moveFlash() {
         console.log(squares.length)
         console.log(currentFlashIndex)
-        squares[currentFlashIndex].classList.remove()
+
+        if(currentFlashIndex <0 || currentFlashIndex >= squares.length){
+            clearInterval(flashId)
+            return
+        }
+        
+        squares[currentFlashIndex].classList.remove('flash')
         currentFlashIndex -= width
+
+        if(currentFlashIndex <0 || currentFlashIndex >= squares.length){
+            clearInterval(flashId)
+            return
+        }
         squares[currentFlashIndex].classList.add('flash')
 
         if (squares[currentFlashIndex].classList.contains('invader')) {
