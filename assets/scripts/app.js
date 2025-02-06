@@ -47,8 +47,9 @@ function chooseShooter(e) {
 const soundsList = {
     boomSFX: new Audio('assets/media/iphone-camera-capture.mp3'), // Audio() constructor- https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement/Audio
     gameOverSFX: new Audio('assets/media/game-over-arcade.mp3'),
+    successSFX: new Audio('assets/media/success.mp3'),
 }
-// set default volume for all sound
+// set default volume for all sound elements
 Object.values(soundsList).forEach(sound => sound.volume = 0.2)
 
 // toggle volume for every sound in soundsList
@@ -64,21 +65,6 @@ function toggleSound() {
 
 }
 
-//Original toggle sound function targetting only one Audio
-// const boomSFX = new Audio('assets/media/iphone-camera-capture.mp3')
-// boomSFX.volume = 0.1 // default volume
-
-// function toggleSound(e){
-//     if (toggleSoundButton.classList.contains('sound-on')){
-//         toggleSoundButton.classList.add('sound-off')
-//         toggleSoundButton.classList.remove('sound-on')
-//         boomSFX.volume = 0 //mutes the sound
-//     } else {
-//         toggleSoundButton.classList.add('sound-on')
-//         toggleSoundButton.classList.remove('sound-off')
-//         boomSFX.volume = 0.1 //unmute the sound
-//     }
-// }
 toggleSoundButton.addEventListener('click', toggleSound)
 
 
