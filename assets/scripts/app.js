@@ -101,6 +101,12 @@ const alienInvaders = [
 
 // Create a constant with the bottom row's divs to evaluate for game over
 const endRow = [210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224]
+function drawEnd() {
+    for (let i = 0; i < endRow.length; i++) {
+            squares[endRow[i]].classList.add('endRow') 
+    }
+}
+drawEnd()
 
 // loops through the alienInvaders set to draw the invaders
 function draw() {
@@ -163,16 +169,36 @@ function moveInvaders() {
         alienInvaders[i] += direction
     }
     draw()
-    // original code by Ania Kubow, modified to address bug: game would not end unless invaders actually collided with current shooter index so they could pass by if there was a gap in the middle. 
+    
+    /**  Original code by Ania Kubow. Edited to address a bug in original code. 
+     * Issue: the game would not end unless the invaders collided with the shooter and were able to pass by
+     * this would trigger an error as the surviving invaders would continue to travel down past the grid  
+    */
     if (squares[currentShooterIndex].classList.contains('invader')) {
+        GameOver()
+    } 
+    /**
+     * Adapted from code by SCollins. Fixes the issue mentioned above.
+     * Create a global constant that adds the endRow class to all of the bottom row divs 
+     * using a for loop we check each div for when the invaders reach the bottom to trigger a game over 
+    */
+    for (let i = 0; i < (squares.length); i++) {
+        if (squares[i].matches(".invader.endRow")) {
+            GameOver()
+        }
+      }
+
+    function GameOver(){
         resultDisplay.innerHTML = `<h4>Game Over</h4> You shot ${score} invaders`
         soundsList.gameOverSFX.play()
         clearInterval(invadersId)
         squares[currentShooterIndex].classList.remove('camera') //removes shooter from grid on game over
         setTimeout(() => remove(), 500) //removes all invaders on game Over
-    } 
+    }
+
     if (invadersRemoved.length === alienInvaders.length) {
         resultDisplay.innerHTML = `<h4>You Win!</h4> You shot ${score} invaders`
+        soundsList.successSFX.play()
         clearInterval(invadersId)
     }
     return
@@ -194,11 +220,11 @@ function shoot(e) {
         }
 
         squares[currentFlashIndex].classList.remove('flash')
-        currentFlashIndex -= width   //This makes the flash go upwards ie: 217-15 = 202 (directly above the currentFlashIndex that triggers the flash)
+        currentFlashIndex -= width  //This makes the flash go upwards ie: if my shooter's index is 217 -15 = 202 (directly above the currentFlashIndex that triggers the flash)
         
         if ((currentFlashIndex < 0 || currentFlashIndex >= squares.length) ) {
-            clearInterval(flashId) // stop the flash if it goes out of bounds on its way up
-            return // Exit the function if the index is out of bounds
+            clearInterval(flashId)
+            return 
         }
 
         squares[currentFlashIndex].classList.add('flash')
