@@ -131,8 +131,9 @@ If using TDD, demonstrate in commit log. Document it in Readme or separate file.
 
 ## DEPLOYMENT
 ## CREDITS
-	The base javascript code for the game comes from Ania Kubów ( https://youtu.be/s6LrpUTQQn0?si=DZ24tUrVomU48pgm)
-	
+The base javascript code for the game comes from Ania Kubów: (https://youtu.be/s6LrpUTQQn0?si=DZ24tUrVomU48pgm)
+GameOver on reaching the bottom row by SCollins: (https://github.com/SJECollins/ci-pp2-pixels-arcade/tree/main)
+Audio() constructor: (https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement/Audio)
 	
 ### Media
 - Invader cut out and edited from photo by Guilhem Vellut from Paris, France. https://www.flickr.com/photos/o_0/28023125416/  
@@ -143,9 +144,10 @@ If using TDD, demonstrate in commit log. Document it in Readme or separate file.
 - shooter2 made using Pixel art green retro hat by Patinya_P_Ang from Patinya_P_ANG https://www.canva.com/photos/MAFrmC84tXI/
 - shooter3 cat pixel by FranGeL Katerns https://www.canva.com/icons/MAGRfqjLFK4/
 
-Sound effect: 
+Sound effects: 
 - Camera capture sound effect by <a href="https://pixabay.com/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6448">freesound_community</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6448">Pixabay</a>
-- negative_beeps Sound Effect by <a href="https://pixabay.com/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6008">freesound_community</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6008">Pixabay</a>
+- negative_beeps sound effect by <a href="https://pixabay.com/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6008">freesound_community</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6008">Pixabay</a>
+- success sound effect by <a href="https://pixabay.com/users/updatepelgo-44563794/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=221935">UpdatePelgo</a> from <a href="https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=221935">Pixabay</a>
 
 ### ACKNOWLEDGEMENTS
-Related projects: https://github.com/SJECollins/ci-pp2-pixels-arcade/tree/main
+Related projects: 

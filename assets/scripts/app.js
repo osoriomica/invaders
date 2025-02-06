@@ -12,7 +12,6 @@ let isGoingRight = true
 let direction = 1
 let score = 0
 
-
 // On-screen buttons
 const shooterOptions = document.querySelectorAll('#shooter-options .shooter')
 const leftArrow = document.getElementById('left-arrow')
@@ -45,7 +44,7 @@ function chooseShooter(e) {
 
 // Sound FX with a sound object to keep the code scalable
 const soundsList = {
-    boomSFX: new Audio('assets/media/iphone-camera-capture.mp3'), // Audio() constructor- https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement/Audio
+    boomSFX: new Audio('assets/media/iphone-camera-capture.mp3'), 
     gameOverSFX: new Audio('assets/media/game-over-arcade.mp3'),
     successSFX: new Audio('assets/media/success.mp3'),
 }
@@ -62,9 +61,7 @@ function toggleSound() {
     // toggle sound button background images
     toggleSoundButton.classList.toggle('sound-on')
     toggleSoundButton.classList.toggle('sound-off')
-
 }
-
 toggleSoundButton.addEventListener('click', toggleSound)
 
 
@@ -85,7 +82,9 @@ const alienInvaders = [
     30, 31, 32, 33, 34, 35, 36, 37, 38, 39
 ]
 
-// Create a constant with the bottom row's divs to evaluate for game over
+/** const endRow is assigned with the bottom row's divs to evaluate for game over. 
+ * This code is based on Ania Kubow's draw() which assigns a class to the divs occupied by the invaders
+*/ 
 const endRow = [210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224]
 function drawEnd() {
     for (let i = 0; i < endRow.length; i++) {
@@ -94,11 +93,11 @@ function drawEnd() {
 }
 drawEnd()
 
-// loops through the alienInvaders set to draw the invaders
+
 function draw() {
     for (let i = 0; i < alienInvaders.length; i++) {
         if (!invadersRemoved.includes(i)) {
-            squares[alienInvaders[i]].classList.add('invader') //looping through set array above i=0
+            squares[alienInvaders[i]].classList.add('invader')
         }
     }
 }
@@ -112,7 +111,7 @@ function remove() {
     }
 }
 
-//Move shooter function - pressing the key arrows or clicking on the arrow buttons - based on Ania Kubow's code
+//Move shooter function - pressing the key arrows or clicking on the screen buttons - based on Ania Kubow's code
 function moveShooter(e) {
     squares[currentShooterIndex].classList.remove('camera')
     if ((e.key === 'ArrowLeft' || e.target.id === "left-arrow") && currentShooterIndex % width !== 0) {
@@ -130,7 +129,7 @@ document.addEventListener('keydown', moveShooter)
 leftArrow.addEventListener("click", moveShooter)
 rightArrow.addEventListener('click', moveShooter)
 
-// Move invaders function by Ania Kubow
+// MoveInvaders function by Ania Kubow
 function moveInvaders() {
     const leftEdge = alienInvaders[0] % width === 0;
     const rightEdge = alienInvaders[alienInvaders.length - 1] % width === width - 1; //minus one on the length because we need the index
@@ -178,8 +177,8 @@ function moveInvaders() {
         resultDisplay.innerHTML = `<h4>Game Over</h4> You shot ${score} invaders`
         soundsList.gameOverSFX.play()
         clearInterval(invadersId)
-        squares[currentShooterIndex].classList.remove('camera') //removes shooter from grid on game over
-        setTimeout(() => remove(), 500) //removes all invaders on game Over
+        squares[currentShooterIndex].classList.remove('camera') // Removes shooter from grid on game over
+        setTimeout(() => remove(), 500) // Removes all invaders on game Over
     }
 
     if (invadersRemoved.length === alienInvaders.length) {
@@ -201,7 +200,7 @@ function shoot(e) {
         
         // ensure currentFlashIndex is within bounds of the grid
         if ((currentFlashIndex < 0 || currentFlashIndex >= squares.length) ) {
-            clearInterval(flashId) // stop the flash if it goes out of bounds (
+            clearInterval(flashId) // stop the flash if it goes out of bounds
             return // Exit the function if the index is out of bounds
         }
 
