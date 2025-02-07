@@ -1,43 +1,43 @@
 // const { soundsList } = require("./soundsfx")
 
 // Game Global Variables
-const grid = document.querySelector('.grid')
-const resultDisplay = document.querySelector('.result')
-const scoreDisplay = document.querySelector('.score')
-const width = 15
-const invadersRemoved = [] //keeps track of shooted invaders so they're not drawn again when moving
-let currentShooterIndex = 217
-let invadersId = 0
-let isGoingRight = true
-let direction = 1
-let score = 0
+const grid = document.querySelector('.grid');
+const resultDisplay = document.querySelector('.result');
+const scoreDisplay = document.querySelector('.score');
+const width = 15;
+const invadersRemoved = []; //keeps track of shooted invaders so they're not drawn again when moving
+let currentShooterIndex = 217;
+let invadersId = 0;
+let isGoingRight = true;
+let direction = 1;
+let score = 0;
 
 // On-screen buttons
-const shooterOptions = document.querySelectorAll('#shooter-options .shooter')
-const leftArrow = document.getElementById('left-arrow')
-const rightArrow = document.getElementById('right-arrow')
-const shooter = document.getElementById('shooter')
-const startPause = document.getElementById('start-pause')
-const restartButton = document.getElementById('restart')
-const toggleSoundButton = document.getElementById('sound')
+const shooterOptions = document.querySelectorAll('#shooter-options .shooter');
+const leftArrow = document.getElementById('left-arrow');
+const rightArrow = document.getElementById('right-arrow');
+const shooter = document.getElementById('shooter');
+const startPause = document.getElementById('start-pause');
+const restartButton = document.getElementById('restart');
+const toggleSoundButton = document.getElementById('sound');
 
 // Modal elements 
-const gameModal = new bootstrap.Modal(document.getElementById('game-modal'))
-const startGameButton = document.getElementById('start-game')
+const gameModal = new bootstrap.Modal(document.getElementById('game-modal'));
+const startGameButton = document.getElementById('start-game');
 
 // Choose the shooter function using a forEach loop 
 shooterOptions.forEach(option => {
-    option.addEventListener('click', chooseShooter)
-})
+    option.addEventListener('click', chooseShooter);
+});
 
 function chooseShooter(e) {
-    const selectedShooter = e.target
-    console.log('Chosen shooter:', selectedShooter.id)
+    const selectedShooter = e.target;
+    console.log('Chosen shooter:', selectedShooter.id);
 
-    shooter.classList = ''
+    shooter.classList = '';
 
     for (const className of selectedShooter.classList) {
-        shooter.classList.add(className)
+        shooter.classList.add(className);
         //this code passes each class individually to .shooter as the classList.add() method was seeing the classes (.shooter .shooterN)as a single class name and returning an InvalidCharacterError
     }
 }
@@ -47,87 +47,87 @@ const soundsList = {
     boomSFX: new Audio('assets/media/iphone-camera-capture.mp3'), 
     gameOverSFX: new Audio('assets/media/game-over-arcade.mp3'),
     successSFX: new Audio('assets/media/success.mp3'),
-}
+};
 // set default volume for all sound elements
-Object.values(soundsList).forEach(sound => sound.volume = 0.2)
+Object.values(soundsList).forEach(sound => sound.volume = 0.2);
 
 // toggle volume for every sound in soundsList
 function toggleSound() {
-    const newVolume = (toggleSoundButton.classList.contains('sound-on')) ? 0 : 0.2
+    const newVolume = (toggleSoundButton.classList.contains('sound-on')) ? 0 : 0.2;
 
     // set volume for each sound in soundsList
-    Object.values(soundsList).forEach(sound => sound.volume = newVolume)
+    Object.values(soundsList).forEach(sound => sound.volume = newVolume);
 
     // toggle sound button background images
-    toggleSoundButton.classList.toggle('sound-on')
-    toggleSoundButton.classList.toggle('sound-off')
+    toggleSoundButton.classList.toggle('sound-on');
+    toggleSoundButton.classList.toggle('sound-off');
 }
-toggleSoundButton.addEventListener('click', toggleSound)
+toggleSoundButton.addEventListener('click', toggleSound);
 
 
 // Code by Ania Kubow - for loop creates grid by spanning 255 square divs and appending them to a grid of 15 by 15
 for (let i = 0; i < width * width; i++) {
-    const square = document.createElement('div')
-    square.id = i //gives ids to each square based on their index
-    grid.appendChild(square)
-}
+    const square = document.createElement('div');
+    square.id = i; //gives ids to each square based on their index
+    grid.appendChild(square);
+};
 
-const squares = Array.from(document.querySelectorAll('.grid div')) //transforms list of divs to an array so we can loop through them
-console.log(squares)
+const squares = Array.from(document.querySelectorAll('.grid div')); //transforms list of divs to an array so we can loop through them
+console.log(squares);
 
 // Assign invader class to selected divs within the grid using index ids.
 const alienInvaders = [
     0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
     15, 16, 17, 18, 19, 20, 21, 22, 23, 24,
     30, 31, 32, 33, 34, 35, 36, 37, 38, 39
-]
+];
 
 /** const endRow is assigned with the bottom row's divs to evaluate for game over. 
  * This code is based on Ania Kubow's draw() which assigns a class to the divs occupied by the invaders
 */ 
-const endRow = [210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224]
+const endRow = [210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224];
 function drawEnd() {
     for (let i = 0; i < endRow.length; i++) {
-            squares[endRow[i]].classList.add('endRow') 
+            squares[endRow[i]].classList.add('endRow');
     }
 }
-drawEnd()
+drawEnd();
 
 
 function draw() {
     for (let i = 0; i < alienInvaders.length; i++) {
         if (!invadersRemoved.includes(i)) {
-            squares[alienInvaders[i]].classList.add('invader')
+            squares[alienInvaders[i]].classList.add('invader');
         }
     }
 }
-draw()
+draw();
 
-squares[currentShooterIndex].classList.add('camera')
+squares[currentShooterIndex].classList.add('camera');
 
 function remove() {
     for (let i = 0; i < alienInvaders.length; i++) {
-        squares[alienInvaders[i]].classList.remove('invader')
+        squares[alienInvaders[i]].classList.remove('invader');
     }
 }
 
 //Move shooter function - pressing the key arrows or clicking on the screen buttons - based on Ania Kubow's code
 function moveShooter(e) {
-    squares[currentShooterIndex].classList.remove('camera')
+    squares[currentShooterIndex].classList.remove('camera');
     if ((e.key === 'ArrowLeft' || e.target.id === "left-arrow") && currentShooterIndex % width !== 0) {
-        e.preventDefault()
-        currentShooterIndex -= 1
+        e.preventDefault();
+        currentShooterIndex -= 1;
     }
     if ((e.key === 'ArrowRight' || e.target.id === "right-arrow") && currentShooterIndex % width < width - 1) {
-        e.preventDefault()
-        currentShooterIndex += 1
+        e.preventDefault();
+        currentShooterIndex += 1;
     }
-    squares[currentShooterIndex].classList.add('camera')
+    squares[currentShooterIndex].classList.add('camera');
 }
 
-document.addEventListener('keydown', moveShooter)
-leftArrow.addEventListener("click", moveShooter)
-rightArrow.addEventListener('click', moveShooter)
+document.addEventListener('keydown', moveShooter);
+leftArrow.addEventListener("click", moveShooter);
+rightArrow.addEventListener('click', moveShooter);
 
 // MoveInvaders function by Ania Kubow
 function moveInvaders() {
@@ -137,30 +137,30 @@ function moveInvaders() {
 
     if (rightEdge && isGoingRight) {
         for (let i = 0; i < alienInvaders.length; i++) {
-            alienInvaders[i] += width + 1
-            direction = -1
-            isGoingRight = false
+            alienInvaders[i] += width + 1;
+            direction = -1;
+            isGoingRight = false;
         }
     }
     if (leftEdge && !isGoingRight) {
         for (let i = 0; i < alienInvaders.length; i++) {
-            alienInvaders[i] += width - 1
-            direction = 1
-            isGoingRight = true
+            alienInvaders[i] += width - 1;
+            direction = 1;
+            isGoingRight = true;
 
         }
     }
     for (let i = 0; i < alienInvaders.length; i++) {
-        alienInvaders[i] += direction
+        alienInvaders[i] += direction;
     }
-    draw()
+    draw();
     
     /**  Original code by Ania Kubow. Edited to address a bug in original code. 
      * Issue: the game would not end unless the invaders collided with the shooter and were able to pass by
      * this would trigger an error as the surviving invaders would continue to travel down past the grid  
     */
     if (squares[currentShooterIndex].classList.contains('invader')) {
-        GameOver()
+        GameOver();
     } 
     /**
      * Adapted from code by SCollins. Fixes the issue mentioned above.
@@ -169,116 +169,116 @@ function moveInvaders() {
     */
     for (let i = 0; i < (squares.length); i++) {
         if (squares[i].matches(".invader.endRow")) {
-            GameOver()
+            GameOver();
         }
       }
 
     function GameOver(){
-        resultDisplay.innerHTML = `<h4>Game Over</h4> You shot ${score} invaders`
-        soundsList.gameOverSFX.play()
-        clearInterval(invadersId)
-        squares[currentShooterIndex].classList.remove('camera') // Removes shooter from grid on game over
-        setTimeout(() => remove(), 500) // Removes all invaders on game Over
+        resultDisplay.innerHTML = `<h4>Game Over</h4> You shot ${score} invaders`;
+        soundsList.gameOverSFX.play();
+        clearInterval(invadersId);
+        squares[currentShooterIndex].classList.remove('camera'); // Removes shooter from grid on game over
+        setTimeout(() => remove(), 500); // Removes all invaders on game Over
     }
 
     if (invadersRemoved.length === alienInvaders.length) {
-        resultDisplay.innerHTML = `<h4>You Win!</h4> You shot ${score} invaders`
-        soundsList.successSFX.play()
-        clearInterval(invadersId)
+        resultDisplay.innerHTML = `<h4>You Win!</h4> You shot ${score} invaders`;
+        soundsList.successSFX.play();
+        clearInterval(invadersId);
     }
-    return
+    return;
 }
 
 // Shoot function - original code by Ania Kubow. Edited to customise game
 function shoot(e) {
-    let flashId
-    let currentFlashIndex = currentShooterIndex
+    let flashId;
+    let currentFlashIndex = currentShooterIndex;
 
     function moveFlash() {
-        console.log(squares.length)
-        console.log(currentFlashIndex)
+        console.log(squares.length);
+        console.log(currentFlashIndex);
         
         // ensure currentFlashIndex is within bounds of the grid
-        if ((currentFlashIndex < 0 || currentFlashIndex >= squares.length) ) {
-            clearInterval(flashId) // stop the flash if it goes out of bounds
-            return // Exit the function if the index is out of bounds
+        if ((currentFlashIndex < 0 || currentFlashIndex >= squares.length)) {
+            clearInterval(flashId); // stop the flash if it goes out of bounds
+            return; // Exit the function if the index is out of bounds
         }
 
-        squares[currentFlashIndex].classList.remove('flash')
-        currentFlashIndex -= width  //This makes the flash go upwards ie: if my shooter's index is 217 -15 = 202 (directly above the currentFlashIndex that triggers the flash)
+        squares[currentFlashIndex].classList.remove('flash');
+        currentFlashIndex -= width;  //This makes the flash go upwards ie: if my shooter's index is 217 -15 = 202 (directly above the currentFlashIndex that triggers the flash)
         
-        if ((currentFlashIndex < 0 || currentFlashIndex >= squares.length) ) {
-            clearInterval(flashId)
-            return 
+        if ((currentFlashIndex < 0 || currentFlashIndex >= squares.length)) {
+            clearInterval(flashId);
+            return;
         }
 
-        squares[currentFlashIndex].classList.add('flash')
+        squares[currentFlashIndex].classList.add('flash');
 
         if (squares[currentFlashIndex].classList.contains('invader')) {
-            squares[currentFlashIndex].classList.remove('flash')
-            squares[currentFlashIndex].classList.remove('invader')
-            squares[currentFlashIndex].classList.add('boom')
+            squares[currentFlashIndex].classList.remove('flash');
+            squares[currentFlashIndex].classList.remove('invader');
+            squares[currentFlashIndex].classList.add('boom');
 
 
-            setTimeout(() => squares[currentFlashIndex].classList.remove('boom'), 300) //makes .boom disappear after 300 miliseconds
-            clearInterval(flashId)
+            setTimeout(() => squares[currentFlashIndex].classList.remove('boom'), 300); //makes .boom disappear after 300 miliseconds
+            clearInterval(flashId);
 
-            const InvaderRemoved = alienInvaders.indexOf(currentFlashIndex)//looks into the flash index to see if there're aliens and stores it
-            invadersRemoved.push(InvaderRemoved)
-            score++
-            scoreDisplay.innerHTML = score
-            console.log(invadersRemoved)
+            const InvaderRemoved = alienInvaders.indexOf(currentFlashIndex);//looks into the flash index to see if there're aliens and stores it
+            invadersRemoved.push(InvaderRemoved);
+            score++;
+            scoreDisplay.innerHTML = score;
+            console.log(invadersRemoved);
         }
     }
     if (e.key === 'ArrowUp' || e.key === " " || e.target.id === 'shooter') {
-        e.preventDefault()
-        flashId = setInterval(moveFlash, 100)
-        soundsList.boomSFX.play()
+        e.preventDefault();
+        flashId = setInterval(moveFlash, 100);
+        soundsList.boomSFX.play();
     }
 }
 
 // show modal on page load 
 window.onload = () => {
     setTimeout(() => {
-        gameModal.show()
-    }, 300)
-}
+        gameModal.show();
+    }, 300);
+};
 
 // start game on modal>button click
 startGameButton.addEventListener('click', () => {
     gameModal.hide();
     startGame();
-})
+});
 
 function startGame() {
     invadersId = setInterval(moveInvaders, 350); //sets up the initial game state, before this, the aliens are just static.
-    startPause.classList.remove('hidden-buttons') //toggles visibility of game option buttons (New Game and Start-Pause)
-    restartButton.classList.remove('hidden-buttons')
+    startPause.classList.remove('hidden-buttons'); //toggles visibility of game option buttons (New Game and Start-Pause)
+    restartButton.classList.remove('hidden-buttons');
     startPause.innerHTML = 'PAUSE';
 }
 
-document.addEventListener('keydown', shoot)
-shooter.addEventListener('click', shoot)
+document.addEventListener('keydown', shoot);
+shooter.addEventListener('click', shoot);
 
 // Pause/Resume button
 function togglePauseResume(e) {
     if (invadersId) {
         //Game is running from the beginning so we need to pause it first
-        clearInterval(invadersId)
-        invadersId = ""
-        startPause.innerHTML = 'RESUME'
+        clearInterval(invadersId);
+        invadersId = "";
+        startPause.innerHTML = 'RESUME';
     } else {
-        invadersId = setInterval(moveInvaders, 350)
-        startPause.innerHTML = 'PAUSE'
-        moveInvaders()
+        invadersId = setInterval(moveInvaders, 350);
+        startPause.innerHTML = 'PAUSE';
+        moveInvaders();
     }
 }
 
-startPause.addEventListener('click', togglePauseResume)
+startPause.addEventListener('click', togglePauseResume);
 
 // Restart button - resets game state and starts over
 function restartGame(e) {
-    location.reload()
+    location.reload();
 }
 
-restartButton.addEventListener('click', restartGame)
+restartButton.addEventListener('click', restartGame);
