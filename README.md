@@ -1,15 +1,21 @@
 # URBAN INVADERS
+![Responsive Urban Invaders](README-folder/other-assets/responsive-invaders.png) 
+
+The deployed website can be found here: [Urban Invaders](https://osoriomica.github.io/invaders/index.html)  
 
 ## Introduction
 
 ### About the original Space Invaders:
+![poster of original Space Invaders](README-folder/other-assets/space-invaders-flyer-1978.jpg)  
+[Image by Arcade Museum](https://en.wikipedia.org/w/index.php?curid=41622028), Fair use.
 
-By Arcade Museum, Fair use, https://en.wikipedia.org/w/index.php?curid=41622028
-Released in 1978 by Taito Corporation, and designed by Tomohiro Nishikado; Space Invaders is considered one of the most influential and greatest games of all time (https://en.wikipedia.org/wiki/Space_Invaders). After almost half a century since its origins, it has continued to be a part of the pop culture across the globe, inspiring people daily with its simplicity and iconic design.
-One of my favourite street artists, Franck Slama (AKA Invader) has given the famous alien invaders and their unmistakable pixelated art a new life by installing, pixelated ceramic tiles on public walls around the world. HIs artwork includes the invaders as well as other famous characters from olds-school video games like Mario Bros and Pac Man. 
--See space-invaders website for more info on his work: (https://www.space-invaders.com/home/).
+Released in 1978 by Taito Corporation, and designed by Tomohiro Nishikado; [Space Invaders](https://en.wikipedia.org/wiki/Space_Invaders) is considered one of the most influential and greatest games of all time. After almost half a century since its origins, it has continued to be a part of the pop culture across the globe, inspiring people daily with its simplicity and iconic design.  
 
-By Julie - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=50343315
+### About Frank Slama (AKA Invader)
+One of my favourite street artists, Franck Slama (AKA Invader) has given the famous alien invaders and their unmistakable pixelated art a new life by installing, pixelated ceramic tiles on public walls around the world. His artwork features the invaders as well as other famous characters from old-school video games like Mario Bros and Pac Man. 
+- See space-invaders website for more info on his work: (https://www.space-invaders.com/home/).
+
+![Frank Slama AKA Invader](README-folder/other-assets/invader-portrait.jpg) [By Julie - Own work, CC BY-SA 4.0](https://commons.wikimedia.org/w/index.php?curid=50343315)
 
 !(Add couple of photos from my camera row).
 
