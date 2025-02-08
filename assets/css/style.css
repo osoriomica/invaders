@@ -5,13 +5,13 @@
 :root {
     --bg-dark: #252c3f;
     /* space-cadet */
-    --highlight1: #ff9f1cff;
+    --highlight1: #ff9f1c;
     /* orange-peel */
     --light-text: #ddd;
     /*antiflash-white*/
-    --dark-text: #102542ff;
+    --dark-text: #102542;
     /* oxford-blue */
-    --highlight2: rgb(185, 0, 3);
+    --highlight2: #ba0003;
     /*engineering-orange*/
 }
 

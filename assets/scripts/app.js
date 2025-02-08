@@ -222,6 +222,7 @@ function moveInvaders() {
     resultDisplay.innerHTML = `You Win! You shot ${score} invaders`
     soundsList.successSFX.play()
     clearInterval(invadersId)
+    isGameOver = true
   }
   return
 }

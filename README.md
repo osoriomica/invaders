@@ -79,22 +79,22 @@ The buttons and links are formatted so that the user can interact intuitively.
 
 - Colour Palette: 
 
-	| Color             | Hex                                                                | Name                         |
-	| ----------------- | ------------------------------------------------------------------ | -----------------------------|
+	| Color      | Hex                                         | Name                             |
+	| ---------- | ------------------------------------------- | ---------------------------------|
 	| ![#252c3f](https://placehold.co/15x15/252c3f/252c3f.png) | #252c3f | Space Cadet |
-	| ![#ff9f1c](https://placehold.co/15x15/ff9f1c/ff9f1c.png)| #ff9f1c | Orange Peel |
+	| ![#ff9f1c](https://placehold.co/15x15/ff9f1c/ff9f1c.png) | #ff9f1c | Orange Peel |
 	| ![#dddddd](https://placehold.co/15x15/dddddd/dddddd.png) | #dddddd | Antiflash white | 
 	| ![#102542](https://placehold.co/15x15/102542/102542.png) | #102542 | Oxford Blue |
-	| ![#d10003](https://placehold.co/15x15/d10003/d10003.png) | #d10003 | Enginneering Orange |
+	| ![#d10003](https://placehold.co/15x15/d10003/d10003.png) | #ba0003 | Enginneering Orange |
 
 - Typography (imported from Google Fonts): 
 	- Press Start 2P: Headings and highlighted buttons.
 	- Jersey 15:  General text elements. 
-- Sounds and music:
-- Graphics: 
-- Buttons: camera capture, tile crack, fanfarre?
-- Background: 
-- Modals: Styled to resemble the French road signs that has been ‘invaded’ with a pixelated art installation. Format: blue background, white uppercase fonts and centred text. A tiny space Invader on the top right corner.
+- Sounds and music: pixabay.com
+- Graphics: canva.com 
+- Buttons: camera capture, tile crack,=
+- Background: photo taken and edited by developper. 
+- Modal: Styled to resemble the French road signs that has been ‘invaded’ with a pixelated art installation. Format: blue background, white uppercase fonts and centred text. A tiny space Invader on the top right corner.
 
 ## WIREFRAMES  
 ### Information Architecture diagram
@@ -106,10 +106,15 @@ The buttons and links are formatted so that the user can interact intuitively.
 - Visual Studio Code: IDE connected to github codespaces
 - Google Fonts: Find and import font families
 - Wireframe.cc: Make initial wireframes 
-- canva.com- Create, edit and export sprite elements and draft my wireframes and overall design before translating it to html/css code. 
+- canva.com- Create, edit and export sprite elements and draft my wireframes and overall design before translating it to html/css code
+- pixabay.com - to download sound effects
 - coolors.co- Create the colour palette
-- Font Awesome - arrow icons
-- cloudconvert.com: convert and optimise images for the web. 
+- Font Awesome - arrow icons on index.html
+- cloudconvert.com - convert and optimise images for the web
+- mdn web docs - for general reference
+- Lighthouse - to improve site's general score following their suggestions
+- prettier.io - to beautify the code
+- Google's Inspect Element - to debug code and see console logs and errors
 
 ## TESTING
 ### HTML Validation
@@ -121,20 +126,13 @@ The buttons and links are formatted so that the user can interact intuitively.
 [link to html validotr](https://validator.w3.org/nu/?doc=https%3A%2F%2Fosoriomica.github.io%2Finvaders%2F404.html)  
 ![screenshot of html validation](README-folder/validation/html-validation.png)
 ### CSS
-- W3C CSS Validation:
-<p>
-    <a href="http://jigsaw.w3.org/css-validator/check/referer">
-        <img style="border:0;width:88px;height:31px"
-            src="http://jigsaw.w3.org/css-validator/images/vcss"
-            alt="Valid CSS!" />
-    </a>
-</p>
+- W3C CSS Validation: [Link to css validator](http://jigsaw.w3.org/css-validator/validator?lang=en&profile=css3svg&uri=https%3A%2F%2Fosoriomica.github.io%2Finvaders%2Fassets%2Fcss%2Fstyle.css&usermedium=all&vextwarning=&warning=1)  
 
 ![CSS validation screenshot](README-folder/validation/css-validation.png)
           
-[Link to css validator](http://jigsaw.w3.org/css-validator/validator?lang=en&profile=css3svg&uri=https%3A%2F%2Fosoriomica.github.io%2Finvaders%2Fassets%2Fcss%2Fstyle.css&usermedium=all&vextwarning=&warning=1) 
 ### JS 
 app.js was tested using (https://jshint.com/) 
+![JSHint analysis](README-folder/validation/jshint-validation.png)
 
 #### LIGHTHOUSE
 The website was tested with Google Chrome's Lighthouse
@@ -145,7 +143,7 @@ The website was tested with Google Chrome's Lighthouse
 - 404:  
 ![screenshot of code analysis](README-folder/validation/lighthouse-404.png) 
 
-Jest tests!- effective and meaningful	.
+Jest tests!- effective and meaningful.
 If using TDD, demonstrate in commit log. Document it in Readme or separate file.
 
 ### Testing user stories
