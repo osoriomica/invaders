@@ -64,7 +64,6 @@ shooterOptions.forEach((option) => {
 
 function chooseShooter(e) {
   const selectedShooter = e.target
-  console.log("Chosen shooter:", selectedShooter.id)
 
   shooter.classList = ""
 
@@ -101,7 +100,6 @@ for (let i = 0; i < width * width; i++) {
 
 //Transforms list of divs to an array so we can loop through them.
 const squares = Array.from(document.querySelectorAll(".grid div"))
-console.log(squares)
 
 // Assign invader class to selected divs within the grid using index ids.
 const alienInvaders = [
@@ -242,8 +240,6 @@ function shoot(e) {
   let currentFlashIndex = currentShooterIndex
 
   function moveFlash() {
-    console.log(squares.length)
-    console.log(currentFlashIndex)
 
     /*
       currentFlashIndex -= width makes the flash go upwards ie: 
@@ -274,7 +270,6 @@ function shoot(e) {
       invadersRemoved.push(InvaderRemoved)
       score++
       scoreDisplay.innerHTML = score
-      console.log(invadersRemoved)
     }
   }
   if (e.key === "ArrowUp" || e.key === " " || e.target.id === "shooter") {
