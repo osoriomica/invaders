@@ -1,6 +1,7 @@
 /* jshint esversion: 8 */
+/*jshint -W033 */
 
-// Game Global Variables:
+// GLOBAL VARIABLES:
 const grid = document.querySelector(".grid")
 const resultDisplay = document.querySelector(".result")
 const scoreDisplay = document.querySelector(".score")
@@ -22,9 +23,38 @@ const restartButton = document.getElementById("restart")
 const toggleSoundButton = document.getElementById("sound")
 
 // Modal elements:
-const gameModal = new document.getElementById("game-modal")
+/*
+jshint returns a warning on bootstrap not being a defined variable 
+although it is needed for the code to work.
+*/
+const gameModal = new bootstrap.Modal(document.getElementById("game-modal"))
 const startGameButton = document.getElementById("start-game")
 
+// Sound FX with a sound object to keep the code scalable.
+const soundsList = {
+  boomSFX: new Audio("assets/media/iphone-camera-capture.mp3"),
+  gameOverSFX: new Audio("assets/media/game-over-arcade.mp3"),
+  successSFX: new Audio("assets/media/success.mp3"),
+}
+
+// MAIN CODE:
+//Sound
+
+// Toggle volume for every sound in soundsList.
+function toggleSound() {
+  const newVolume = toggleSoundButton.classList.contains("sound-on") ? 0 : 0.2
+
+  // Set volume for each sound in soundsList.
+  Object.values(soundsList).forEach((sound) => (sound.volume = newVolume))
+
+  // Toggle sound button background images.
+  toggleSoundButton.classList.toggle("sound-on")
+  toggleSoundButton.classList.toggle("sound-off")
+}
+// Set default volume for all sound elements.
+Object.values(soundsList).forEach((sound) => (sound.volume = 0.2))
+
+//Select a shooter
 // Choose the shooter function using a forEach loop.
 shooterOptions.forEach((option) => {
   option.addEventListener("click", chooseShooter)
@@ -40,36 +70,30 @@ function chooseShooter(e) {
     shooter.classList.add(className)
     /*
     	Passes each class individually to .shooter as the classList.add() 
-      	method was seeing the classes (.shooter.shooterN) as a single 
-      	class name and returning an InvalidCharacterError.
+      method was seeing the classes (.shooter.shooterN) as a single 
+      class name and returning an InvalidCharacterError.
     */
   }
 }
 
-// Sound FX with a sound object to keep the code scalable.
-const soundsList = {
-  boomSFX: new Audio("assets/media/iphone-camera-capture.mp3"),
-  gameOverSFX: new Audio("assets/media/game-over-arcade.mp3"),
-  successSFX: new Audio("assets/media/success.mp3"),
+//Game logic.
+// Show modal on page load.
+window.onload = () => {
+  setTimeout(() => {
+    gameModal.show()
+  }, 300)
 }
-// Set default volume for all sound elements.
-Object.values(soundsList).forEach((sound) => (sound.volume = 0.2))
 
-// Toggle volume for every sound in soundsList.
-function toggleSound() {
-  const newVolume = toggleSoundButton.classList.contains("sound-on") ? 0 : 0.2
-
-  // Set volume for each sound in soundsList.
-  Object.values(soundsList).forEach((sound) => (sound.volume = newVolume))
-
-  // Toggle sound button background images.
-  toggleSoundButton.classList.toggle("sound-on")
-  toggleSoundButton.classList.toggle("sound-off")
+function startGame() {
+  //sets up the initial game state, before this, the aliens are just static.
+  invadersId = setInterval(moveInvaders, 350)
+  //toggles visibility of game option buttons (New Game and Start-Pause)
+  startPause.classList.remove("hidden-buttons")
+  restartButton.classList.remove("hidden-buttons")
+  startPause.innerHTML = "PAUSE"
 }
-toggleSoundButton.addEventListener("click", toggleSound)
 
-// Code by Ania Kubow.
-//This for loop creates a 15 by 15 grid spanning 255 square divs.
+//Code by Ania Kubow: Creates a 15 by 15 grid spanning 255 square divs.
 for (let i = 0; i < width * width; i++) {
   const square = document.createElement("div")
   square.id = i //gives ids to each square based on their index.
@@ -87,9 +111,9 @@ const alienInvaders = [
 ]
 
 /*
-endRow is assigned with the bottom row's divs to evaluate for game over. 
-This code is based on Ania Kubow's draw() which assigns a class 
+Code based on Ania Kubow's draw() which assigns a class 
 to the divs occupied by the invaders.
+.endRow is assigned to the bottom row's divs to evaluate for game over. 
 */
 const endRow = [
   210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224,
@@ -111,13 +135,13 @@ function draw() {
 }
 draw()
 
-squares[currentShooterIndex].classList.add("camera")
-
 function remove() {
   for (let i = 0; i < alienInvaders.length; i++) {
     squares[alienInvaders[i]].classList.remove("invader")
   }
 }
+
+squares[currentShooterIndex].classList.add("camera")
 
 //moveShooter function: pressing the key arrows or clicking on screen buttons.
 //Based on Ania Kubow's code.
@@ -139,10 +163,6 @@ function moveShooter(e) {
   }
   squares[currentShooterIndex].classList.add("camera")
 }
-
-document.addEventListener("keydown", moveShooter)
-leftArrow.addEventListener("click", moveShooter)
-rightArrow.addEventListener("click", moveShooter)
 
 // MoveInvaders function by Ania Kubow:
 function moveInvaders() {
@@ -172,7 +192,7 @@ function moveInvaders() {
   draw()
 
   /*
-  Original code by Ania Kubow. Edited to address a bug in original code. 
+  Original code was edited to address a bug. 
   Issue: the game would not end unless the invaders collided with the shooter 
   and were able to pass by this would trigger an error as the surviving 
   invaders would continue to travel down past the grid.
@@ -259,31 +279,6 @@ function shoot(e) {
   }
 }
 
-// show modal on page load
-window.onload = () => {
-  setTimeout(() => {
-    gameModal.show()
-  }, 300)
-}
-
-// start game on modal>button click
-startGameButton.addEventListener("click", () => {
-  gameModal.hide()
-  startGame()
-})
-
-function startGame() {
-  //sets up the initial game state, before this, the aliens are just static.
-  invadersId = setInterval(moveInvaders, 350)
-  //toggles visibility of game option buttons (New Game and Start-Pause)
-  startPause.classList.remove("hidden-buttons")
-  restartButton.classList.remove("hidden-buttons")
-  startPause.innerHTML = "PAUSE"
-}
-
-document.addEventListener("keydown", shoot)
-shooter.addEventListener("click", shoot)
-
 // Pause/Resume button:
 function togglePauseResume(e) {
   if (invadersId) {
@@ -298,11 +293,21 @@ function togglePauseResume(e) {
   }
 }
 
-startPause.addEventListener("click", togglePauseResume)
-
 // Restart button - resets game state and starts over.
 function restartGame(e) {
   location.reload()
 }
 
+//EVENT LISTENERS
+startGameButton.addEventListener("click", () => {
+  gameModal.hide()
+  startGame()
+})
+toggleSoundButton.addEventListener("click", toggleSound)
+document.addEventListener("keydown", moveShooter)
+leftArrow.addEventListener("click", moveShooter)
+rightArrow.addEventListener("click", moveShooter)
+document.addEventListener("keydown", shoot)
+shooter.addEventListener("click", shoot)
+startPause.addEventListener("click", togglePauseResume)
 restartButton.addEventListener("click", restartGame)
