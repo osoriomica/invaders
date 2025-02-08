@@ -70,7 +70,7 @@ function chooseShooter(e) {
   for (const className of selectedShooter.classList) {
     shooter.classList.add(className)
     /*
-    	Passes each class individually to .shooter as the classList.add() 
+      Passes each class individually to .shooter as the classList.add() 
       method was seeing the classes (.shooter.shooterN) as a single 
       class name and returning an InvalidCharacterError.
     */
@@ -232,7 +232,7 @@ function moveInvaders() {
 // Shoot function - original code by Ania Kubow. Edited to customise game.
 function shoot(e) {
   // Guard clause: don't shoot if the game is paused.
-  if ((isGamePaused) || (isGameOver)){
+  if ((isGamePaused) || (isGameOver)) {
     return;
   }
 
@@ -264,12 +264,13 @@ function shoot(e) {
       setTimeout(() => squares[currentFlashIndex].classList.remove("boom"), 300)
       //makes .boom disappear after 300 miliseconds.
       clearInterval(flashId)
+
       //Keeps track of shooted invaders so they're not drawn again when moving
       const InvaderRemoved = alienInvaders.indexOf(currentFlashIndex)
       //looks into the flash index to see if there're aliens and stores it
       invadersRemoved.push(InvaderRemoved)
       score++
-      scoreDisplay.innerHTML = score
+      padScore(score)
     }
   }
   if (e.key === "ArrowUp" || e.key === " " || e.target.id === "shooter") {
@@ -299,6 +300,24 @@ function togglePauseResume(e) {
 function restartGame(e) {
   location.reload()
 }
+
+// Function to pad score to 3 digits. - Code idea by my mentor Brian Macharia
+function padScore(score) {
+  let paddedScore
+  if (score <= 9) {
+    paddedScore = `00${score}`
+  }
+  else if (score >= 10 && score <= 99) {
+    paddedScore = `0${score}`
+  }
+  else {
+    paddedScore = score
+  }
+
+  scoreDisplay.innerHTML = paddedScore
+  return paddedScore
+}
+
 
 //EVENT LISTENERS
 startGameButton.addEventListener("click", () => {
