@@ -53,7 +53,7 @@
     </header>
 
     <!-- Start game Modal -->
-    <div class="modal fade" id="game-modal" data-bs-backdrop="static" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="game-modal" data-bs-backdrop="static" tabindex="-1" aria-label="Choose a shooter and press start game to play the game." aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body">
@@ -84,11 +84,11 @@
 
         </section>
         <!-- Game options -->
-        <div id="game-options" class="hidden-buttons">
+        <div id="game-options">
 
             <!-- Start, pause and restart Game -->
-            <button id="restart" type="button" class="btn play-btn hidden-buttons">NEW GAME</button>
-            <button id="start-pause" type="button" class="btn play-btn hidden-buttons">START</button>
+            <button id="restart" type="button" class="btn play-btn hidden-buttons" aria-label="Start a new game">NEW GAME</button>
+            <button id="start-pause" type="button" class="btn play-btn hidden-buttons" aria-label="Pause or resume the game">START</button>
 
         </div>
 
