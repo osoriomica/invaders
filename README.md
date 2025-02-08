@@ -4,12 +4,20 @@
 The deployed website can be found here: [Urban Invaders](https://osoriomica.github.io/invaders/index.html)  
 
 ## Introduction
+ 
+
+Urban Invaders is a playful take on the street art by French artist Frank Slama and the original Space Invaders arcade game.
+
+It’s become a personal habit of mine to photograph (or shoot) these Invader installations whenever I happily come across them whilst walking on the streets of my city or as a tourist somewhere else.  
+This project comes from a mix of arcade nostalgia, my interest in street art and our modern compulsive need of capturing stuff in photos. The user controls the shooter as usual, but on this occasion, they are tourists with their cameras shooting photos of the invaders crawling down a building. I hope to capture some of that original fun with a twist on my version of Space Invaders. 
+
+![collage of photos of Invader's installations around Paris](README-folder/other-assets/collage-photos.jpg) 
 
 ### About the original Space Invaders:
 ![poster of original Space Invaders](README-folder/other-assets/space-invaders-flyer-1978.jpg)  
 [Image by Arcade Museum](https://en.wikipedia.org/w/index.php?curid=41622028), Fair use.
 
-Released in 1978 by Taito Corporation, and designed by Tomohiro Nishikado; [Space Invaders](https://en.wikipedia.org/wiki/Space_Invaders) is considered one of the most influential and greatest games of all time. After almost half a century since its origins, it has continued to be a part of the pop culture across the globe, inspiring people daily with its simplicity and iconic design.  
+Released in 1978 by Taito Corporation, and designed by Tomohiro Nishikado; [Space Invaders](https://en.wikipedia.org/wiki/Space_Invaders) is considered one of the most influential and greatest games of all time. After almost half a century since its origins, it has continued to be a part of the pop culture across the globe, inspiring people daily with its simplicity and iconic design. 
 
 ### About Frank Slama (AKA Invader)
 One of my favourite street artists, Franck Slama (AKA Invader) has given the famous alien invaders and their unmistakable pixelated art a new life by installing, pixelated ceramic tiles on public walls around the world. His artwork features the invaders as well as other famous characters from old-school video games like Mario Bros and Pac Man. 
@@ -17,66 +25,53 @@ One of my favourite street artists, Franck Slama (AKA Invader) has given the fam
 
 ![Frank Slama AKA Invader](README-folder/other-assets/invader-portrait.jpg) [By Julie - Own work, CC BY-SA 4.0](https://commons.wikimedia.org/w/index.php?curid=50343315)
 
-!(Add couple of photos from my camera row).
-
-It’s become a personal habit of mine to photograph (or shoot) these Invader installations whenever I happily come across them whilst walking on the streets of my city or as a tourist somewhere else.
-So, this project comes from that mix of nostalgia, street art and our compulsive need of capturing cool things in photos. The user controls the shooter as usual, but on this occasion, they are tourists with their cameras shooting photos of the invaders crawling down the buildings. I hope to capture some of that original fun with a twist on my version of Space Invaders. 
-
 ## User Experience
 
 ### User stories
-The user: anyone should be able to play and hopefully enjoy the experience. On one side, Space Invaders recalls the nostalgia for the Golden Age of arcade games but also, it’s a simple and fun game to play. 
+Space Invaders recalls the nostalgia for the Golden Age of arcade games but also, it’s a simple and fun game to play. 
+Therefore, the user of this website is someone who'd like to play a quick shooting game based on Space Invaders. Or someone who shares the interest (or maybe has just come across) an installation by Invader.   
 
 - As a user, I’d like to understand how to play the game.
+- As a user, I’d like to play the game with simple controls.
 - As a user, I would like to easily start a new game.
-- As a user, I’d like to have control over some of the visuals like the background, the invader’s style or my avatar.
+- As a user, I’d like to choose my shooter.
 - As a user, I’d like to be able to pause, resume and/or start a new game.
-- As a user, I’d like to control the volume for the audio effects/background music.  
+- As a user, I’d like to control the audio effects/background music.  
 - As a user, I’d like to know my score at the end of the game.
-- As a user, I’d like to know if I’ve lost and be able to start again. 
-- As a user, I’d like to share my score with social media and maybe challenge a friend.??
+- As a user, I’d like to know if I’ve lost or won the game. 
 
 ### Features
-Layout: The website is presented in two pages, keeping the focus on the game as the main feature. 
-
-#### homepage: 
-- Welcome message: the homepage has a simple welcome message like a French road sign (blue background, white inner border and text written in white uppercase -but with an arcade-inspired font). The welcome message offers quick instructions and a button to start the game. 
-- Maybe transitioning with a loading animation screen before the rest of the code can run. 
-
-By Jordiet. from Reus - París, CC BY-SA 2.0, https://commons.wikimedia.org/w/index.php?curid=76505381 
-
-- Instructions: The user can click on the instructions button to open a modal featuring a quick intro to the game and playing instructions. 
-#### game page:
-- Button to close the modal reads “Got it!”.
-- Game Controls: Three buttons above the game’s grid that the user can click on: New Game, Pause and Resume.
-- Choose your shooter/invader/space. The user can choose their favourite shooter/invader/space from a pre-set options menu underneath the game’s grid. Each space loads a different background song A default space is loaded at the start of the game and on clicking the New Game button.
-- Sound controls: The user can click on the audio icons to control volume.
-- A footer with social media links to share the game.
-##### Gameplay: 
-- On game start, the shooter is placed at the bottom centre of the grid. The grouped of invaders appear at the top left corner and start moving side to side, descending one space towards the shooter.
-Using Left and Right arrows, the user can move the shooter side to side but not past the edge of the grid. 
-Using the Up arrow, the shooter can fire against the invaders. 
-- 3 credits are given to the user to play before the game is over. 
-- Each time the shooter hits an invader, this disappears and the score is increased by one. 
-- The game is won by destroying all the invaders before they touch the shooter or the bottom of the grid. If the 
+Layout: The website is presented in two pages. The homepage and the game page. The focus relies on the game as the main feature. 
+#### General features
+- logo and navigation menu with two links: Home and Play Urban Invaders.
+- footer with social media icons to open in a new tab facebook and instagram websites.
+#### Homepage: 
+- Welcome message: the homepage has a simple welcome message styled like a French road sign (blue background, white inner border and text written in white uppercase -but with an arcade-inspired font).
+- Instructions: the welcome message offers quick instructions on how to play the game. 
+- Link: to the game page. 
+#### Game page:
+- Modal: on page load, a bootstrap modal is displayed with 3 shoooter options to choose before starting the game.  
+- Button to close the modal reads "Start Game”.
+- Score display: below the navigation menu, centered with yellow text for contrast. The game over or winning messages are updated on the same line.
+- Game Options: Two buttons below the score and above the game’s grid: New Game and Pause/Resume.
+- Game Board: on a square box with dark semi transparent background. The invaders and the shooting camera are placed within. 
+- Game Controls: Big arrow buttons and the selected shooter are placed directly below the grid. The user can play without a keyboard using these buttons.  
+- Sound controls: The user can click on the audio icon to toggle the sound on and off.
+##### Game Logic: 
+- On game start, the shooter is placed at the bottom centre of the grid. The grouped of invaders appear at the top left corner and start moving side to side, descending towards the shooter.
+- Using Left and Right arrows (on keyboard and on screen), the user can move the shooter side to side but not past the edge of the grid. 
+- Using the Up arrow or the spacebar on the keyboard (or clicking on the shooter's icon on screen), the user can fire against the invaders. 
+- Each time the shooter hits an invader, it disappears and the score is increased by one. 
+- The game is won by destroying all the invaders before they touch the shooter or the bottom of the grid.
 - The game is lost if the invaders reach the shooter or the bottom of the grid. 
-- If all invaders are destroyed. Send a new wave of faster invaders with differentiated by a different icon.??
-- At random, one “boss invader” can appear during the game and shoot back at the user. The user can fire at this invader too. If the user is hit by the “boss invader”, the shooter looses a credit/life.??
-- Game Over: the end of the game. A modal appears with the final score and a Congratulations! Or Game Over message. (And the option to share this on Instagram/Facebook??).   
-#### Possible features to add in a future deployment:
-	- Scoreboard with a top 10 of the highest scores and the user’s initials. 
- 	- Boss to increase difficulty of the game. 
-	- Share score to social media? 
-	- Report an issue link to write an email to developer. 
-	- Random math drop bomb to shooter? (Nice to have if more time) 
+- Game Over: the end of the game. The score display is updated with the final score and a Congratulations! Or Game Over message. 
 
-### Functionalities to add
-- Choose your Avatar / invaders
-- Score display.
-- 404 Page - Looks like you’ve reached beyond space. Button: Go back! 
-- Second and third wave of faster invaders?
-- 3 lives? Display credits 03/02/01/game over - Would you like to play again?
-- Boss with faster moving interval that shoots back at user??
+	#### Possible features to add in a future deployment:
+	- Scoreboard with a top 10 of the highest scores and the user’s initials. 
+ 	- Boss to increase difficulty of the game. Random math drop bomb to shooter? (Nice to have if more time)
+	- Share score to social media.
+	- Report an issue link to write an email to developer. 
+	- Option to add levels of difficulty (faster invaders, bosses, etc)
 
 ### Design	
 The overall design is inspired by the original arcade aesthetic and Invader’s street art installations (see introduction).
@@ -97,28 +92,36 @@ The buttons and links are formatted so that the user can interact intuitively.
 	- Press Start 2P: Headings and highlighted buttons.
 	- Jersey 15:  General text elements. 
 - Sounds and music: pixabay.com
-- Graphics: canva.com 
-- Buttons: camera capture, tile crack,=
+- Graphics: SVGs edited from canva.com - all characters have a pixelated style.
 - Background: photo taken and edited by developper. 
-- Modal: Styled to resemble the French road signs that has been ‘invaded’ with a pixelated art installation. Format: blue background, white uppercase fonts and centred text. A tiny space Invader on the top right corner.
+- Text signs: Styled to resemble the French road signs to keep the idea of street art.
 
 ## WIREFRAMES  
 ### Information Architecture diagram
 
+### Mock-ups
+<details>
+<summary>Click here to open the site's mockups:</summary>
+
+![Mobile Index](README-folder/wireframes/canva-mockups/index-mockup.jpg)
+![Mobile Invaders](README-folder/wireframes/canva-mockups/invaders-mockup.jpg)
+![Mobile 404](README-folder/wireframes/canva-mockups/404-mockup.jpg)
+![Large Screens - Invaders](README-folder/wireframes/canva-mockups/large-screen-invaders-mockup.jpg)
+</details>
+
 ### Technologies used:
 - Languages: HTML5, CSS3, JS 
-- Bootstrap 5.2.3
-- GitHub: to host my project  
-- Visual Studio Code: IDE connected to github codespaces
-- Google Fonts: Find and import font families
-- Wireframe.cc: Make initial wireframes 
-- canva.com- Create, edit and export sprite elements and draft my wireframes and overall design before translating it to html/css code
-- pixabay.com - to download sound effects
-- coolors.co- Create the colour palette
-- Font Awesome - arrow icons on index.html
+- Bootstrap 5.2.3 - to enhance the visual appearance of the website as well as the [built-in modal component](https://getbootstrap.com/docs/4.0/components/modal/) used alongside custom CSS styles
+- GitHub - to host the project  
+- Visual Studio Code - IDE connected to github codespaces
+- Google Fonts - Find and import font families
+- canva.com - Create, edit and export [sprite elements](https://www.canva.com/design/DAGcibDIbGE/Kb27D79L8M__OToY9XiEmg/edit?utm_content=DAGcibDIbGE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton). [Draft wireframes and overall design](https://www.canva.com/design/DAGcSUaYHVU/TzfS5spG1CXN-vaJxABJHw/edit?utm_content=DAGcSUaYHVU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) before translating it to html/css code.
+- pixabay.com - to download free sound effects
+- coolors.co - Create the colour palette
+- Font Awesome - arrow icons on index.html and social icons on footer
 - cloudconvert.com - convert and optimise images for the web
-- mdn web docs - for general reference
-- Lighthouse - to improve site's general score following their suggestions
+- mdn web docs - for general coding reference 
+- Lighthouse - to improve site's general score by following their suggestions on performance, accessibility, best practices and SEO 
 - prettier.io - to beautify the code
 - Google's Inspect Element - to debug code and see console logs and errors
 
@@ -145,15 +148,19 @@ The website was tested with Google Chrome's Lighthouse
 - Homepage:   
 ![screenshot of code analysis](README-folder/validation/lighthouse-index.png)
 - Invaders:  
-![screenshot of code analysis](README-folder/validation/lighthouse-invaders.png)
+![screenshot of code analysis](README-folder/validation/lighthouse-invaders.jpg)
 - 404:  
 ![screenshot of code analysis](README-folder/validation/lighthouse-404.png) 
 
-Jest tests!- effective and meaningful.
-If using TDD, demonstrate in commit log. Document it in Readme or separate file.
-
 ### Testing user stories
-
+- As a user, I’d like to understand how to play the game:
+- As a user, I’d like to play the game with simple controls:
+- As a user, I would like to easily start a new game:
+- As a user, I’d like to choose my shooter: 
+- As a user, I’d like to be able to pause, resume and/or start a new game:
+- As a user, I’d like to control the audio effects/background music:
+- As a user, I’d like to know my score at the end of the game:
+- As a user, I’d like to know if I’ve lost or won the game:
 ### Bugs
 - Navbar toggle not behaving properly. Issue: Target was not set to correct ID. Fix: Using bootstrap’s documentation, I made sure both the parent’s data-bs-target and the id of its descendant div were the same.  
 - Background image on .main-text-bg not displaying responsively. Issue: The text would overflow the container and the image was not growing with its parent div. Fix: set width to 100%, and height to 100vh so the text would stop overflowing and the image would occupy the full width of its container.
@@ -163,9 +170,10 @@ If using TDD, demonstrate in commit log. Document it in Readme or separate file.
 
 ## DEPLOYMENT
 ## CREDITS
-The base javascript code for the game comes from Ania Kubów: (https://youtu.be/s6LrpUTQQn0?si=DZ24tUrVomU48pgm)
-GameOver on reaching the bottom row by SCollins: (https://github.com/SJECollins/ci-pp2-pixels-arcade/tree/main)
-Audio() constructor: (https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement/Audio)
+### Code
+- The base javascript code for the game comes from Ania Kubów: (https://youtu.be/s6LrpUTQQn0?si=DZ24tUrVomU48pgm)
+- GameOver on reaching the bottom row by SCollins: (https://github.com/SJECollins/ci-pp2-pixels-arcade/tree/main)
+- Audio() constructor: (https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement/Audio)
 	
 ### Media
 - Invader cut out and edited from photo by Guilhem Vellut from Paris, France. https://www.flickr.com/photos/o_0/28023125416/  
@@ -176,10 +184,9 @@ Audio() constructor: (https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudio
 - shooter2 made using Pixel art green retro hat by Patinya_P_Ang from Patinya_P_ANG https://www.canva.com/photos/MAFrmC84tXI/
 - shooter3 cat pixel by FranGeL Katerns https://www.canva.com/icons/MAGRfqjLFK4/
 
-Sound effects: 
+#### Sound effects: 
 - Camera capture sound effect by <a href="https://pixabay.com/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6448">freesound_community</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6448">Pixabay</a>
 - negative_beeps sound effect by <a href="https://pixabay.com/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6008">freesound_community</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6008">Pixabay</a>
 - success sound effect by <a href="https://pixabay.com/users/updatepelgo-44563794/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=221935">UpdatePelgo</a> from <a href="https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=221935">Pixabay</a>
 
 ### ACKNOWLEDGEMENTS
-Related projects: 
