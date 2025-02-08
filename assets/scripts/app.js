@@ -1,5 +1,6 @@
 /* jshint esversion: 8 */
 /*jshint -W033 */
+/* global bootstrap */
 
 // GLOBAL VARIABLES:
 const grid = document.querySelector(".grid")
@@ -25,10 +26,6 @@ const restartButton = document.getElementById("restart")
 const toggleSoundButton = document.getElementById("sound")
 
 // Modal elements:
-/*
-jshint returns a warning on bootstrap not being a defined variable 
-although it is needed for the code to work.
-*/
 const gameModal = new bootstrap.Modal(document.getElementById("game-modal"))
 const startGameButton = document.getElementById("start-game")
 
