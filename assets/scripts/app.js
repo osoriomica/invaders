@@ -13,6 +13,7 @@ let isGoingRight = true
 let direction = 1
 let score = 0
 let isGamePaused = false;
+let isGameOver = false;
 
 // On-screen buttons:
 const shooterOptions = document.querySelectorAll("#shooter-options .shooter")
@@ -33,9 +34,9 @@ const startGameButton = document.getElementById("start-game")
 
 // Sound FX with a sound object to keep the code scalable.
 const soundsList = {
-  boomSFX: new Audio("assets/media/iphone-camera-capture.mp3"),
-  gameOverSFX: new Audio("assets/media/game-over-arcade.mp3"),
-  successSFX: new Audio("assets/media/success.mp3"),
+  boomSFX: new Audio("assets/media/audio/iphone-camera-capture.mp3"),
+  gameOverSFX: new Audio("assets/media/audio/game-over-arcade.mp3"),
+  successSFX: new Audio("assets/media/audio/success.mp3"),
 }
 
 // MAIN CODE:
@@ -213,16 +214,17 @@ function moveInvaders() {
   }
 
   function gameOver() {
-    resultDisplay.innerHTML = `<h4>Game Over</h4> You shot ${score} invaders`
+    resultDisplay.innerHTML = `Game Over! You shot ${score} invaders`
     soundsList.gameOverSFX.play()
     clearInterval(invadersId)
+    isGameOver = true
     // Removes shooter from grid on game over
     squares[currentShooterIndex].classList.remove("camera")
     setTimeout(() => remove(), 500) // Removes all invaders on game Over
   }
 
   if (invadersRemoved.length === alienInvaders.length) {
-    resultDisplay.innerHTML = `<h4>You Win!</h4> You shot ${score} invaders`
+    resultDisplay.innerHTML = `You Win! You shot ${score} invaders`
     soundsList.successSFX.play()
     clearInterval(invadersId)
   }
@@ -232,10 +234,10 @@ function moveInvaders() {
 // Shoot function - original code by Ania Kubow. Edited to customise game.
 function shoot(e) {
   // Guard clause: don't shoot if the game is paused.
-  if (isGamePaused){
+  if ((isGamePaused) || (isGameOver)){
     return;
   }
-  
+
   let flashId
   let currentFlashIndex = currentShooterIndex
 
@@ -277,7 +279,7 @@ function shoot(e) {
   }
   if (e.key === "ArrowUp" || e.key === " " || e.target.id === "shooter") {
     e.preventDefault()
-    flashId = setInterval(moveFlash, 200)
+    flashId = setInterval(moveFlash, 150)
     soundsList.boomSFX.play()
   }
 }
