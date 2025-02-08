@@ -113,13 +113,15 @@ The buttons and links are formatted so that the user can interact intuitively.
 
 ## TESTING
 ### HTML Validation
-- Homepage:
-[link to html validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fosoriomica.github.io%2Finvaders%2Findex.html)
-- Invaders:
+- Homepage:  
+[link to html validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fosoriomica.github.io%2Finvaders%2Findex.html)  
+- Invaders:  
 [Link to html validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fosoriomica.github.io%2Finvaders%2Finvaders.html) 
-- 404: 
-[link to html validotr](https://validator.w3.org/nu/?doc=https%3A%2F%2Fosoriomica.github.io%2Finvaders%2F404.html)
+- 404:   
+[link to html validotr](https://validator.w3.org/nu/?doc=https%3A%2F%2Fosoriomica.github.io%2Finvaders%2F404.html)  
+![screenshot of html validation](README-folder/validation/html-validation.png)
 ### CSS
+- W3C CSS Validation:
 <p>
     <a href="http://jigsaw.w3.org/css-validator/check/referer">
         <img style="border:0;width:88px;height:31px"
@@ -127,13 +129,21 @@ The buttons and links are formatted so that the user can interact intuitively.
             alt="Valid CSS!" />
     </a>
 </p>
+
+![CSS validation screenshot](README-folder/validation/css-validation.png)
           
 [Link to css validator](http://jigsaw.w3.org/css-validator/validator?lang=en&profile=css3svg&uri=https%3A%2F%2Fosoriomica.github.io%2Finvaders%2Fassets%2Fcss%2Fstyle.css&usermedium=all&vextwarning=&warning=1) 
 ### JS 
 app.js was tested using (https://jshint.com/) 
 
-![screenshot of code analysis](link)
-- https://developer.chrome.com/docs/lighthouse/overview/ 
+#### LIGHTHOUSE
+The website was tested with Google Chrome's Lighthouse
+- Homepage:   
+![screenshot of code analysis](README-folder/validation/lighthouse-index.png)
+- Invaders:  
+![screenshot of code analysis](README-folder/validation/lighthouse-invaders.png)
+- 404:  
+![screenshot of code analysis](README-folder/validation/lighthouse-404.png) 
 
 Jest tests!- effective and meaningful	.
 If using TDD, demonstrate in commit log. Document it in Readme or separate file.
