@@ -113,10 +113,26 @@ The buttons and links are formatted so that the user can interact intuitively.
 
 ## TESTING
 ### HTML Validation
--Hompage:
-- ![Link to html validator] (https://validator.w3.org/) 
-- CSS: https://jigsaw.w3.org/css-validator/ 
-- https://jshint.com/ 
+- Homepage:
+[link to html validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fosoriomica.github.io%2Finvaders%2Findex.html)
+- Invaders:
+[Link to html validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fosoriomica.github.io%2Finvaders%2Finvaders.html) 
+- 404: 
+[link to html validotr](https://validator.w3.org/nu/?doc=https%3A%2F%2Fosoriomica.github.io%2Finvaders%2F404.html)
+### CSS
+<p>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!" />
+    </a>
+</p>
+          
+[Link to css validator](http://jigsaw.w3.org/css-validator/validator?lang=en&profile=css3svg&uri=https%3A%2F%2Fosoriomica.github.io%2Finvaders%2Fassets%2Fcss%2Fstyle.css&usermedium=all&vextwarning=&warning=1) 
+### JS 
+app.js was tested using (https://jshint.com/) 
+
+![screenshot of code analysis](link)
 - https://developer.chrome.com/docs/lighthouse/overview/ 
 
 Jest tests!- effective and meaningful	.
