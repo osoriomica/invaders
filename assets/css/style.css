@@ -196,9 +196,9 @@ main {
 }
 
 /* Start, pause and restart styles */
-.hidden-buttons {
-    display: none;
-}
+/* .hidden-buttons {
+    visibility: hidden;
+} */
 
 /* Start Game sModal */
 .modal {

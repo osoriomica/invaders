@@ -12,6 +12,7 @@ let invadersId = 0
 let isGoingRight = true
 let direction = 1
 let score = 0
+let isGamePaused = false;
 
 // On-screen buttons:
 const shooterOptions = document.querySelectorAll("#shooter-options .shooter")
@@ -87,9 +88,6 @@ window.onload = () => {
 function startGame() {
   //sets up the initial game state, before this, the aliens are just static.
   invadersId = setInterval(moveInvaders, 350)
-  //toggles visibility of game option buttons (New Game and Start-Pause)
-  startPause.classList.remove("hidden-buttons")
-  restartButton.classList.remove("hidden-buttons")
   startPause.innerHTML = "PAUSE"
 }
 
@@ -233,6 +231,11 @@ function moveInvaders() {
 
 // Shoot function - original code by Ania Kubow. Edited to customise game.
 function shoot(e) {
+  // Guard clause: don't shoot if the game is paused.
+  if (isGamePaused){
+    return;
+  }
+  
   let flashId
   let currentFlashIndex = currentShooterIndex
 
@@ -283,10 +286,12 @@ function shoot(e) {
 function togglePauseResume(e) {
   if (invadersId) {
     //Game is running from the beginning so we need to pause it first
+    isGamePaused = true
     clearInterval(invadersId)
     invadersId = ""
     startPause.innerHTML = "RESUME"
   } else {
+    isGamePaused = false
     invadersId = setInterval(moveInvaders, 350)
     startPause.innerHTML = "PAUSE"
     moveInvaders()
