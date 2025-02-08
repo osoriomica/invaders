@@ -112,11 +112,13 @@ The buttons and links are formatted so that the user can interact intuitively.
 - cloudconvert.com: convert and optimise images for the web. 
 
 ## TESTING
-Online validation: HTML, CSS, JS, Lighthouse on google
-https://validator.w3.org/ 
-https://jigsaw.w3.org/css-validator/ 
-https://jshint.com/ 
-https://developer.chrome.com/docs/lighthouse/overview/ 
+### HTML Validation
+-Hompage:
+- ![Link to html validator] (https://validator.w3.org/) 
+- CSS: https://jigsaw.w3.org/css-validator/ 
+- https://jshint.com/ 
+- https://developer.chrome.com/docs/lighthouse/overview/ 
+
 Jest tests!- effective and meaningful	.
 If using TDD, demonstrate in commit log. Document it in Readme or separate file.
 

@@ -124,16 +124,16 @@ main {
     background-color: var(--highlight1);
 }
 
-.main-text-bg .btn,
+.main-text-bg .btn:hover,
 .modal .btn:hover {
     color: var(--light-text);
-    transition: color 0.5s ease-in-out;
+    transition: color 0.3s ease-in-out;
 }
 
-.main-text-bg .btn,
+.main-text-bg .btn:active,
 .modal .btn:active {
     color: var(--light-text);
-    transition: color 0.5s ease-in-out;
+    transition: color 0.3s ease-in-out;
 }
 
 .center-align {
