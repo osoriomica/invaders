@@ -101,7 +101,7 @@ I used canva.com for the overall design and [mocking up process](README-folder/w
 ### Information Architecture diagram
 
 <details>
-<summary> Please click here to open the mobile wireframes:  </summary>
+<summary> Please click here to open the <strong>MOBILE WIREFRAMES:</strong>  </summary>
 
 ![index wireframe on mobile](README-folder/wireframes/mobile-wireframes/mobile-index-wireframe.jpg)  
 ![invaders wireframe turned into mockup](README-folder/wireframes/mobile-wireframes/mobile-invaders-design-wireframe.jpg)
@@ -109,7 +109,7 @@ I used canva.com for the overall design and [mocking up process](README-folder/w
 </details>
 
 <details>
-<summary>Please click here to open the larger screen wireframes: </summary>
+<summary>Please click here to open the <strong>LARGE SCREEN WIREFRAMES:</strong> </summary>
 
 ![index wireframe on large screens](README-folder/wireframes/large-screen-wireframes/index-wireframe.jpg)
 ![invaders wireframe -large screens](README-folder/wireframes/large-screen-wireframes/invaders-game-wireframe.jpg)
@@ -150,7 +150,7 @@ I used canva.com for the overall design and [mocking up process](README-folder/w
 app.js was tested using (https://jshint.com/) 
 ![JSHint analysis](README-folder/validation/jshint-validation.png)
 
-#### LIGHTHOUSE
+### LIGHTHOUSE
 The website was tested with Google Chrome's Lighthouse
 - Homepage:   
 ![screenshot of code analysis](README-folder/validation/lighthouse-index.png)
@@ -168,6 +168,7 @@ The website was tested with Google Chrome's Lighthouse
 - As a user, I’d like to control the audio effects/background music:
 - As a user, I’d like to know my score at the end of the game:
 - As a user, I’d like to know if I’ve lost or won the game:
+
 ### Fixed Bugs
 - Navbar toggle not behaving properly. Issue: Target was not set to correct ID. Fix: Using bootstrap’s documentation, I made sure both the parent’s data-bs-target and the id of its descendant div were the same.  
 - Background image on .main-text-bg not displaying responsively. Issue: The text would overflow the container and the image was not growing with its parent div. Fix: set width to 100%, and height to 100vh so the text would stop overflowing and the image would occupy the full width of its container.
