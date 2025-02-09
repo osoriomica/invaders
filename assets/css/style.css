@@ -448,9 +448,8 @@ footer {
         padding: 2.6rem 3rem 0;
         margin-top: calc(6rem);
         max-width: 590px;
-        /* height: 60vh; this height doesn't work on landscape phones */
-        height: 100vh;
-        /* this height works for landscape phones but overflows onto the footer*/
+        height: 90vh;
+     
         /* Different background image for larger screens */
         background-image: url(../media/road-sign.webp);
     }

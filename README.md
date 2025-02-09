@@ -42,9 +42,9 @@ Therefore, the user of this website is someone who'd like to play a quick shooti
 
 ### Features
 Layout: The website is presented in two pages. The homepage and the game page. The focus relies on the game as the main feature. 
-#### General features
-- logo and navigation menu with two links: Home and Play Urban Invaders.
-- footer with social media icons to open in a new tab facebook and instagram websites.
+#### General features across the site:
+- The logo, title and navigation menu with two links: Home and Play Urban Invaders.
+- A simple footer with social media icons to open in a new tab facebook and instagram websites.
 #### Homepage: 
 - Welcome message: the homepage has a simple welcome message styled like a French road sign (blue background, white inner border and text written in white uppercase -but with an arcade-inspired font).
 - Instructions: the welcome message offers quick instructions on how to play the game. 
@@ -88,18 +88,18 @@ The buttons and links are formatted so that the user can interact intuitively.
 	| ![#102542](https://placehold.co/15x15/102542/102542.png) | #102542 | Oxford Blue |
 	| ![#d10003](https://placehold.co/15x15/d10003/d10003.png) | #ba0003 | Enginneering Orange |
 
-- Typography (imported from Google Fonts): 
+- Typography. Chosen for its pixelated styles to emulate an arcade's game -imported from Google Fonts: 
 	- Press Start 2P: Headings and highlighted buttons.
 	- Jersey 15:  General text elements. 
-- Sounds and music: pixabay.com
-- Graphics: SVGs edited from canva.com - all characters have a pixelated style.
-- Background: photo taken and edited by developper. 
-- Text signs: Styled to resemble the French road signs to keep the idea of street art.
+- Sounds and music: pixabay.com. The sounds are within a javascript object so there's room for future expansion.
+- Graphics: SVGs edited from canva.com - all characters have a pixelated style to resemble the Space Invaders game and Invader's art installations.
+- Background: A shot of a street in Paris. Photo taken and edited by the developper.  
+- Text signs: Styled to resemble the French road signs to continue the idea of street art.
 
 ## WIREFRAMES  
-I used canva.com for the overall design and [mocking up process](README-folder/wireframes/canva-mockups). The wireframes then allowed me to start experimenting with the colours and visual elements such as the svgs used across the site. 
-### Information Architecture diagram
+I used canva.com for the overall design and the [mock-up process](README-folder/wireframes/canva-mockups). These wireframes then allowed me to start experimenting with the colours and visual elements such as the svgs used across the site. 
 
+### Information Architecture diagram
 <details>
 <summary> Please click here to open the <strong>MOBILE WIREFRAMES:</strong>  </summary>
 
@@ -147,7 +147,7 @@ I used canva.com for the overall design and [mocking up process](README-folder/w
 ![CSS validation screenshot](README-folder/validation/css-validation.png)
           
 ### JS 
-app.js was tested using (https://jshint.com/) 
+app.js was tested using (https://jshint.com/). Three directives were added at the top of the js file to inform JSHint about the use of bootstrap (global bootstrap), to ignore the missing semicolons (-W033), and the use of the esversion: 8 (so that let and const were not flagged). No warnings were thrown after this.
 ![JSHint analysis](README-folder/validation/jshint-validation.png)
 
 ### LIGHTHOUSE
@@ -156,7 +156,7 @@ The website was tested with Google Chrome's Lighthouse
 ![screenshot of code analysis](README-folder/validation/lighthouse-index.png)
 - Invaders:  
 ![screenshot of code analysis](README-folder/validation/lighthouse-invaders.jpg)
-- 404:  
+- 404 -due to its error nature, the general score was affected:  
 ![screenshot of code analysis](README-folder/validation/lighthouse-404.png) 
 
 ### Testing user stories
