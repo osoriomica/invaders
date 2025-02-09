@@ -97,16 +97,23 @@ The buttons and links are formatted so that the user can interact intuitively.
 - Text signs: Styled to resemble the French road signs to keep the idea of street art.
 
 ## WIREFRAMES  
+I used canva.com for the overall design and [mocking up process](README-folder/wireframes/canva-mockups). The wireframes then allowed me to start experimenting with the colours and visual elements such as the svgs used across the site. 
 ### Information Architecture diagram
 
-### Mock-ups
 <details>
-<summary>Click here to open the site's mockups:</summary>
+<summary> Please click here to open the mobile wireframes:  </summary>
 
-![Mobile Index](README-folder/wireframes/canva-mockups/index-mockup.jpg)
-![Mobile Invaders](README-folder/wireframes/canva-mockups/invaders-mockup.jpg)
-![Mobile 404](README-folder/wireframes/canva-mockups/404-mockup.jpg)
-![Large Screens - Invaders](README-folder/wireframes/canva-mockups/large-screen-invaders-mockup.jpg)
+![index wireframe on mobile](README-folder/wireframes/mobile-wireframes/mobile-index-wireframe.jpg)  
+![invaders wireframe turned into mockup](README-folder/wireframes/mobile-wireframes/mobile-invaders-design-wireframe.jpg)
+![404 mobile wireframe](README-folder/wireframes/mobile-wireframes/mobile-404-wireframe.jpg)
+</details>
+
+<details>
+<summary>Please click here to open the larger screen wireframes: </summary>
+
+![index wireframe on large screens](README-folder/wireframes/large-screen-wireframes/index-wireframe.jpg)
+![invaders wireframe -large screens](README-folder/wireframes/large-screen-wireframes/invaders-game-wireframe.jpg)
+![invaders modal wireframe - large screens](README-folder/wireframes/large-screen-wireframes/invaders-modal-wireframe.jpg)
 </details>
 
 ### Technologies used:
