@@ -79,7 +79,7 @@ function chooseShooter(e) {
 window.onload = () => {
   setTimeout(() => {
     gameModal.show()
-  }, 300)
+  }, 200)
 }
 
 function startGame() {
