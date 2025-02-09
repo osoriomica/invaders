@@ -187,7 +187,6 @@ main {
 }
 
 #main-game h1 {
-    padding-bottom: 1rem;
     font-size: smaller;
     width: fit-content;
     margin: 0 auto;

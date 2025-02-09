@@ -194,6 +194,7 @@ function moveInvaders() {
 
   if (squares[currentShooterIndex].classList.contains("invader")) {
     gameOver()
+    return
   }
   /*
      Adapted from code by SCollins. Fixes the issue mentioned above.
@@ -209,7 +210,7 @@ function moveInvaders() {
   }
 
   function gameOver() {
-    resultDisplay.innerHTML = `Game Over! You shot ${score} invaders`
+    resultDisplay.innerHTML = `Game Over!`
     soundsList.gameOverSFX.play()
     clearInterval(invadersId)
     isGameOver = true
@@ -219,7 +220,7 @@ function moveInvaders() {
   }
 
   if (invadersRemoved.length === alienInvaders.length) {
-    resultDisplay.innerHTML = `You Win! You shot ${score} invaders`
+    resultDisplay.innerHTML = `You Win!`
     soundsList.successSFX.play()
     clearInterval(invadersId)
     isGameOver = true

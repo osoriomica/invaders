@@ -120,9 +120,9 @@ The buttons and links are formatted so that the user can interact intuitively.
 - coolors.co - Create the colour palette
 - Font Awesome - arrow icons on index.html and social icons on footer
 - cloudconvert.com - convert and optimise images for the web
-- mdn web docs - for general coding reference 
+- mdn web docs - for general coding reference: Loops and iteration, audio(), working with objects, etc.
 - Lighthouse - to improve site's general score by following their suggestions on performance, accessibility, best practices and SEO 
-- prettier.io - to beautify the code
+- prettier.io - to beautify the js and css code
 - Google's Inspect Element - to debug code and see console logs and errors
 
 ## TESTING
@@ -161,7 +161,7 @@ The website was tested with Google Chrome's Lighthouse
 - As a user, I’d like to control the audio effects/background music:
 - As a user, I’d like to know my score at the end of the game:
 - As a user, I’d like to know if I’ve lost or won the game:
-### Bugs
+### Fixed Bugs
 - Navbar toggle not behaving properly. Issue: Target was not set to correct ID. Fix: Using bootstrap’s documentation, I made sure both the parent’s data-bs-target and the id of its descendant div were the same.  
 - Background image on .main-text-bg not displaying responsively. Issue: The text would overflow the container and the image was not growing with its parent div. Fix: set width to 100%, and height to 100vh so the text would stop overflowing and the image would occupy the full width of its container.
 - Start game modal closing but not initialising game. The default setting for bootstrap's modal allows the user to click outside the modal to dismiss it, but if the user did this instead of pressing the start game button, the setInterval was not being updated by the startGame(). Fix:  Set backdrop to static (the modal will not close when clicking outside of it) to force the user to click on the Start Game button.
