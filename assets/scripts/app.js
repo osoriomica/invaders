@@ -210,17 +210,18 @@ function moveInvaders() {
   }
 
   function gameOver() {
-    resultDisplay.innerHTML = `Game Over!`
+    resultDisplay.innerHTML = `Game Over! `
     soundsList.gameOverSFX.play()
     clearInterval(invadersId)
     isGameOver = true
     // Removes shooter from grid on game over
     squares[currentShooterIndex].classList.remove("camera")
     setTimeout(() => remove(), 500) // Removes all invaders on game Over
+
   }
 
   if (invadersRemoved.length === alienInvaders.length) {
-    resultDisplay.innerHTML = `You Win!`
+    resultDisplay.innerHTML = `You Win! `
     soundsList.successSFX.play()
     clearInterval(invadersId)
     isGameOver = true
@@ -230,7 +231,7 @@ function moveInvaders() {
 
 // Shoot function - original code by Ania Kubow. Edited to customise game.
 function shoot(e) {
-  // Guard clause: don't shoot if the game is paused.
+  // Guard clause: don't shoot if the game is paused or if the game is over.
   if ((isGamePaused) || (isGameOver)) {
     return;
   }
