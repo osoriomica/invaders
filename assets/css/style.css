@@ -72,7 +72,7 @@ h3 {
     color: var(--highlight1);
     font-family: "Press Start 2P", serif;
     /* Calc() picked from Inspect element values and edited for intended look */
-    font-size: calc(1rem + 1.2vw);
+    font-size: calc(1rem + 1.1vw);
     margin-bottom: 0.3rem;
 }
 
@@ -551,8 +551,8 @@ footer {
 }
 
 /* Media queries */
-/* large phones or landscape mobile screens (568px and up) */
-@media screen and (min-width: 568px) {
+/* large phones or landscape mobile screens (580px and up) */
+@media screen and (min-width: 580px) {
 
     /* Main - homepage */
     .main-text-bg {
@@ -566,7 +566,8 @@ footer {
     }
 
     .main-text-bg h1 {
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.3rem;
+
     }
 
     #social {
