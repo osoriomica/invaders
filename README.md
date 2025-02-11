@@ -8,7 +8,8 @@ The deployed website can be found here: [Urban Invaders](https://osoriomica.gith
 - [INTRODUCTION](#introduction)
     * [About the original Space Invaders](#about-the-original-space-invaders)
     * [About Frank Slama (AKA Invader)](#about-frank-slama-aka-invader)
-- [USER EXPERIENCE](#user-experience)
+- [UXD](#uxd)
+	* [Development Timeline](#development-timeline)
     * [User stories](#user-stories)
     * [Features](#features)
     * [Design](#design)
@@ -52,7 +53,15 @@ One of my favourite street artists, Franck Slama (AKA Invader), has given the fa
 
 ![Frank Slama AKA Invader](README-folder/other-assets/invader-portrait.jpg) [By Julie - Own work, CC BY-SA 4.0](https://commons.wikimedia.org/w/index.php?curid=50343315)
 
-## User Experience
+## UXD
+
+### Development Timeline
+| Week commencing: | Task 1                                                         | Task 2                                                | Task 3                                                       | Task 4                                                                     |
+| ---------------- | -------------------------------------------------------------- | ----------------------------------------------------- | ------------------------------------------------------------ | -------------------------------------------------------------------------- |
+| 13-01-25         | Draft strategy, scope, structure, skeleton and surface planes. | Make initial wireframes and mockups.                  | SVG and visual elements.                                     | Explore imagery and color palette to be used in site.                      |
+| 20-01-25         | Initial commit.                                                | Basic HTML layout. General CSS and Bootstrap styling. | Site deployment.                                             | Refine visuals, edit photos and SVG elements. Optimise images for the web. |
+| 27-01-25         | Work through Ania's code and import it into the script file.   | Style the game elements.                              | Add 'sound toggle' and 'choose the shooter' functionalities. | Debug code.                                                                |
+| 03-02-25         | Clean up Readme file.                                          | Revisit text and styles.                              | Debug code.                                                  | Testing and validation.                                                    |
 
 ### User stories
 Space Invaders recalls the nostalgia for the Golden Age of arcade games but also, it’s a simple and fun game to play. 
@@ -88,7 +97,7 @@ Layout: The website is presented in two pages. The homepage and the game page. T
 	1. Camera flash: triggered on clicking the shooter to emulate a camera's shutter.
 	2. Game Over: played when an user looses the game.
 	3. Success: played when an user wins the game.
-##### Game Logic: 
+#### Game Logic: 
 - On game start, the shooter is placed at the bottom centre of the grid. The group of invaders appear at the top left corner and start moving side to side, descending towards the shooter.
 - Using Left and Right arrows (on keyboard and on-screen), the user can move the shooter side to side but not past the edge of the grid. 
 - Using the Up arrow or the spacebar on the keyboard (or clicking on the shooter's icon on-screen), the user can fire against the invaders. 
@@ -97,7 +106,7 @@ Layout: The website is presented in two pages. The homepage and the game page. T
 - The game is lost if the invaders reach the shooter or the bottom of the grid. 
 - Game Over: the end of the game. The score display is updated with the final score and a Congratulations! Or Game Over message. 
 
-	#### Possible features to add in a future deployment:
+	#### Features to add in a future deployment:
 	- Scoreboard with a top 10 of the highest scores and the user’s initials. 
  	- Boss to increase difficulty of the game. Random math drop bomb to shooter? (Nice to have if more time).
 	- Share score to social media.
