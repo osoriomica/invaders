@@ -271,6 +271,7 @@ The site was thoroughly tested using a manual testing approach. This approach le
 - <strong>Game not ending if the invaders reached the bottom</strong> without touching the shooter triggering a console error. Fix: Create a new constant using the divs on the bottom row and checking against the invaders class to trigger the game over.
 - <strong>Console error re:flash id</strong> Issue: the flash would continue to travel upwards indefinitely taking the index to negative numbers. Fix: Add a guard clause to return the function if the flash's index went out of bounds.
 - <strong>Social links not being able to be clicked on homepage on mobile screens.</strong> Issue: the height of the main text element was set 100vh on a higher z-index than the footer's thus covering the icons and preventing the user from clicking on them. Fix: Set the height to 90vh. 
+- <strong>Shoot(e) was enabled on dismissing the modal without clicking on the start game button:</strong> Fix: Add new global variable isGameStarted, then updating the variable to true in the event listener of the start game buttons (on the modal and on the game option buttons) and finally, including it within the guard clause on shoot() as a !isGameStarted along the isGameOver and isGamePaused if statement.  
 
 
 ## DEPLOYMENT
