@@ -555,7 +555,7 @@ footer {
     /* Main - homepage */
     .main-text-bg {
         padding: 2.6rem 3rem 0;
-        margin-top: calc(6rem);
+        margin-top: 6rem;
         max-width: 590px;
         height: 80vh;
      
@@ -587,7 +587,6 @@ footer {
     .main-text-bg {
         padding: 4.5rem 3.5rem 0 3rem;
         max-width: 800px;
-        height: 80vh;
     }
 
     .main-text-bg h1 {
