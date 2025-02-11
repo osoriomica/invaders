@@ -294,6 +294,7 @@ function togglePauseResume(e) {
     invadersId = setInterval(moveInvaders, 350)
     startPause.innerHTML = "PAUSE"
     moveInvaders()
+    isGameStarted = true
   }
 }
 
