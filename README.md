@@ -169,6 +169,7 @@ I used canva.com for the overall design and the [mock-up process](README-folder/
 - Font Awesome - arrow icons on index.html and social icons on footer
 - cloudconvert.com - convert and optimise images for the web using the webp format
 - mdn web docs - for general coding reference: Loops and iteration, audio(), location.reload(), working with objects, etc.
+- w3schools: [Filter functions](https://www.w3schools.com/cssref/css3_pr_filter.php)
 - Lighthouse - to improve the site's general score by following their suggestions on performance, accessibility, best practices and SEO 
 - prettier.io - to beautify the js and css code
 - Google's Inspect Element - to debug code and see console logs and errors
