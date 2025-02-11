@@ -1,5 +1,5 @@
 # URBAN INVADERS
-![Responsive Urban Invaders](README-folder/other-assets/responsive-invaders.png) 
+![Responsive Urban Invaders](README-folder/other-assets/responsive-invaders-white.png) 
 
 The deployed website can be found here: [Urban Invaders](https://osoriomica.github.io/invaders/index.html)  
 
@@ -72,17 +72,17 @@ Layout: The website is presented in two pages. The homepage and the game page. T
 
 	#### Possible features to add in a future deployment:
 	- Scoreboard with a top 10 of the highest scores and the user’s initials. 
- 	- Boss to increase difficulty of the game. Random math drop bomb to shooter? (Nice to have if more time)
+ 	- Boss to increase difficulty of the game. Random math drop bomb to shooter? (Nice to have if more time).
 	- Share score to social media.
 	- Report an issue link to write an email to developer. 
-	- Option to add levels of difficulty (faster invaders, bosses, etc)
+	- Option to add levels of difficulty (faster invaders, bosses, etc).
 
 ### Design	
-The overall design is inspired by the original arcade aesthetic and Invader’s street art installations (see introduction).
-The colour palette is high-contrasting and the text elements easy to read.
+The overall design is inspired by the original arcade aesthetic and Invader’s french street art installations (see introduction).
+The colour palette is high-contrasting and the text elements easy to read. It is inspired on the french flag colors: blue, red and white plus yellow (for highlights and increased contrast on dark blue backgrounds).
 The buttons and links are formatted so that the user can interact intuitively.
 
-- Colour Palette: 
+- Colour Palette:   
 
 	| Color      | Hex                                         | Name                             |
 	| ---------- | ------------------------------------------- | ---------------------------------|
@@ -95,7 +95,7 @@ The buttons and links are formatted so that the user can interact intuitively.
 - Typography. Chosen for its pixelated styles to emulate an arcade's game -imported from Google Fonts: 
 	- Press Start 2P: Headings and highlighted buttons.
 	- Jersey 15:  General text elements. 
-- Sounds and music: pixabay.com. The sounds are within a javascript object so there's room for future expansion.
+- Sounds and music: Chosen to emulate the arcade game experience and offer a better user experience. Downloaded from pixabay.com. The sounds are within a javascript object so there's room for future expansion.
 - Graphics: SVGs edited from canva.com - all characters have a pixelated style to resemble the Space Invaders game and Invader's art installations.
 - Background: A shot of a street in Paris. Photo taken and edited by the developer.  
 - Text signs: Styled to resemble the French road signs to continue the idea of street art.
@@ -126,15 +126,16 @@ I used canva.com for the overall design and the [mock-up process](README-folder/
 - GitHub - to host the project  
 - Visual Studio Code - IDE connected to GitHub codespaces
 - Google Fonts - Find and import font families
-- canva.com - Create, edit and export [sprite elements](https://www.canva.com/design/DAGcibDIbGE/Kb27D79L8M__OToY9XiEmg/edit?utm_content=DAGcibDIbGE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton). [Draft wireframes and overall design](https://www.canva.com/design/DAGcSUaYHVU/TzfS5spG1CXN-vaJxABJHw/edit?utm_content=DAGcSUaYHVU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) before translating it to html/css code.
-- pixabay.com - to download free sound effects
-- coolors.co - Create the colour palette
+- canva.com - Create, edit and export [sprite elements](https://www.canva.com/design/DAGcibDIbGE/Kb27D79L8M__OToY9XiEmg/edit?utm_content=DAGcibDIbGE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton). [Draft wireframes and overall design](https://www.canva.com/design/DAGcSUaYHVU/TzfS5spG1CXN-vaJxABJHw/edit?utm_content=DAGcSUaYHVU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) before translating it to html/css code
+- pixabay.com - to download the free sound effects used in the game
+- coolors.co - Create the colour palette 
 - Font Awesome - arrow icons on index.html and social icons on footer
-- cloudconvert.com - convert and optimise images for the web
+- cloudconvert.com - convert and optimise images for the web using the webp format
 - mdn web docs - for general coding reference: Loops and iteration, audio(), location.reload(), working with objects, etc.
 - Lighthouse - to improve the site's general score by following their suggestions on performance, accessibility, best practices and SEO 
 - prettier.io - to beautify the js and css code
 - Google's Inspect Element - to debug code and see console logs and errors
+- Chat GPT - Used to explain concepts that were not so obvious such as the directives needed to stop JSHint from throwing warnings related to my code; explain a breakdown of some console errors and offer different approaches to tackle these.   
 - [tabletomarkdown.com](https://tabletomarkdown.com/convert-spreadsheet-to-markdown/): to easily generate my testing table by importing it from a spreadsheet
 
 ## TESTING

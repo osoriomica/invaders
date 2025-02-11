@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Jersey+15&family=Press+Start+2P&display=swap");
 
@@ -19,7 +26,8 @@
 * {
     padding: 0%;
     margin: 0%;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 * a,
@@ -39,8 +47,13 @@ header {
 }
 
 body {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     font-family: "Jersey 15", serif;
     /* font-family: 'Press Start 2P', serif; */
     text-transform: uppercase;
@@ -68,7 +81,8 @@ h3 {
 footer a,
 p,
 h1 {
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    -webkit-filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+            filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
 nav {
@@ -114,7 +128,8 @@ main {
     background-repeat: no-repeat;
     background-size: contain;
     /* filter functions from w3schools: https://www.w3schools.com/cssref/css3_pr_filter.php */
-    filter: sepia(30%) drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4)) opacity(95%);
+    -webkit-filter: sepia(30%) drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4)) opacity(95%);
+            filter: sepia(30%) drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4)) opacity(95%);
 }
 
 .main-text-bg .btn,
@@ -127,28 +142,48 @@ main {
 .main-text-bg .btn:hover,
 .modal .btn:hover {
     color: var(--light-text);
+    -webkit-transition: color 0.3s ease-in-out;
+    -o-transition: color 0.3s ease-in-out;
     transition: color 0.3s ease-in-out;
 }
 
 .main-text-bg .btn:active,
 .modal .btn:active {
     color: var(--light-text);
+    -webkit-transition: color 0.3s ease-in-out;
+    -o-transition: color 0.3s ease-in-out;
     transition: color 0.3s ease-in-out;
 }
 
 .center-align {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 /* Invaders game */
 
 #game-options {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 0 2rem;
     margin-top: 0.5rem;
 }
@@ -156,13 +191,18 @@ main {
 .play-btn {
     font-family: "Press Start 2p", serif;
     font-size: 0.75rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
 }
 
 #game-options button {
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     color: var(--light-text);
     padding: 0.3rem 0.7rem;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     margin: 0 auto;
     background-color: var(--highlight2);
@@ -172,12 +212,16 @@ main {
 #game-options button:hover {
     background-color: var(--light-text);
     color: var(--dark-text);
+    -webkit-transition: color 0.5s ease-in-out;
+    -o-transition: color 0.5s ease-in-out;
     transition: color 0.5s ease-in-out;
 }
 
 #game-options button:active {
     background-color: var(--light-text);
     color: var(--dark-text);
+    -webkit-transition: color 0.5s ease-in-out;
+    -o-transition: color 0.5s ease-in-out;
     transition: color 0.5s ease-in-out;
 }
 
@@ -188,6 +232,8 @@ main {
 
 #main-game h1 {
     font-size: smaller;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     margin: 0 auto;
 }
@@ -213,9 +259,14 @@ main {
     width: 320px;
     height: 320px;
     /* border: solid 1px var(--bg-dark); */
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin: 0.5rem auto;
     background-color: rgb(40, 48, 67, 0.8);
 }
@@ -223,37 +274,49 @@ main {
 .grid div {
     width: 21px;
     height: 21px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 .invader {
     background: url(../media/red-invader.svg) no-repeat center center/cover;
-    filter: drop-shadow(1px 3px 1px rgb(0 0 0 / 0.4));
+    -webkit-filter: drop-shadow(1px 3px 1px rgb(0 0 0 / 0.4));
+            filter: drop-shadow(1px 3px 1px rgb(0 0 0 / 0.4));
     height: 2rem;
     width: 2rem;
 }
 
 .camera {
     background: url(../media/camera.svg) no-repeat center center/cover;
-    filter: drop-shadow(1px 3px 1px rgb(0 0 0 / 0.4));
+    -webkit-filter: drop-shadow(1px 3px 1px rgb(0 0 0 / 0.4));
+            filter: drop-shadow(1px 3px 1px rgb(0 0 0 / 0.4));
 }
 
 .flash {
     background: url(../media/flash.svg) no-repeat center center/cover;
-    filter: drop-shadow(1px 3px 1px rgb(0 0 0 / 0.4));
+    -webkit-filter: drop-shadow(1px 3px 1px rgb(0 0 0 / 0.4));
+            filter: drop-shadow(1px 3px 1px rgb(0 0 0 / 0.4));
 }
 
 .boom {
     background: url(../media/cracked-invader.svg) no-repeat center center/cover;
-    filter: drop-shadow(1px 3px 1px rgb(0 0 0 / 0.4));
+    -webkit-filter: drop-shadow(1px 3px 1px rgb(0 0 0 / 0.4));
+            filter: drop-shadow(1px 3px 1px rgb(0 0 0 / 0.4));
 }
 
 /* Invaders Game controls */
 #game-controls {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
     max-width: fit-content;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin: 1rem auto 0;
 }
 
@@ -265,7 +328,8 @@ main {
     background: url(../media/ddd-left-arrow.svg) no-repeat center center/cover;
     height: 4rem;
     width: 4rem;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    -webkit-filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+            filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
     /* Shadow effect from: https://css-tricks.com/adding-shadows-to-svg-icons-with-css-and-svg-filters/ */
     cursor: pointer;
 }
@@ -280,7 +344,8 @@ main {
     background: url(../media/ddd-right-arrow.svg) no-repeat center center/cover;
     height: 4rem;
     width: 4rem;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    -webkit-filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+            filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
     cursor: pointer;
 }
 
@@ -307,7 +372,8 @@ main {
 #shooter {
     height: 4rem;
     width: 4rem;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    -webkit-filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+            filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
     cursor: pointer;
 }
 
@@ -319,9 +385,16 @@ main {
 
 /* options within the modal */
 #shooter-options {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-bottom: 0.4rem;
 }
 
@@ -353,7 +426,8 @@ main {
 #sound {
     height: 2.5rem;
     width: 2.5rem;
-    filter: invert();
+    -webkit-filter: invert();
+            filter: invert();
 }
 
 .sound-on {
@@ -366,23 +440,38 @@ main {
 
 /*Sound SFX button positioning, adapted from FAB - Floating Action Button by Florent https://codepen.io/fosmont/pen/oNbOQWd  */
 .sound-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    user-select: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     position: absolute;
-    filter: opacity(0.6);
+    -webkit-filter: opacity(0.6);
+            filter: opacity(0.6);
     bottom: 30px;
     right: 30px;
 }
 
 .sound-container:hover {
-    filter: opacity(1);
+    -webkit-filter: opacity(1);
+            filter: opacity(1);
 }
 
 .sound-container:active {
-    filter: opacity(1);
+    -webkit-filter: opacity(1);
+            filter: opacity(1);
 }
 
 /* footer section - styles */
@@ -395,12 +484,21 @@ footer {
 }
 
 #footer {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     text-align: center;
     padding: 0 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     /* constrains size above 1800px */
     max-width: 1800px;
     margin: 0 auto;
@@ -408,16 +506,27 @@ footer {
 
 #footer>a,
 #footer>p {
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     margin: 0.5rem 0;
 }
 
 #social {
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     list-style-type: none;
-    align-items: baseline;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
     margin: 0.5rem 0;
 }
 
@@ -436,6 +545,8 @@ footer {
 
 #social a:hover {
     color: var(--highlight1);
+    -webkit-transition: color 0.25s ease-in-out;
+    -o-transition: color 0.25s ease-in-out;
     transition: color 0.25s ease-in-out;
 }
 
@@ -459,6 +570,8 @@ footer {
     }
 
     #social {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
         display: inline-flex;
     }
 }
@@ -491,9 +604,14 @@ footer {
         width: 620px;
         height: 620px;
         /* border: solid 1px var(--bg-dark); */
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-wrap: wrap;
-        align-items: center;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         margin: 1rem auto;
         background-color: rgb(40, 48, 67, 0.8);
     }
@@ -501,6 +619,7 @@ footer {
     .grid div {
         width: 40px;
         height: 40px;
-        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
     }
 }
