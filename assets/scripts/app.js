@@ -13,8 +13,9 @@ let invadersId = 0
 let isGoingRight = true
 let direction = 1
 let score = 0
-let isGamePaused = false;
-let isGameOver = false;
+let isGameStarted = false
+let isGamePaused = false
+let isGameOver = false
 
 // On-screen buttons:
 const shooterOptions = document.querySelectorAll("#shooter-options .shooter")
@@ -232,8 +233,8 @@ function moveInvaders() {
 // Shoot function - original code by Ania Kubow. Edited to customise game.
 function shoot(e) {
   // Guard clause: don't shoot if the game is paused or if the game is over.
-  if ((isGamePaused) || (isGameOver)) {
-    return;
+  if ((!isGameStarted) || (isGamePaused) || (isGameOver)) {
+    return
   }
 
   let flashId
@@ -322,6 +323,7 @@ function padScore(score) {
 //EVENT LISTENERS
 startGameButton.addEventListener("click", () => {
   gameModal.hide()
+  isGameStarted = true
   startGame()
 })
 toggleSoundButton.addEventListener("click", toggleSound)
