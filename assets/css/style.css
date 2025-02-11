@@ -119,7 +119,7 @@ main {
     padding: 2.4rem 2rem 0;
     margin: 2rem auto 0;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     max-width: 300px;
     /* background image */
     background-image: url(../media/6x4-road-sign.webp);
@@ -557,7 +557,7 @@ footer {
         padding: 2.6rem 3rem 0;
         margin-top: calc(6rem);
         max-width: 590px;
-        height: 90vh;
+        height: 80vh;
      
         /* Different background image for larger screens */
         background-image: url(../media/road-sign.webp);

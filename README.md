@@ -112,6 +112,7 @@ Layout: The website is presented in two pages. The homepage and the game page. T
 	- Share score to social media.
 	- Report an issue link to write an email to developer. 
 	- Option to add levels of difficulty (faster invaders, bosses, etc).
+	- If the user clicks on the shooter when the game is over, paused or not started, to animate the game options buttons to prompt the user to click on them (or to open a modal prompting the user to start a new game or to return to the homepage).
 
 ### Design	
 The overall design is inspired by the original arcade aesthetic and Invader’s french street art installations (see introduction).
@@ -275,9 +276,7 @@ The site was thoroughly tested using a manual testing approach. This approach le
 - <strong>Shoot(e) was enabled on dismissing the modal without clicking on the start game button:</strong> Fix: Add new global variable isGameStarted, then updating the variable to true in the event listener of the start game buttons (on the modal and on the game option buttons) and finally, including it within the guard clause on shoot() as a !isGameStarted along the isGameOver and isGamePaused if statement.  
 
 
-## DEPLOYMENT
-For a future deployment, it would be best practice to optimise all imagery used to increase loading times. I would also like to digitalise the printed menus and have them as downloadable files on the homepage. I would like to add a donations section and a relevant link on the About us page. 
-
+## DEPLOYMENT 
 For deploying the website I followed the following steps:  
 1. Go to the Settings tab of your GitHub repo.  
 2. On the left-hand sidebar, in the Code and automation section, select Pages.  
