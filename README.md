@@ -3,8 +3,35 @@
 
 The deployed website can be found here: [Urban Invaders](https://osoriomica.github.io/invaders/index.html)  
 
+<!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
+
+- [INTRODUCTION](#introduction)
+    * [About the original Space Invaders](#about-the-original-space-invaders)
+    * [About Frank Slama (AKA Invader)](#about-frank-slama-aka-invader)
+- [USER EXPERIENCE](#user-experience)
+    * [User stories](#user-stories)
+    * [Features](#features)
+    * [Design](#design)
+- [WIREFRAMES](#wireframes)
+    * [Information Architecture diagram](#information-architecture-diagram)
+- [TECHNOLOGIES USED](#technologies-used)
+- [TESTING](#testing)
+    * [HTML Validation](#html-validation)
+    * [CSS Validation](#css)
+    * [JS Validation](#js)
+    * [LIGHTHOUSE](#lighthouse)
+    * [Testing user stories](#testing-user-stories)
+    * [Manual Testing](#functionality-testing)
+    * [Fixed Bugs](#fixed-bugs)
+- [DEPLOYMENT](#deployment)
+- [CREDITS](#credits)
+    * [Code](#code)
+    * [Media](#media)
+    * [ACKNOWLEDGEMENTS](#acknowledgements)
+
+<!-- TOC end -->
+
 ## Introduction
- 
 
 Urban Invaders is a playful take on the street art by French artist Frank Slama and the original Space Invaders arcade game.
 
@@ -120,7 +147,8 @@ I used canva.com for the overall design and the [mock-up process](README-folder/
 ![invaders modal wireframe - large screens](README-folder/wireframes/large-screen-wireframes/invaders-modal-wireframe.jpg)
 </details>
 
-### Technologies used:
+## TECHNOLOGIES USED:
+
 - Languages: HTML5, CSS3, JS 
 - Bootstrap 5.2.3 - to enhance the visual appearance of the website as well as the [built-in modal component](https://getbootstrap.com/docs/4.0/components/modal/) used alongside custom CSS styles
 - GitHub - to host the project  
@@ -136,7 +164,9 @@ I used canva.com for the overall design and the [mock-up process](README-folder/
 - prettier.io - to beautify the js and css code
 - Google's Inspect Element - to debug code and see console logs and errors
 - Chat GPT - Used to explain concepts that were not so obvious such as the directives needed to stop JSHint from throwing warnings related to my code; explain a breakdown of some console errors and offer different approaches to tackle these.   
-- [tabletomarkdown.com](https://tabletomarkdown.com/convert-spreadsheet-to-markdown/): to easily generate my testing table by importing it from a spreadsheet
+- [tabletomarkdown.com](https://tabletomarkdown.com/convert-spreadsheet-to-markdown/): to easily generate my testing table by importing it from a spreadsheet.
+- [Markdown TOC generator](https://bitdowntoc.derlin.ch/)
+- [Autoprefixer](https://autoprefixer.github.io/): to parse my CSS file and add the needed prefixes for browser compatibility.  
 
 ## TESTING
 ### HTML Validation
@@ -186,7 +216,9 @@ The website was tested with Google Chrome's Lighthouse
 - As a user, I’d like to know if I’ve lost or won the game:
 	- The score display is updated at the end of the game letting me know if I've won or lost the game.
 
-### Functionality Testing
+### Manual Testing
+The site was thoroughly tested using a manual testing approach. This approach lead to catch and fix issues from early on the development. Please see below for the tests and final results:
+
 | Test Label                   | Test Action                                               | Expected Outcome                                                                                                                                                                                                                                  | Test Outcome |
 | ---------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
 | Site’s responsiveness        | Resize site with Inspect Tool using different dimensions. | The site remains easy to read and uncluttered across different screen sizes. Images and text change depending on media queries.                                                                                                                   | Pass         |
@@ -254,25 +286,25 @@ You then have the option of working locally or downloading the project locally t
 
 ## CREDITS
 ### Code
-- The base javascript code for the game comes from Ania Kubów: (https://youtu.be/s6LrpUTQQn0?si=DZ24tUrVomU48pgm)
-- GameOver on reaching the bottom row by SCollins: (https://github.com/SJECollins/ci-pp2-pixels-arcade/tree/main)
-- Audio() constructor: (https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement/Audio)
-- Location.reload(): (https://developer.mozilla.org/en-US/docs/Web/API/Location/reload)
-- Bootstrap documentation for general reference.
+- The base javascript code for the game comes from [Ania Kubów](https://youtu.be/s6LrpUTQQn0?si=DZ24tUrVomU48pgm)
+- GameOver on reaching the bottom row by [SCollins](https://github.com/SJECollins/ci-pp2-pixels-arcade/tree/main)
+- Audio() constructor on [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement/Audio)
+- Location.reload() on [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/API/Location/reload)
+- [Bootstrap documentation](https://getbootstrap.com/docs/5.3/getting-started/introduction/) for general reference in layout styling, navigation bars and modals, etc.
 	
 ### Media
-- Invader cut out and edited from photo by Guilhem Vellut from Paris, France. https://www.flickr.com/photos/o_0/28023125416/  
-- Pixelated camera icon⁠ edited from the original by Rara nia nur hanifa on Canva.com https://www.canva.com/icons/MAFYvLietmQ/  
-- Star Pixel Art⁠ from chickchick on Canva.com https://www.canva.com/photos/MAGSKDopQAg/  
-- Road sign image edited from image listing https://www.ebay.it/itm/314175660736  
-- Shooter1 based on the artwork by Patinya_P_ANG on Canva.com https://www.canva.com/photos/MAFs6D_S9Rs/  
-- shooter2 made using Pixel art green retro hat by Patinya_P_Ang from Patinya_P_ANG https://www.canva.com/photos/MAFrmC84tXI/
-- shooter3 cat pixel by FranGeL Katerns https://www.canva.com/icons/MAGRfqjLFK4/
+- Invader cut out and edited from photo by [Guilhem Vellut](https://www.flickr.com/photos/o_0/28023125416/)  
+- Pixelated camera icon⁠ edited from the original by [Rara nia nur hanifa on Canva.com](https://www.canva.com/icons/MAFYvLietmQ/)  
+- Star Pixel Art⁠ from [chickchick on Canva.com](https://www.canva.com/photos/MAGSKDopQAg/)  
+- French road sign image isolated and edited from this [eBay image listing](https://www.ebay.it/itm/314175660736)  
+- Shooter1 based on the artwork by [Patinya_P_ANG on Canva.com](https://www.canva.com/photos/MAFs6D_S9Rs/)  
+- shooter2 made using Pixel art green retro hat by [Patinya_P_Ang from Patinya_P_ANG](https://www.canva.com/photos/MAFrmC84tXI/)
+- shooter3 cat pixel by [FranGeL Katerns](https://www.canva.com/icons/MAGRfqjLFK4/)
 
 #### Sound effects: 
-- Camera capture sound effect by <a href="https://pixabay.com/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6448">freesound_community</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6448">Pixabay</a>
-- negative_beeps sound effect by <a href="https://pixabay.com/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6008">freesound_community</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6008">Pixabay</a>
-- success sound effect by <a href="https://pixabay.com/users/updatepelgo-44563794/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=221935">UpdatePelgo</a> from <a href="https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=221935">Pixabay</a>
+- Camera capture sound effect by [freesound_community](https://pixabay.com/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6448) from [Pixabay](https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6448)
+- Negative_beeps sound effect by [freesound_community](https://pixabay.com/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6008) from [Pixabay](https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6008)
+- Success sound effect by [UpdatePelgo](https://pixabay.com/users/updatepelgo-44563794/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=221935) from [Pixabay](https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=221935)
 
 ### ACKNOWLEDGEMENTS
 Thanks to my mentor Brian Macharia for his time and amazing way of explaining stuff in such a brilliant manner.  
