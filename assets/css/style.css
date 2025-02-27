@@ -94,6 +94,10 @@ nav {
     border: none;
 }
 
+.navbar-nav {
+    word-spacing: normal;
+}
+
 .navbar-nav:hover {
     --bs-nav-link-hover-color: var(--highlight1);
 }
