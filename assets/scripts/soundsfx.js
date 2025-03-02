@@ -1,4 +1,0 @@
-
-soundsList = {}
-
-module.exports = { soundsList };
