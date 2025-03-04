@@ -29,6 +29,7 @@ const toggleSoundButton = document.getElementById("sound")
 // Modal elements:
 const gameModal = new bootstrap.Modal(document.getElementById("game-modal"))
 const startGameButton = document.getElementById("start-game")
+const gameOverModal = new bootstrap.Modal(document.getElementById('game-over-modal'))
 
 // Sound FX with a sound object to keep the code scalable.
 const soundsList = {
