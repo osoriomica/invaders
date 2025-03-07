@@ -256,6 +256,12 @@ main {
     font-size: 2rem;
 }
 
+.end-score {
+    font-size: 2rem;
+    padding: .5rem 0;
+}
+
+
 /* Grid and sprites */
 .grid {
     width: 320px;

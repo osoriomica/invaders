@@ -58,7 +58,7 @@
             <div class="modal-content">
                 <div class="modal-body">
                     <h4 class="modal-title">The urban invaders are here!</h4>
-                    <p>Take your shot but remember,<br>don't let them touch you!<br>Choose your shooter:</p>
+                    <p class="modal-text">Take your shot but remember,<br>don't let them touch you!<br>Choose your shooter:</p>
 
                     <div id="shooter-options">
                         <div id="shooter1" class="shooter shooter1"></div>
@@ -79,10 +79,11 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body">
-                    <h4 class="modal-title"></h4>
-                    <p>You shot <span id="score"></span> invaders.</p>
+                    <!-- Results in Modal-->
+                    <h1><span class="result modal-title"></span></h1>
+                    <p class="end-score">you shot <span class="score">000</span> invaders!</p>
 
-                    <button type="button" id="start-game" class="btn play-btn">PLAY AGAIN</button>
+                    <button type="button" id="restart-game" class="btn play-btn">PLAY AGAIN</button>
                     <div class="d-flex justify-content-end">
                         <div class="invader"></div>
                     </div>

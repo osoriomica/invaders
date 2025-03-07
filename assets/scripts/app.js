@@ -30,6 +30,7 @@ const toggleSoundButton = document.getElementById("sound")
 const gameModal = new bootstrap.Modal(document.getElementById("game-modal"))
 const startGameButton = document.getElementById("start-game")
 const gameOverModal = new bootstrap.Modal(document.getElementById('game-over-modal'))
+const restartGameButton = document.getElementById("restart-game")
 
 // Sound FX with a sound object to keep the code scalable.
 const soundsList = {
@@ -216,10 +217,14 @@ function moveInvaders() {
     soundsList.gameOverSFX.play()
     clearInterval(invadersId)
     isGameOver = true
+    isGameStarted = false
     // Removes shooter from grid on game over
     squares[currentShooterIndex].classList.remove("camera")
     setTimeout(() => remove(), 500) // Removes all invaders on game Over
-
+    setTimeout(() => {
+      gameOverModal.show()
+    }, 200)
+    
   }
 
   if (invadersRemoved.length === alienInvaders.length) {
@@ -227,6 +232,10 @@ function moveInvaders() {
     soundsList.successSFX.play()
     clearInterval(invadersId)
     isGameOver = true
+    isGameStarted = false
+    setTimeout(() => {
+      gameOverModal.show()
+    }, 200)
   }
   return
 }
@@ -321,12 +330,15 @@ function padScore(score) {
   return paddedScore
 }
 
-
 //EVENT LISTENERS
 startGameButton.addEventListener("click", () => {
   gameModal.hide()
   isGameStarted = true
   startGame()
+})
+restartGameButton.addEventListener("click", () => {
+  gameOverModal.hide()
+  restartGame()
 })
 toggleSoundButton.addEventListener("click", toggleSound)
 document.addEventListener("keydown", moveShooter)
