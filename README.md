@@ -3,7 +3,11 @@
 
 The deployed website can be found here: [Urban Invaders](https://osoriomica.github.io/invaders/index.html)  
 
+### Full size screenshots of the finished website
+
+
 <!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
+## Table of Contents:
 
 - [INTRODUCTION](#introduction)
     * [About the original Space Invaders](#about-the-original-space-invaders)
