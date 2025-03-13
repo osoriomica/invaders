@@ -1,10 +1,17 @@
 # URBAN INVADERS
 ![Responsive Urban Invaders](README-folder/other-assets/responsive-invaders-white.png) 
 
-The deployed website can be found here: [Urban Invaders](https://osoriomica.github.io/invaders/index.html)  
+The deployed website can be found here: [Urban Invaders](https://osoriomica.github.io/invaders/index.html) 
 
-### Full size screenshots of the finished website
+<details>
+<summary><strong>CLICK HERE to view full screenshots of the website.</strong></summary>
 
+[Mobile version:](README-folder/screenshots/mobile-version)
+![mobile version - screenshots](README-folder/screenshots/mobile-screenshots.webp)
+
+[Desktop version:](README-folder/screenshots/desktop-version)
+![desktop version - screenshots](README-folder/screenshots/large-screenshots.webp)
+</details>
 
 <!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
 ## Table of Contents:
