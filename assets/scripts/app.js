@@ -6,6 +6,7 @@
 const grid = document.querySelector(".grid")
 const resultDisplay = document.querySelector(".result")
 const scoreDisplay = document.querySelector(".score")
+const finalScore = document.querySelector(".finalScore")
 const width = 15
 const invadersRemoved = []
 let currentShooterIndex = 217
@@ -327,6 +328,7 @@ function padScore(score) {
   }
 
   scoreDisplay.innerHTML = paddedScore
+  finalScore.innerHTML = paddedScore
   return paddedScore
 }
 
