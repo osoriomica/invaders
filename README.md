@@ -239,6 +239,8 @@ The website was tested with Google Chrome's Lighthouse
 	- The score display is updated at the end of the game letting me know if I've won or lost the game.
 
 ### Manual Testing
+2EDIT! Explain the principles of automated and manual testing and when each might be deployed.
+
 The site was thoroughly tested using a manual testing approach. This approach lead to catch and fix issues from early on the development. Please see below for the tests and final results:
 
 | Test Label                   | Test Action                                               | Expected Outcome                                                                                                                                                                                                                                  | Test Outcome |
@@ -288,22 +290,40 @@ The site was thoroughly tested using a manual testing approach. This approach le
 
 
 ## DEPLOYMENT 
-For deploying the website I followed the following steps:  
-1. Go to the Settings tab of your GitHub repo.  
-2. On the left-hand sidebar, in the Code and automation section, select Pages.  
-3. Make sure:  
-    * Source is set to 'Deploy from Branch'. 
-    * Main branch is selected. 
-    * Folder is set to / (root).  
-4. Under Branch, click Save. 
-5. Go back to the Code tab. Wait for the build to finish and refresh your repo. 
-6. In the Environments section, click on 'github-pages'. 
-7. Click View deployment to see the live site.  
+1. <strong>Create a GitHub Repository</strong>
+	1. Go to [GitHub website](https://github.com/) and navigate to the <strong>Settings</strong> tab.
+	2. [Create a new public repository](https://github.com/new) using the format username.github.io, where username is your GitHub username.   
+	3. Optionally, add a repository description, select whether it will be public or private, and initialise it with a README file (optional). 
+	4. <strong>Forking:</strong> If deploying a project you don’t own, fork the repository first by clicking the "Fork" button at the top right of the project repository.
+	5. Configure GitHub Pages later in the settings.
+2. <strong>Clone and Deploy a Project</strong>
+	1. (Optional) Install [GitHub Desktop](https://desktop.github.com/) if you prefer a graphical interface for managing repositories.
+	2. Clone the repository:
+		* After installing GitHub Desktop (if you're using it), refresh the page on GitHub and click the “Set up in Desktop” button.
+		* The GitHub Desktop app will open. Select a location to save the project and clone it.
+	3. Create an <strong>index.html</strong> file for your project if it doesn’t already exist.
+	4. Use the terminal to:
+		* <strong>Add</strong> your changes: git add .
+		* <strong>Commit</strong> your changes: git commit -m "Initial commit"
+		* <strong>Push</strong> your changes: git push origin main
+3. <strong>Clone and Deploy This Project</strong>
+	1. Go to my GitHub repository for this project: [Urban Invaders](https://github.com/osoriomica/invaders).
+	2. In the top right corner of the repository page, click the green Gitpod icon to open a new workspace in Gitpod.
+	3. You can choose to work locally or download the project and edit it in an IDE like [Visual Studio Code](https://code.visualstudio.com/download).
+4. <strong>Deploy Your Website</strong>
+    1. In GitHub, go to the <strong>Settings</strong> tab of your repository.
+	2. In the left sidebar, under the Code and automation section, select <strong>Pages</strong>.
+	3. Configure the following settings:
+		* Set Source to <strong>"Deploy from Branch."</strong>
+		* Ensure the <strong>Main branch</strong> is selected.
+		* Set Folder to <strong>/ (root)</strong>.
+	4. Click <strong>Save</strong>.
+	5. Go back to the <strong>Code</strong> tab. Wait a few minutes for the deployment to finish, then refresh the page. You should see a message under the GitHub Pages section stating that "Your site is live at https://username.github.io/repository/."
+	6. Click the button to visit your deployed site.
 
-**To clone and deploy this project**
-From your account of Github, visit my repository [Urban Invaders](https://github.com/osoriomica/invaders) 
-Locate the Project GitHub repository and click the green "Gitpod" icon on the top right corner of my repo to start a new Gitpod workspace. 
-You then have the option of working locally or downloading the project locally to be edited with an IDE such as VS code. 
+	<strong>Note:</strong> Your site will not automatically update unless you commit and push any changes via the terminal. If you encounter a 404 error, double-check that your index.html file is in the root of your repository.
+
+
 
 ## CREDITS
 ### Code
