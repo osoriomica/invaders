@@ -221,7 +221,7 @@ function moveInvaders() {
     isGameStarted = false
     // Removes shooter from grid on game over
     squares[currentShooterIndex].classList.remove("camera")
-    setTimeout(() => remove(), 500) // Removes all invaders on game Over
+  
     setTimeout(() => {
       gameOverModal.show()
     }, 200)
